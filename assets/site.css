@@ -398,3 +398,7 @@ mark.hl { background: linear-gradient(transparent 55%, var(--neon) 55%); color: 
 .tabs a::after { display: none !important; }
 .drawer a { border-left-color: transparent !important; }
 .drawer a.on { border-left-color: #fff !important; }
+
+/* Landing: unified colors */
+.svc-card, .svc-card[data-c] { --c: #d6d6da; border-top: 1px solid var(--line-dark) !important; background: #121214; }
+.svc-status { color: #d6d6da; border-color: #4a4a50; }
