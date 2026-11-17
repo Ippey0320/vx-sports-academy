@@ -5,332 +5,293 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>VX SPORTS ACADEMY</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="VX SPORTS ACADEMY 公式サイト。VX PERSONAL（パーソナルトレーニング）、VX GYM（まもなくオープン）、VX SOCCER（生徒募集中）。">
+<meta name="description" content="VX SPORTS ACADEMY 公式サイト。VX PERSONAL（パーソナルトレーニング）受付中。VX GYM 入会受付開始・開業準備中。VX SOCCER まもなく発足。">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:title" content="VX SPORTS ACADEMY">
-<meta property="og:description" content="VX PERSONAL・VX GYM・VX SOCCER。身体能力の向上とサッカーの技術を伸ばすスポーツアカデミー。">
+<meta property="og:description" content="身体能力とサッカーの技術を、マンツーマンで伸ばす。VX PERSONAL・VX GYM・VX SOCCER。">
 <meta property="og:image" content="https://ippey0320.github.io/vx-sports-academy/assets/og-image.png">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400;62..125,600;62..125,800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap">
 <style>
-/* Layout: 黒と白の帯を交互に積む一枚もの。鋭角の斜め切り（V字）で帯を区切る */
+/* Layout: スマホ1カラム基準。黒（ブランド）と白（読む場所）の帯を交互に。下部に体験申し込みバーを固定 */
 :root {
   --ink: #0b0b0c;
+  --ink-2: #18181a;
   --paper: #f6f6f4;
-  --line: #2a2a2d;
-  --mute: #8d8d93;
-  --mute-on-paper: #5d5d63;
-  --white: #ffffff;
+  --line-dark: #2e2e32;
+  --line-light: #d6d6d2;
+  --text-on-ink: #ffffff;
+  --sub-on-ink: #b9b9bf;
+  --text-on-paper: #0b0b0c;
+  --sub-on-paper: #4a4a50;
   --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
   --body: "Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
-  --gutter-l: max(16px, env(safe-area-inset-left, 0px));
-  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+  --gl: max(20px, env(safe-area-inset-left, 0px));
+  --gr: max(20px, env(safe-area-inset-right, 0px));
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 120px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body { margin: 0; background: var(--ink); color: var(--white); font-family: var(--body); font-size: 16px; line-height: 1.8; -webkit-font-smoothing: antialiased; }
+body { margin: 0; background: var(--ink); color: var(--text-on-ink); font-family: var(--body); font-size: 17px; line-height: 1.85; -webkit-font-smoothing: antialiased; padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
 a:focus-visible, button:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
 h1, h2, h3 { text-wrap: balance; margin: 0; }
-p { margin: 0; }
-
-.wrap { max-width: 1120px; margin: 0 auto; padding-left: var(--gutter-l); padding-right: var(--gutter-r); }
-.label { font-family: var(--display); font-weight: 600; font-size: 12px; letter-spacing: .32em; text-transform: uppercase; font-stretch: 125%; }
+p, ul, ol { margin: 0; }
+.wrap { max-width: 1040px; margin: 0 auto; padding-left: var(--gl); padding-right: var(--gr); }
+.en { font-family: var(--display); font-weight: 600; font-stretch: 125%; letter-spacing: .24em; font-size: 13px; text-transform: uppercase; }
 
 /* Header */
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--ink); }
-.site-header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; background: var(--ink); border-bottom: 1px solid var(--line); }
-.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 20; background: var(--ink); }
+.site-header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 19; background: var(--ink); border-bottom: 1px solid var(--line-dark); }
+.head-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .brand img { height: 22px; width: auto; }
-.brand span { font-family: var(--display); font-weight: 600; font-stretch: 125%; font-size: 11px; letter-spacing: .38em; white-space: nowrap; }
-.nav { display: flex; gap: 22px; font-size: 13px; }
-.nav a { text-decoration: none; color: var(--mute); }
-.nav a:hover { color: var(--white); }
-@media (max-width: 720px) { .nav { display: none; } }
-
-/* Hero */
-.hero { padding-block: 88px 120px; background: var(--ink); position: relative; }
-.hero .wrap { display: grid; gap: 40px; }
-.hero-mark { width: min(420px, 70%); }
-.hero-name { font-family: var(--display); font-weight: 600; font-stretch: 125%; letter-spacing: .5em; font-size: clamp(13px, 2.2vw, 20px); margin-right: -.5em; }
-.hero h1 { font-weight: 900; font-size: clamp(30px, 5.4vw, 60px); line-height: 1.3; letter-spacing: .02em; }
-.hero-lead { color: #c9c9cd; max-width: 34em; }
-.hero-cta { display: flex; flex-wrap: wrap; gap: 12px; }
-
-.btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 26px; font-weight: 700; font-size: 15px; text-decoration: none; border: 1.5px solid currentColor; transition: background .15s, color .15s; }
-.btn-solid { background: var(--white); color: var(--ink); border-color: var(--white); }
-.btn-solid:hover { background: transparent; color: var(--white); }
-.btn-ghost:hover { background: var(--white); color: var(--ink); }
-.btn svg { width: 18px; height: 18px; flex: none; }
-
-/* Paper sections */
-.paper { background: var(--paper); color: var(--ink); }
-.section { padding-block: 96px; }
-.section-head { display: grid; gap: 14px; margin-bottom: 48px; }
-.section-head h2 { font-weight: 900; font-size: clamp(26px, 3.6vw, 40px); line-height: 1.35; }
-.paper .label { color: var(--mute-on-paper); }
-.ink .label, .hero .label { color: var(--mute); }
-
-/* Programs */
-.programs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 2px solid var(--ink); }
-.program { padding: 32px 28px 36px 0; display: grid; gap: 14px; align-content: start; min-width: 0; }
-.program + .program { padding-left: 28px; border-left: 1px solid #cfcfcc; }
-.status { justify-self: start; font-size: 12px; font-weight: 700; letter-spacing: .12em; padding: 3px 10px; border: 1.5px solid var(--ink); }
-.status.now { background: var(--ink); color: var(--paper); }
-.program h3 { font-size: 22px; font-weight: 900; line-height: 1.45; }
-.program .en { font-family: var(--display); font-stretch: 112%; font-weight: 600; font-size: 12px; letter-spacing: .2em; color: var(--mute-on-paper); text-transform: uppercase; }
-.program p { color: #303034; font-size: 15px; }
-.program a.more { font-weight: 700; font-size: 14px; text-underline-offset: 4px; }
-@media (max-width: 860px) {
-  .programs { grid-template-columns: 1fr; }
-  .program, .program + .program { padding: 28px 0; border-left: 0; }
-  .program + .program { border-top: 1px solid #cfcfcc; }
+.brand span { font-family: var(--display); font-weight: 600; font-stretch: 125%; font-size: 11px; letter-spacing: .34em; white-space: nowrap; }
+.tabs { display: flex; gap: 6px; padding-bottom: 12px; }
+.tabs a { flex: 1; text-align: center; text-decoration: none; font-family: var(--display); font-weight: 800; font-stretch: 112%; font-size: 13px; letter-spacing: .1em; padding: 9px 4px; border: 1px solid var(--line-dark); color: var(--sub-on-ink); white-space: nowrap; }
+.tabs a:hover { color: var(--text-on-ink); border-color: var(--text-on-ink); }
+.tabs a.main { background: var(--text-on-ink); color: var(--ink); border-color: var(--text-on-ink); }
+@media (min-width: 760px) {
+  .site-header .wrap { display: flex; align-items: center; justify-content: space-between; }
+  .tabs { padding: 0; width: 420px; }
 }
 
-/* Soccer team */
-.team { background: var(--ink); }
-.team .grid, .kids .grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 56px; align-items: start; }
-.team-statement { font-weight: 900; font-size: clamp(24px, 3.2vw, 36px); line-height: 1.5; }
-.team-statement em { font-style: normal; border-bottom: 3px solid var(--white); }
-.team-body { display: grid; gap: 28px; }
-.team-body > p { color: #c9c9cd; }
-.pillars { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
-.pillar { background: var(--ink); padding: 22px 20px; display: grid; gap: 6px; min-width: 0; }
-.pillar .en { font-family: var(--display); font-weight: 800; font-stretch: 125%; font-size: 13px; letter-spacing: .22em; }
-.pillar h3 { font-size: 17px; font-weight: 700; }
-.pillar p { font-size: 14px; color: var(--mute); line-height: 1.7; }
-.recruit { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; border: 1.5px solid var(--white); padding: 20px 22px; }
-.recruit strong { font-size: 18px; }
-.recruit small { display: block; color: var(--mute); font-size: 13px; }
-@media (max-width: 860px) { .team .grid, .kids .grid { grid-template-columns: 1fr; gap: 36px; } }
-@media (max-width: 460px) { .pillars { grid-template-columns: 1fr; } }
+/* Buttons */
+.btn { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; padding: 14px 24px; font-weight: 700; font-size: 17px; text-decoration: none; border: 2px solid currentColor; text-align: center; line-height: 1.4; transition: background .15s, color .15s; }
+.btn svg { width: 22px; height: 22px; flex: none; }
+.on-ink .btn-solid { background: var(--text-on-ink); color: var(--ink); border-color: var(--text-on-ink); }
+.on-ink .btn-solid:hover { background: transparent; color: var(--text-on-ink); }
+.on-ink .btn-line:hover { background: var(--text-on-ink); color: var(--ink); }
+.on-paper .btn-solid { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.on-paper .btn-solid:hover { background: transparent; color: var(--ink); }
+.on-paper .btn-line:hover { background: var(--ink); color: var(--paper); }
+.btn-row { display: grid; gap: 12px; }
+@media (min-width: 640px) { .btn-row { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 620px; } }
 
-/* Kids gym */
-.kids ul { list-style: none; margin: 0; padding: 0; display: grid; border-top: 2px solid var(--ink); }
-.kids li { display: grid; grid-template-columns: 9.5em 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid #cfcfcc; font-size: 15px; }
-.kids li b { font-weight: 700; }
-.kids .lead { color: #303034; display: grid; gap: 18px; }
-@media (max-width: 420px) { .kids li { grid-template-columns: 1fr; gap: 2px; } }
+/* Bands */
+.on-ink { background: var(--ink); color: var(--text-on-ink); }
+.on-paper { background: var(--paper); color: var(--text-on-paper); }
+.band { padding-block: 64px; }
+@media (min-width: 760px) { .band { padding-block: 96px; } }
+.stack { display: grid; gap: 28px; }
+.sub { color: var(--sub-on-ink); }
+.on-paper .sub { color: var(--sub-on-paper); }
 
-/* Pricing */
-.price-table { color: inherit; font-size: inherit; width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
-.price-table th, .price-table td { text-align: left; padding: 18px 12px 18px 0; border-bottom: 1px solid #cfcfcc; vertical-align: top; }
-.price-table thead th { font-size: 12px; font-weight: 700; letter-spacing: .14em; color: var(--mute-on-paper); border-bottom: 2px solid var(--ink); }
-.price-table td.price { font-family: var(--display); font-weight: 800; font-size: 22px; white-space: nowrap; text-align: right; padding-right: 0; }
-.price-table td.price small { font-family: var(--body); font-size: 12px; font-weight: 500; color: var(--mute-on-paper); margin-left: 4px; }
-.price-table .name { font-weight: 700; }
-.price-table .note { display: block; font-size: 13px; color: var(--mute-on-paper); font-weight: 400; }
-.table-scroll { overflow-x: auto; }
-.price-foot { margin-top: 18px; font-size: 13px; color: var(--mute-on-paper); }
+.status { display: inline-block; justify-self: start; font-size: 14px; font-weight: 700; letter-spacing: .08em; padding: 4px 12px; border: 2px solid currentColor; }
+.status.fill { background: var(--text-on-ink); color: var(--ink); border-color: var(--text-on-ink); }
+.on-paper .status.fill { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+/* Hero */
+.hero { padding-block: 48px 56px; }
+.hero .stack { gap: 24px; }
+.hero-mark { width: min(300px, 72%); }
+.hero h1 { font-weight: 900; font-size: clamp(28px, 7.4vw, 60px); line-height: 1.35; letter-spacing: .02em; }
+.hero-lead { color: var(--sub-on-ink); font-size: 17px; max-width: 32em; }
+
+/* Section head */
+.sec-head { display: grid; gap: 14px; }
+.sec-logo img { height: clamp(44px, 11vw, 76px); width: auto; }
+.sec-title { font-family: var(--display); font-weight: 400; font-stretch: 125%; letter-spacing: .1em; font-size: clamp(34px, 9vw, 64px); line-height: 1.05; }
+.sec-title b { font-weight: 800; }
+.sec-head h2.catch { font-weight: 900; font-size: clamp(26px, 6.6vw, 40px); line-height: 1.45; }
+.lead { font-size: 17px; max-width: 34em; }
+
+/* Points */
+.points { display: grid; gap: 12px; }
+@media (min-width: 760px) { .points { grid-template-columns: repeat(2, minmax(0, 1fr)); } .points.four { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.point { padding: 22px 20px; display: grid; gap: 6px; align-content: start; min-width: 0; border: 1px solid var(--line-light); background: #ffffff; }
+.on-ink .point { border-color: var(--line-dark); background: var(--ink-2); }
+.point .en { font-size: 12px; color: var(--sub-on-paper); }
+.on-ink .point .en { color: var(--sub-on-ink); }
+.point h3 { font-size: 20px; font-weight: 900; line-height: 1.45; }
+.point p { font-size: 16px; line-height: 1.75; }
+
+/* Flow + price cards */
+.flow { list-style: none; padding: 0; display: grid; gap: 0; border-top: 2px solid var(--ink); }
+.flow li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 4px 14px; padding: 22px 0; border-bottom: 1px solid var(--line-light); }
+.flow .num { font-family: var(--display); font-weight: 800; font-stretch: 112%; font-size: 22px; line-height: 1.3; grid-row: span 3; }
+.flow .name { font-size: 18px; font-weight: 900; line-height: 1.45; }
+.flow .price { font-family: var(--display); font-weight: 800; font-size: 30px; line-height: 1.2; font-variant-numeric: tabular-nums; letter-spacing: .01em; }
+.flow .price small { font-family: var(--body); font-size: 14px; font-weight: 500; color: var(--sub-on-paper); margin-left: 6px; letter-spacing: 0; }
+.flow .desc { font-size: 15px; color: var(--sub-on-paper); line-height: 1.7; }
+@media (min-width: 760px) {
+  .flow li { grid-template-columns: 56px minmax(0, 1fr) auto; align-items: center; }
+  .flow .num { grid-row: span 2; }
+  .flow .price { grid-column: 3; grid-row: 1 / span 2; text-align: right; }
+}
+.note-box { padding: 20px; border-left: 4px solid var(--ink); background: #ffffff; font-size: 16px; line-height: 1.8; }
+.note-box b { font-weight: 900; }
+
+/* Kids/gym list */
+.checks { list-style: none; padding: 0; display: grid; border-top: 2px solid currentColor; }
+.checks li { display: grid; gap: 2px; padding: 16px 0; border-bottom: 1px solid var(--line-light); }
+.checks b { font-size: 17px; }
+.checks span { font-size: 15px; color: var(--sub-on-paper); }
 
 /* Contact */
-.contact { background: var(--ink); }
-.contact .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-.contact-card { display: grid; gap: 10px; padding: 28px; border: 1.5px solid var(--white); text-decoration: none; transition: background .15s, color .15s; min-width: 0; }
-.contact-card:hover { background: var(--white); color: var(--ink); }
-.contact-card .label { color: inherit; opacity: .7; }
-.contact-card strong { font-size: 22px; font-weight: 900; display: flex; align-items: center; gap: 12px; }
-.contact-card strong svg { width: 26px; height: 26px; flex: none; }
-.contact-card span.sub { font-size: 14px; opacity: .75; }
-@media (max-width: 640px) { .contact .cards { grid-template-columns: 1fr; } }
+.contact-grid { display: grid; gap: 12px; }
+@media (min-width: 760px) { .contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.c-card { display: grid; gap: 4px; padding: 20px 22px; border: 2px solid var(--text-on-ink); text-decoration: none; transition: background .15s, color .15s; min-width: 0; }
+.c-card:hover { background: var(--text-on-ink); color: var(--ink); }
+.c-card .en { font-size: 12px; opacity: .75; }
+.c-card strong { font-size: 19px; font-weight: 900; display: flex; align-items: center; gap: 10px; }
+.c-card strong svg { width: 24px; height: 24px; flex: none; }
+.c-card .s { font-size: 14px; opacity: .8; }
+.c-card.main { background: var(--text-on-ink); color: var(--ink); }
+.c-card.main:hover { background: transparent; color: var(--text-on-ink); }
 
-footer { border-top: 1px solid var(--line); }
-footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 12px; color: var(--mute); }
-footer .label { color: var(--white); }
+/* Sticky CTA */
+.cta-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 18; background: var(--ink); border-top: 1px solid var(--line-dark); padding: 10px var(--gr) calc(10px + env(safe-area-inset-bottom, 0px)) var(--gl); display: flex; gap: 10px; }
+.cta-bar a { flex: 1; min-height: 52px; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 900; font-size: 16px; text-decoration: none; }
+.cta-bar .p { background: var(--text-on-ink); color: var(--ink); }
+.cta-bar .s { flex: 0 0 auto; padding: 0 18px; border: 2px solid var(--text-on-ink); }
+.cta-bar svg { width: 22px; height: 22px; flex: none; }
+@media (min-width: 760px) { .cta-bar { justify-content: flex-end; } .cta-bar a.p { flex: 0 0 340px; } }
 
-/* Divisions: VX GYM / VX SOCCER */
-.divisions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 8px; }
-.division { display: grid; gap: 10px; padding: 26px 26px 22px; border: 1.5px solid var(--white); text-decoration: none; transition: background .15s, color .15s; min-width: 0; }
-.division:hover { background: var(--white); color: var(--ink); }
-.division-name, .division-title { font-family: var(--display); font-weight: 400; font-stretch: 125%; letter-spacing: .12em; line-height: 1.1; }
-.division-name { font-size: clamp(22px, 2.2vw, 28px); white-space: nowrap; }
-.division-name b, .division-title b { font-weight: 800; }
-.division-desc { font-size: 14px; opacity: .75; line-height: 1.7; }
-.division-go { font-size: 13px; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
-@media (max-width: 860px) { .divisions { grid-template-columns: 1fr; } }
-.division-head { display: grid; gap: 8px; padding-bottom: 28px; margin-bottom: 56px; border-bottom: 2px solid currentColor; }
-.division-title { font-size: clamp(40px, 7vw, 84px); }
-.division-logo img { height: clamp(48px, 7vw, 84px); width: auto; max-width: 100%; }
-.division-sub { font-size: 15px; opacity: .7; }
-.gym-block + .gym-block { margin-top: 88px; }
-.gym-lead { color: #303034; max-width: 34em; }
-.section-head .status { margin-bottom: 4px; }
-.team .status { border-color: var(--white); }
-.team .status.now { background: var(--white); color: var(--ink); }
-.contact { border-top: 1px solid var(--line); }
-.gym-section { border-top: 1px solid #cfcfcc; }
-.two-col { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; border-top: 2px solid var(--ink); margin-bottom: 48px; }
-.point { padding: 24px 24px 24px 0; display: grid; gap: 6px; min-width: 0; }
-.point + .point { padding-left: 24px; border-left: 1px solid #cfcfcc; }
-.point .en { font-family: var(--display); font-weight: 800; font-stretch: 125%; font-size: 12px; letter-spacing: .22em; color: var(--mute-on-paper); }
-.point h3 { font-size: 18px; font-weight: 700; }
-.point p:last-child { font-size: 14px; color: #303034; }
-@media (max-width: 640px) { .two-col { grid-template-columns: 1fr; } .point + .point { padding-left: 0; border-left: 0; border-top: 1px solid #cfcfcc; } }
+footer .wrap { padding-block: 28px; display: grid; gap: 6px; font-size: 13px; color: var(--sub-on-ink); border-top: 1px solid var(--line-dark); }
+footer .en { color: var(--text-on-ink); font-size: 12px; }
 </style>
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="VX SPORTS ACADEMY トップへ">
-      <img src="assets/logo.svg" alt="VX">
-      <span>SPORTS ACADEMY</span>
-    </a>
-    <nav class="nav" aria-label="メニュー">
-      <a href="#personal">VX PERSONAL</a>
-      <a href="#gym">VX GYM</a>
-      <a href="#soccer">VX SOCCER</a>
-      <a href="#price">料金</a>
-      <a href="#contact">お問い合わせ</a>
+    <div class="head-row">
+      <a class="brand" href="#top" aria-label="VX SPORTS ACADEMY トップへ">
+        <img src="assets/logo.svg" alt="VX">
+        <span>SPORTS ACADEMY</span>
+      </a>
+    </div>
+    <nav class="tabs" aria-label="事業">
+      <a class="main" href="#personal">PERSONAL</a>
+      <a href="#gym">GYM</a>
+      <a href="#soccer">SOCCER</a>
     </nav>
   </div>
 </header>
 
 <main id="top">
-  <section class="hero">
-    <div class="wrap">
-      <img class="hero-mark" src="assets/logo.svg" alt="VX">
-      <p class="hero-name">SPORTS ACADEMY</p>
-      <h1>動ける身体が、<br>プレーを変える。</h1>
-      <p class="hero-lead">アジリティ、フィジカル、運動能力。土台から鍛えて、一人ひとりが生き生きと動ける力をつくります。</p>
-      <div class="divisions">
-        <a class="division" href="#personal">
-          <span class="division-name">VX <b>PERSONAL</b></span>
-          <span class="division-desc">身体能力の向上と、サッカーの基礎技術から上級者のスキルの底上げまで。</span>
-          <span class="division-go">受付中</span>
-        </a>
-        <a class="division" href="#gym">
-          <span class="division-name">VX <b>GYM</b></span>
-          <span class="division-desc">サッカーに限らず、あらゆる競技の身体能力を底上げするジム。</span>
-          <span class="division-go">まもなくオープン</span>
-        </a>
-        <a class="division" href="#soccer">
-          <span class="division-name">VX <b>SOCCER</b></span>
-          <span class="division-desc">身体能力の向上と、トップレベルのサッカー教育を受けられるチーム。</span>
-          <span class="division-go">生徒募集中</span>
-        </a>
+
+  <!-- HERO：今の主役はVX PERSONAL -->
+  <section class="hero on-ink">
+    <div class="wrap stack">
+      <img class="hero-mark" src="assets/logo.svg" alt="VX SPORTS ACADEMY">
+      <span class="status fill">VX PERSONAL 受付中</span>
+      <h1>身体能力と<br>サッカーの技術を、<br>マンツーマンで伸ばす。</h1>
+      <p class="hero-lead">欧州基準のトレーニングで「本気でうまくなりたい選手」を全力でサポートします。まずは初回体験から。</p>
+      <div class="btn-row">
+        <a class="btn btn-solid" href="https://lin.ee/P7ZYT6p" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 4C7 4 3 7.2 3 11.2c0 3.6 3.2 6.6 7.5 7.1-.2.9-.6 2.1-.7 2.4 0 .3.3.5.6.3 1.2-.8 4.3-2.8 5.9-4.3 2.3-1.3 3.7-3.3 3.7-5.5C21 7.2 17 4 12 4Z"/></svg>LINEで体験を申し込む</a>
+        <a class="btn btn-line" href="#price">料金を見る</a>
       </div>
     </div>
   </section>
 
-  <section class="paper section" id="personal">
-    <div class="wrap">
-      <div class="division-head">
-        <p class="division-title">VX <b>PERSONAL</b></p>
-        <p class="division-sub">VXの原点。マンツーマンのパーソナルトレーニング。</p>
+  <!-- VX PERSONAL -->
+  <section class="band on-paper" id="personal">
+    <div class="wrap stack">
+      <div class="sec-head">
+        <p class="sec-title">VX <b>PERSONAL</b></p>
+        <h2 class="catch">一人ひとりの課題に合わせて、<br>動ける身体とプレーの質を引き上げる。</h2>
+      </div>
+      <div class="points">
+        <div class="point">
+          <p class="en">Athleticism</p>
+          <h3>身体能力の向上</h3>
+          <p>スピード、アジリティ、パワー、体幹。プレーの土台になる身体をつくります。</p>
+        </div>
+        <div class="point">
+          <p class="en">Football Skill</p>
+          <h3>基礎技術から上級スキルまで</h3>
+          <p>止める・蹴るの基礎から、上級者のスキルの底上げまで。レベルに合わせて指導します。</p>
+        </div>
       </div>
 
-      <div class="gym-block" id="price">
-        <div class="section-head">
-          <span class="status now">受付中</span>
-          <p class="label">Personal Training</p>
-          <h2>身体能力と、サッカーの技術を<br>マンツーマンで伸ばす。</h2>
-          <p class="gym-lead">一人ひとりの課題に合わせたメニューで、動ける身体とプレーの質を同時に引き上げます。</p>
-        </div>
-        <div class="two-col">
-          <div class="point"><p class="en">ATHLETICISM</p><h3>身体能力の向上</h3><p>スピード、アジリティ、パワー、体幹。プレーの土台になる身体をつくります。</p></div>
-          <div class="point"><p class="en">FOOTBALL SKILL</p><h3>基礎技術から上級スキルまで</h3><p>止める・蹴るの基礎から、上級者のスキルの底上げまで。レベルに合わせて指導します。</p></div>
-        </div>
-        <div class="table-scroll">
-          <table class="price-table">
-            <thead><tr><th>メニュー</th><th>内容</th><th style="text-align:right">料金（税込）</th></tr></thead>
-            <tbody>
-              <tr><td class="name">初回体験</td><td>実際のトレーニング内容を体験できます</td><td class="price">¥5,500<small>/ 1回</small></td></tr>
-              <tr><td class="name">本レッスン<span class="note">最低4回から</span></td><td>マンツーマンレッスン</td><td class="price">¥16,500<small>/ 1回</small></td></tr>
-              <tr><td class="name">初月：1ヶ月契約</td><td>週1回 × 1ヶ月</td><td class="price">¥66,000<small>/ 1ヶ月</small></td></tr>
-              <tr><td class="name">2ヶ月目以降：3ヶ月契約</td><td>初月以降の継続コース</td><td class="price">¥198,000<small>/ 3ヶ月</small></td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="price-foot">料金はすべて税込です。継続的に週1回取り組むことで、確実な成長を目指します。欧州基準のトレーニングで「本気でうまくなりたい選手」を全力でサポートします。</p>
+      <div class="sec-head" id="price" style="margin-top:20px">
+        <p class="en sub">Price ／ 入会方法・料金</p>
+        <h2 class="catch">入会の流れと料金</h2>
       </div>
-
-    </div>
-  </section>
-
-  <section class="paper section gym-section" id="gym">
-    <div class="wrap">
-      <div class="division-head">
-        <h2 class="division-logo"><img src="assets/vx-gym-black.svg" alt="VX GYM"></h2>
-        <p class="division-sub">あらゆる競技の身体能力を底上げするジム。まもなくオープン。</p>
-      </div>
-      <div class="gym-block kids" id="kids">
-        <div class="grid">
-          <div class="section-head" style="margin:0">
-            <span class="status">まもなく開設</span>
-            <p class="label">Athletic Performance Gym</p>
-            <h2>サッカーだけじゃない。<br>すべての競技の<br>土台をつくる。</h2>
-          </div>
-          <div class="lead">
-            <p>野球、バスケ、陸上、どんなスポーツでも、伸びる選手は動ける身体を持っています。VX GYMは競技を問わず、子供たちの身体能力を底上げする場所です。</p>
-            <ul>
-              <li><b>アジリティ</b><span>ラダーやコーンを使った素早い動き</span></li>
-              <li><b>コーディネーション</b><span>身体を思いどおりに動かす力</span></li>
-              <li><b>スピード</b><span>正しいフォームで速く走る</span></li>
-              <li><b>バランス</b><span>ケガをしにくい、ぶれない身体</span></li>
-            </ul>
-            <p>オープンまでの施工の様子や、開設日・体験会のお知らせはInstagramで発信していきます。</p>
-          </div>
-        </div>
+      <ol class="flow">
+        <li><span class="num">01</span><span class="name">まずは初回体験</span><span class="price">¥5,500<small>税込 / 1回</small></span><span class="desc">実際のトレーニング内容を体験できます。</span></li>
+        <li><span class="num">02</span><span class="name">本レッスン</span><span class="price">¥16,500<small>税込 / 1回</small></span><span class="desc">最低4回から承っています。</span></li>
+        <li><span class="num">03</span><span class="name">初月：1ヶ月契約</span><span class="price">¥66,000<small>税込</small></span><span class="desc">週1回 × 1ヶ月の契約です。</span></li>
+        <li><span class="num">04</span><span class="name">2ヶ月目以降：3ヶ月契約</span><span class="price">¥198,000<small>税込</small></span><span class="desc">継続して取り組むためのコースです。</span></li>
+      </ol>
+      <p class="note-box"><b>継続的に週1回取り組むこと</b>で、確実な成長を目指します。</p>
+      <div class="btn-row">
+        <a class="btn btn-solid" href="https://lin.ee/P7ZYT6p" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 4C7 4 3 7.2 3 11.2c0 3.6 3.2 6.6 7.5 7.1-.2.9-.6 2.1-.7 2.4 0 .3.3.5.6.3 1.2-.8 4.3-2.8 5.9-4.3 2.3-1.3 3.7-3.3 3.7-5.5C21 7.2 17 4 12 4Z"/></svg>LINEで体験を申し込む</a>
+        <a class="btn btn-line" href="https://www.instagram.com/vx_sports_academy/" target="_blank" rel="noopener">Instagramを見る</a>
       </div>
     </div>
   </section>
 
-  <section class="team section" id="soccer">
-    <div class="wrap">
-      <div class="division-head">
-        <h2 class="division-logo"><img src="assets/vx-soccer-white.svg" alt="VX SOCCER"></h2>
-        <p class="division-sub">新しいサッカーチーム、生徒募集中。</p>
+  <!-- VX GYM：入会受付開始・開業準備中 -->
+  <section class="band on-ink" id="gym">
+    <div class="wrap stack">
+      <div class="sec-head">
+        <h2 class="sec-logo"><img src="assets/vx-gym-white.svg" alt="VX GYM"></h2>
+        <span class="status fill">入会受付開始・開業準備中</span>
+        <p class="catch" style="font-weight:900;font-size:clamp(26px,6.6vw,40px);line-height:1.45">サッカーだけじゃない。<br>すべての競技の土台をつくる。</p>
       </div>
-      <div class="grid">
-        <div class="section-head" style="margin:0">
-          <span class="status now">生徒募集中</span>
-          <p class="team-statement">選手一人ひとりが、<br><em>生き生きと</em>サッカーできるチームを。</p>
-        </div>
-        <div class="team-body">
-          <p>アカデミーにはまだない、身体能力を本気で伸ばすトレーニング。そのうえで、トップレベルのサッカー教育を受けられる。VX SOCCERは、この2つを両立するチームです。アジリティとフィジカルを徹底して伸ばし、その身体でパスをつなぐサッカーを目指します。</p>
-          <div class="pillars">
-            <div class="pillar"><p class="en">AGILITY</p><h3>アジリティ</h3><p>素早いスタート、ストップ、方向転換。相手より一歩先に動ける身体へ。</p></div>
-            <div class="pillar"><p class="en">PHYSICAL</p><h3>フィジカル</h3><p>当たり負けしない体幹と、最後まで走りきれる体力をつくります。</p></div>
-            <div class="pillar"><p class="en">ATHLETICISM</p><h3>運動能力向上</h3><p>走る・跳ぶ・バランス。すべてのプレーの土台になる力を伸ばします。</p></div>
-            <div class="pillar"><p class="en">PASS FOOTBALL</p><h3>パスサッカー</h3><p>トップレベルの指導で、止める・蹴る・見るを磨き、全員でボールをつなぎます。</p></div>
-          </div>
-          <div class="recruit">
-            <div>
-              <strong>チームメンバー募集中</strong>
-              <small>対象学年・練習日・会場はお問い合わせください</small>
-            </div>
-            <a class="btn btn-solid" href="#contact">入団について問い合わせる</a>
-          </div>
-        </div>
+      <p class="lead sub">野球、バスケ、陸上。どんなスポーツでも、伸びる選手は動ける身体を持っています。VX GYMは競技を問わず、子供たちの身体能力を底上げする場所です。</p>
+      <div class="points four">
+        <div class="point"><p class="en">Agility</p><h3>アジリティ</h3><p>ラダーやコーンで素早い動きを身につける。</p></div>
+        <div class="point"><p class="en">Coordination</p><h3>コーディネーション</h3><p>身体を思いどおりに動かす力。</p></div>
+        <div class="point"><p class="en">Speed</p><h3>スピード</h3><p>正しいフォームで速く走る。</p></div>
+        <div class="point"><p class="en">Balance</p><h3>バランス</h3><p>ケガをしにくい、ぶれない身体。</p></div>
+      </div>
+      <p class="sub">オープンまでの施工の様子や、開業日のお知らせはInstagramで発信しています。</p>
+      <div class="btn-row">
+        <!-- VX GYM用LINEのURLが決まったら href を差し替え（今はInstagram） -->
+        <a class="btn btn-solid" href="https://www.instagram.com/vx_sports_academy/" target="_blank" rel="noopener" data-line="gym">入会について問い合わせる</a>
       </div>
     </div>
   </section>
 
-  <section class="contact section" id="contact">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="label">Contact</p>
-        <h2>お問い合わせ・体験のお申し込み</h2>
-        <p style="color:#c9c9cd">InstagramのDM、またはLINEからお気軽にどうぞ。</p>
+  <!-- VX SOCCER：これから発足 -->
+  <section class="band on-paper" id="soccer">
+    <div class="wrap stack">
+      <div class="sec-head">
+        <h2 class="sec-logo"><img src="assets/vx-soccer-black.svg" alt="VX SOCCER"></h2>
+        <span class="status fill">まもなく発足・メンバー募集</span>
+        <p class="catch" style="font-weight:900;font-size:clamp(26px,6.6vw,40px);line-height:1.45">選手一人ひとりが、<br>生き生きとサッカーできるチームを。</p>
       </div>
-      <div class="cards">
-        <a class="contact-card" href="https://www.instagram.com/vx_sports_academy/" target="_blank" rel="noopener">
-          <span class="label">Instagram</span>
-          <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>DMで問い合わせる</strong>
-          <span class="sub">@vx_sports_academy</span>
+      <p class="lead sub">アカデミーにはまだない、身体能力を本気で伸ばすトレーニング。そのうえで、トップレベルのサッカー教育を受けられる。VX SOCCERは、この2つを両立するチームとして発足します。</p>
+      <div class="points four">
+        <div class="point"><p class="en">Agility</p><h3>アジリティ</h3><p>相手より一歩先に動ける身体へ。</p></div>
+        <div class="point"><p class="en">Physical</p><h3>フィジカル</h3><p>当たり負けしない体幹と走りきる体力。</p></div>
+        <div class="point"><p class="en">Athleticism</p><h3>運動能力向上</h3><p>すべてのプレーの土台になる力。</p></div>
+        <div class="point"><p class="en">Pass Football</p><h3>パスサッカー</h3><p>トップレベルの指導で、全員でボールをつなぐ。</p></div>
+      </div>
+      <p class="sub">対象学年・練習日・会場は決まり次第お知らせします。</p>
+      <div class="btn-row">
+        <!-- VX SOCCER用LINEのURLが決まったら href を差し替え（今はInstagram） -->
+        <a class="btn btn-solid" href="https://www.instagram.com/vx_sports_academy/" target="_blank" rel="noopener" data-line="soccer">入団について問い合わせる</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="band on-ink" id="contact">
+    <div class="wrap stack">
+      <div class="sec-head">
+        <p class="en sub">Contact</p>
+        <h2 class="catch" style="font-weight:900;font-size:clamp(26px,6.6vw,40px);line-height:1.45">お問い合わせ</h2>
+      </div>
+      <div class="contact-grid">
+        <a class="c-card main" href="https://lin.ee/P7ZYT6p" target="_blank" rel="noopener">
+          <span class="en">VX PERSONAL ／ LINE</span>
+          <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 4C7 4 3 7.2 3 11.2c0 3.6 3.2 6.6 7.5 7.1-.2.9-.6 2.1-.7 2.4 0 .3.3.5.6.3 1.2-.8 4.3-2.8 5.9-4.3 2.3-1.3 3.7-3.3 3.7-5.5C21 7.2 17 4 12 4Z"/></svg>体験・パーソナルの申し込み</strong>
+          <span class="s">友だち追加してメッセージを送信</span>
         </a>
-        <a class="contact-card" href="https://lin.ee/P7ZYT6p" target="_blank" rel="noopener">
-          <span class="label">LINE</span>
-          <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 4C7 4 3 7.2 3 11.2c0 3.6 3.2 6.6 7.5 7.1-.2.9-.6 2.1-.7 2.4 0 .3.3.5.6.3 1.2-.8 4.3-2.8 5.9-4.3 2.3-1.3 3.7-3.3 3.7-5.5C21 7.2 17 4 12 4Z"/></svg>LINEで問い合わせる</strong>
-          <span class="sub">友だち追加してメッセージを送信</span>
+        <a class="c-card" href="https://www.instagram.com/vx_sports_academy/" target="_blank" rel="noopener">
+          <span class="en">Instagram</span>
+          <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@vx_sports_academy</strong>
+          <span class="s">VX GYM・VX SOCCERの最新情報とお問い合わせ（DM）</span>
         </a>
       </div>
     </div>
@@ -339,10 +300,15 @@ footer .label { color: var(--white); }
 
 <footer>
   <div class="wrap">
-    <span class="label">VX SPORTS ACADEMY</span>
+    <span class="en">VX SPORTS ACADEMY</span>
     <span>© 2026 VX SPORTS ACADEMY</span>
   </div>
 </footer>
+
+<div class="cta-bar">
+  <a class="p" href="https://lin.ee/P7ZYT6p" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 4C7 4 3 7.2 3 11.2c0 3.6 3.2 6.6 7.5 7.1-.2.9-.6 2.1-.7 2.4 0 .3.3.5.6.3 1.2-.8 4.3-2.8 5.9-4.3 2.3-1.3 3.7-3.3 3.7-5.5C21 7.2 17 4 12 4Z"/></svg>体験を申し込む ¥5,500</a>
+  <a class="s" href="#price">料金</a>
+</div>
 
 </body>
 </html>
