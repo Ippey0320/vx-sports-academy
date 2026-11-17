@@ -6,6 +6,12 @@
 <title>VX SPORTS ACADEMY</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="VX SPORTS ACADEMY 公式サイト。VX PERSONAL（パーソナルトレーニング）、VX GYM（まもなくオープン）、VX SOCCER（生徒募集中）。">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="VX SPORTS ACADEMY">
+<meta property="og:description" content="VX PERSONAL・VX GYM・VX SOCCER。身体能力の向上とサッカーの技術を伸ばすスポーツアカデミー。">
+<meta property="og:image" content="https://ippey0320.github.io/vx-sports-academy/assets/og-image.png">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400;62..125,600;62..125,800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap">
@@ -151,6 +157,7 @@ footer .label { color: var(--white); }
 @media (max-width: 860px) { .divisions { grid-template-columns: 1fr; } }
 .division-head { display: grid; gap: 8px; padding-bottom: 28px; margin-bottom: 56px; border-bottom: 2px solid currentColor; }
 .division-title { font-size: clamp(40px, 7vw, 84px); }
+.division-logo img { height: clamp(48px, 7vw, 84px); width: auto; max-width: 100%; }
 .division-sub { font-size: 15px; opacity: .7; }
 .gym-block + .gym-block { margin-top: 88px; }
 .gym-lead { color: #303034; max-width: 34em; }
@@ -251,7 +258,7 @@ footer .label { color: var(--white); }
   <section class="paper section gym-section" id="gym">
     <div class="wrap">
       <div class="division-head">
-        <p class="division-title">VX <b>GYM</b></p>
+        <h2 class="division-logo"><img src="assets/vx-gym-black.svg" alt="VX GYM"></h2>
         <p class="division-sub">あらゆる競技の身体能力を底上げするジム。まもなくオープン。</p>
       </div>
       <div class="gym-block kids" id="kids">
@@ -279,7 +286,7 @@ footer .label { color: var(--white); }
   <section class="team section" id="soccer">
     <div class="wrap">
       <div class="division-head">
-        <p class="division-title">VX <b>SOCCER</b></p>
+        <h2 class="division-logo"><img src="assets/vx-soccer-white.svg" alt="VX SOCCER"></h2>
         <p class="division-sub">新しいサッカーチーム、生徒募集中。</p>
       </div>
       <div class="grid">
