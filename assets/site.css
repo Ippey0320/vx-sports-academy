@@ -482,3 +482,15 @@ mark.hl { background: linear-gradient(transparent 55%, var(--neon) 55%); color: 
 .cat .svc-status { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; letter-spacing: .1em; padding: 6px 14px; color: var(--neon); border: 1px solid var(--neon); background: rgba(212, 255, 42, .1); }
 .cat .svc-status i { width: 7px; height: 7px; border-radius: 50%; background: var(--neon); animation: vxpulse 1.6s ease-in-out infinite; }
 @media (prefers-reduced-motion: reduce) { .cat .svc-status i { animation: none; } }
+
+/* 日本語の字詰め：かなを詰めて文字の並びをそろえ、太さを周りの見出しと合わせる */
+body { font-feature-settings: "palt" 1; font-kerning: normal; }
+.cat-copy { font-size: 16px; font-weight: 500; color: #fff; letter-spacing: .1em; line-height: 1.9; }
+.cat-facts li { font-size: 14.5px; font-weight: 500; letter-spacing: .1em; color: #d6d6da; font-variant-numeric: tabular-nums; padding: 13px 4px; }
+.cat-kind, .svc-copy, .point h3, .flow .name, .pcard h3 { letter-spacing: .08em; }
+.hero-lead, .kit-price, .chips label span, .field > span { letter-spacing: .08em; }
+.btn, .svc-more, .cta-bar a, .drawer .drawer-line { letter-spacing: .12em !important; }
+.hero h1 { letter-spacing: .06em; }
+.hero-lead { letter-spacing: .05em; }
+.catch { letter-spacing: .05em; }
+.hero-lead, .cat-copy, .catch { word-break: auto-phrase; text-wrap: balance; }
