@@ -442,3 +442,13 @@ mark.hl { background: linear-gradient(transparent 55%, var(--neon) 55%); color: 
 
 .hero2-bg { background-position: 8% 90%; filter: grayscale(1) contrast(1.15) brightness(.38); }
 .hero2::after { background: linear-gradient(180deg, rgba(5,5,6,.55) 0%, rgba(5,5,6,.6) 50%, #0b0b0c 100%); }
+
+/* Services intro v2 */
+.svc-title { font-size: 24px; font-weight: 700; line-height: 1.55; letter-spacing: .04em; }
+.svc-lead { font-size: 14px; color: var(--sub-on-ink); margin-top: -4px; }
+.cat-jump { gap: 10px; }
+.cat-jump a { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 10px; row-gap: 2px; align-items: center; min-height: 76px; padding: 14px; background: #141416; position: relative; }
+.cat-jump a b { grid-row: 1 / span 2; font-size: 20px; font-weight: 300; color: var(--sub-on-ink); }
+.cat-jump a strong { font-weight: 600; font-size: 14px; letter-spacing: .14em; text-align: left; }
+.cat-jump a span { font-family: var(--body); font-size: 12px; letter-spacing: .04em; color: var(--sub-on-ink); text-align: left; }
+.cat-jump a::after { content: "↓"; position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-family: var(--body); color: var(--sub-on-ink); font-size: 14px; }
