@@ -58,39 +58,58 @@
     </div>
   </section>
 
-  <section class="band on-ink" style="border-top:1px solid var(--line-dark)">
+  <section class="band on-ink cats-intro" style="border-top:1px solid var(--line-dark)">
     <div class="wrap stack">
       <div class="sec-head svc-head"><p class="en sub">Services</p><h2 class="catch">4つのサービス</h2></div>
-      <div class="svc">
-      <a class="svc-card" data-c="personal" href="personal.html">
-        <h2 class="lockup big-word" aria-label="VX PERSONAL"><img src="assets/logo.svg" alt=""><i></i><span>PERSONAL</span></h2>
-        <p class="svc-kind">サッカーのパーソナル指導</p>
-        <p class="svc-copy">身体能力とサッカーの技術を、マンツーマンで伸ばす。</p>
-        <span class="svc-status">受付中</span>
-        <span class="svc-more">詳しく見る</span>
-      </a>
-      <a class="svc-card" data-c="gym" href="gym.html">
-        <h2 class="lockup big-word" aria-label="VX GYM"><img src="assets/logo.svg" alt=""><i></i><span>GYM</span></h2>
-        <p class="svc-kind">子どもの運動能力ジム</p>
-        <p class="svc-copy">お子さんの成長が、数字で見える。</p>
-        <span class="svc-status">西麻布・近日オープン</span>
-        <span class="svc-more">詳しく見る</span>
-      </a>
-      <a class="svc-card" data-c="soccer" href="soccer.html">
-        <h2 class="lockup big-word" aria-label="VX SOCCER"><img src="assets/logo.svg" alt=""><i></i><span>SOCCER</span></h2>
-        <p class="svc-kind">新しいサッカーチーム</p>
-        <p class="svc-copy">選手一人ひとりが、生き生きとサッカーできるチームを。</p>
-        <span class="svc-status">U-12・U-9 メンバー募集</span>
-        <span class="svc-more">詳しく見る</span>
-      </a>
-      <a class="svc-card" data-c="apparel" href="apparel.html">
-        <h2 class="lockup big-word" aria-label="VX APPAREL"><img src="assets/logo.svg" alt=""><i></i><span>APPAREL</span></h2>
-        <p class="svc-kind">トレーニングウェア</p>
-        <p class="svc-copy">コーチが着ているウェアを、そのまま。</p>
-        <span class="svc-status">予約受付中</span>
-        <span class="svc-more">詳しく見る</span>
-      </a>
-      </div>
+      <nav class="cat-jump" aria-label="Categories"><a href="#cat-personal"><b>01</b>PERSONAL</a><a href="#cat-gym"><b>02</b>GYM</a><a href="#cat-soccer"><b>03</b>SOCCER</a><a href="#cat-apparel"><b>04</b>APPAREL</a></nav>
+    </div>
+  </section>
+  <section class="cat" id="cat-personal">
+    <div class="wrap">
+      <p class="cat-num">01</p>
+      <h2 class="lockup big-word" aria-label="VX PERSONAL"><img src="assets/logo.svg" alt=""><i></i><span>PERSONAL</span></h2>
+      <p class="cat-kind">サッカーのパーソナル指導</p>
+      <span class="svc-status">受付中</span>
+      
+      <p class="cat-copy">身体能力とサッカーの技術を、マンツーマンで伸ばす。</p>
+      <ul class="cat-facts"><li>マンツーマン指導</li><li>初回体験 ¥5,500</li><li>初心者〜上級者</li></ul>
+      <a class="svc-more cat-btn" href="personal.html">詳しく見る</a>
+    </div>
+  </section>
+  <section class="cat" id="cat-gym">
+    <div class="wrap">
+      <p class="cat-num">02</p>
+      <h2 class="lockup big-word" aria-label="VX GYM"><img src="assets/logo.svg" alt=""><i></i><span>GYM</span></h2>
+      <p class="cat-kind">子どもの運動能力ジム</p>
+      <span class="svc-status">西麻布・近日オープン</span>
+      <a class="cat-img" href="gym.html"><img src="assets/gym-entrance.jpg" alt="" loading="lazy" width="1536" height="1024"></a>
+      <p class="cat-copy">お子さんの成長が、数字で見える。</p>
+      <ul class="cat-facts"><li>パワー・ジャンプ・スピードを計測</li><li>月額 ¥17,800〜</li><li>競技を問わず</li></ul>
+      <a class="svc-more cat-btn" href="gym.html">詳しく見る</a>
+    </div>
+  </section>
+  <section class="cat" id="cat-soccer">
+    <div class="wrap">
+      <p class="cat-num">03</p>
+      <h2 class="lockup big-word" aria-label="VX SOCCER"><img src="assets/logo.svg" alt=""><i></i><span>SOCCER</span></h2>
+      <p class="cat-kind">新しいサッカーチーム</p>
+      <span class="svc-status">U-12・U-9 メンバー募集</span>
+      <a class="cat-img" href="soccer.html"><img src="assets/football-kit.jpg" alt="" loading="lazy" width="1536" height="1024"></a>
+      <p class="cat-copy">選手一人ひとりが、生き生きとサッカーできるチームを。</p>
+      <ul class="cat-facts"><li>U-12・U-9</li><li>身体能力 × サッカー教育</li><li>オフィシャルユニフォーム</li></ul>
+      <a class="svc-more cat-btn" href="soccer.html">詳しく見る</a>
+    </div>
+  </section>
+  <section class="cat" id="cat-apparel">
+    <div class="wrap">
+      <p class="cat-num">04</p>
+      <h2 class="lockup big-word" aria-label="VX APPAREL"><img src="assets/logo.svg" alt=""><i></i><span>APPAREL</span></h2>
+      <p class="cat-kind">トレーニングウェア</p>
+      <span class="svc-status">予約受付中</span>
+      <a class="cat-img" href="apparel.html"><img src="assets/apparel-colors.jpg" alt="" loading="lazy" width="1536" height="1024"></a>
+      <p class="cat-copy">コーチが着ているウェアを、そのまま。</p>
+      <ul class="cat-facts"><li>3点セット ¥19,800</li><li>メンズ・ウィメンズ 6色</li><li>予約注文</li></ul>
+      <a class="svc-more cat-btn" href="apparel.html">詳しく見る</a>
     </div>
   </section>
 
