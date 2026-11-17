@@ -306,19 +306,22 @@ body { max-width: 440px; margin-inline: auto !important; box-shadow: 0 0 0 1px #
 .site-header { max-width: 440px; margin-inline: auto; }
 .cta-bar { max-width: 440px; margin-inline: auto; }
 
-/* Action buttons: easier to tap */
-:root { --line: #06c755; --line-press: #05a647; }
-.btn { font-weight: 700 !important; letter-spacing: .08em !important; transition: transform .08s ease, filter .15s, background .15s, color .15s; }
+/* Action buttons: easier to tap (soft sand tone) */
+:root { --cta: #e7e0d3; --cta-press: #d8cfbf; --cta-ink: #141414; }
+.btn { font-weight: 700 !important; letter-spacing: .08em !important; transition: transform .08s ease, background .15s, color .15s; }
 .btn:active { transform: scale(.98); }
-a.btn[href*="lin.ee"]:not(.btn-neon), .order button.btn { background: var(--line) !important; color: #fff !important; border-color: var(--line) !important; box-shadow: 0 6px 18px rgba(6, 199, 85, .28); }
-a.btn[href*="lin.ee"]:not(.btn-neon):hover, .order button.btn:hover { background: var(--line-press) !important; }
+a.btn[href*="lin.ee"]:not(.btn-neon), .order button.btn { background: var(--cta) !important; color: var(--cta-ink) !important; border-color: var(--cta) !important; }
+a.btn[href*="lin.ee"]:not(.btn-neon):hover, .order button.btn:hover { background: var(--cta-press) !important; border-color: var(--cta-press) !important; }
+.on-paper a.btn[href*="lin.ee"]:not(.btn-neon) { background: #ddd5c6 !important; border-color: #c9bfad !important; }
+.on-paper a.btn[href*="lin.ee"]:not(.btn-neon):hover { background: #cfc6b5 !important; }
 a.btn[href*="lin.ee"]::after, .order button.btn::after, .btn-ig::after, .btn-neon::after { content: "›"; font-size: 22px; line-height: 1; margin-left: 4px; }
-.btn-neon { box-shadow: 0 6px 18px rgba(212, 255, 42, .25); }
 .btn-ig { background: transparent; color: inherit; border: 1px solid currentColor !important; }
 .btn-ig svg { width: 22px; height: 22px; }
 .on-paper .btn-ig:hover { background: var(--ink); color: var(--paper); }
-.cta-bar .p { background: var(--line) !important; color: #fff !important; font-weight: 700; }
-.c-card.main { background: var(--line) !important; color: #fff !important; border-color: var(--line) !important; }
+.cta-bar .p { background: var(--cta) !important; color: var(--cta-ink) !important; font-weight: 700; }
+.c-card::after { content: "›"; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font-size: 26px; }
+.c-card { position: relative; padding-right: 48px !important; }
+.c-card.main { background: var(--cta) !important; color: var(--cta-ink) !important; border-color: var(--cta) !important; }
 </style>
 </head>
 <body>
