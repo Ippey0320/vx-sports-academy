@@ -420,3 +420,25 @@ mark.hl { background: linear-gradient(transparent 55%, var(--neon) 55%); color: 
 .cat-facts { list-style: none; padding: 0; margin: 0; width: 100%; display: grid; border-top: 1px solid var(--line-dark); }
 .cat-facts li { padding: 12px 4px; border-bottom: 1px solid var(--line-dark); font-size: 15px; letter-spacing: .04em; }
 .cat-btn { margin-top: 4px; min-height: 48px; padding: 12px 32px; text-decoration: none; }
+
+/* Landing hero v2 */
+.hero2 { position: relative; overflow: hidden; min-height: min(86svh, 760px); display: grid; align-items: end; color: #fff; background: #050506; }
+.hero2-bg { position: absolute; inset: 0; background: url(gym-entrance.jpg) center 40% / cover no-repeat; filter: grayscale(1) contrast(1.1) brightness(.55); transform: scale(1.06); }
+.hero2::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,5,6,.35) 0%, rgba(5,5,6,.55) 45%, #0b0b0c 100%); }
+.hero2-in { position: relative; z-index: 1; display: grid; justify-items: center; text-align: center; gap: 14px; padding-block: 72px 48px; }
+.hero2-logo { width: 120px; height: auto; }
+.hero2-name { font-family: var(--display); font-stretch: 125%; font-weight: 300; letter-spacing: .5em; font-size: 11px; margin: -4px 0 18px .5em; color: #d6d6da; }
+.hero2-h { font-family: var(--display); font-stretch: 112%; font-weight: 600; font-size: 46px; line-height: 1.02; letter-spacing: -.01em; text-transform: uppercase; }
+.hero2-h em { font-style: normal; color: var(--neon); }
+.hero2-sub { font-size: 19px; font-weight: 700; letter-spacing: .08em; margin-top: 6px; }
+.hero2-lead { font-size: 14px; color: #c9c9cf; line-height: 1.9; max-width: 22em; word-break: auto-phrase; text-wrap: balance; }
+.hero2-btns { display: grid; gap: 10px; width: 100%; max-width: 340px; margin-top: 14px; }
+.hero2-btns .svc-more { justify-content: center; min-height: 52px; text-decoration: none; }
+.hero2-line { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; border: 1px solid rgba(255,255,255,.6); color: #fff; text-decoration: none; font-weight: 700; letter-spacing: .08em; font-size: 15px; }
+.hero2-line svg { width: 20px; height: 20px; }
+.hero2-scroll { width: 1px; height: 44px; background: linear-gradient(#fff, transparent); margin-top: 18px; animation: vxscroll 2s ease-in-out infinite; }
+@keyframes vxscroll { 0% { transform: scaleY(0); transform-origin: top; } 50% { transform: scaleY(1); transform-origin: top; } 51% { transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
+@media (prefers-reduced-motion: reduce) { .hero2-scroll { animation: none; } }
+
+.hero2-bg { background-position: 8% 90%; filter: grayscale(1) contrast(1.15) brightness(.38); }
+.hero2::after { background: linear-gradient(180deg, rgba(5,5,6,.55) 0%, rgba(5,5,6,.6) 50%, #0b0b0c 100%); }
