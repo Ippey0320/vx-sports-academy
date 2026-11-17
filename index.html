@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>VX SPORTS ACADEMY</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="VX SPORTS ACADEMY 公式サイト。VX PERSONAL（パーソナルトレーニング）受付中。VX GYM 入会受付開始・開業準備中。VX SOCCER まもなく発足。">
+<meta name="description" content="VX SPORTS ACADEMY 公式サイト。VX PERSONAL（パーソナルトレーニング）受付中。VX SOCCER まもなく発足。VX GYM 開業準備中。VX COACH KIT 予約受付中。">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:title" content="VX SPORTS ACADEMY">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400;62..125,600;62..125,800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300;62..125,400;62..125,500;62..125,600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
 <style>
 /* Layout: スマホ1カラム基準。黒（ブランド）と白（読む場所）の帯を交互に。下部に体験申し込みバーを固定 */
 :root {
@@ -43,7 +43,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid currentColor; outline
 h1, h2, h3 { text-wrap: balance; margin: 0; }
 p, ul, ol { margin: 0; }
 .wrap { max-width: 1040px; margin: 0 auto; padding-left: var(--gl); padding-right: var(--gr); }
-.en { font-family: var(--display); font-weight: 600; font-stretch: 125%; letter-spacing: .24em; font-size: 13px; text-transform: uppercase; }
+.en { font-family: var(--display); font-weight: 400; font-stretch: 125%; letter-spacing: .3em; font-size: 13px; text-transform: uppercase; }
 
 /* Header */
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 20; background: var(--ink); }
@@ -53,16 +53,17 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .brand img { height: 22px; width: auto; }
 .brand span { font-family: var(--display); font-weight: 600; font-stretch: 125%; font-size: 11px; letter-spacing: .34em; white-space: nowrap; }
 .tabs { display: flex; gap: 6px; padding-bottom: 12px; }
-.tabs a { flex: 1; text-align: center; text-decoration: none; font-family: var(--display); font-weight: 800; font-stretch: 112%; font-size: 13px; letter-spacing: .1em; padding: 9px 4px; border: 1px solid var(--line-dark); color: var(--sub-on-ink); white-space: nowrap; }
+.tabs a { flex: 1; text-align: center; text-decoration: none; font-family: var(--display); font-weight: 400; font-stretch: 125%; font-size: 11px; letter-spacing: .22em; padding: 9px 4px; border: 1px solid var(--line-dark); color: var(--sub-on-ink); white-space: nowrap; }
 .tabs a:hover { color: var(--text-on-ink); border-color: var(--text-on-ink); }
-.tabs a.main { background: var(--text-on-ink); color: var(--ink); border-color: var(--text-on-ink); }
+.tabs a.main { color: var(--text-on-ink); border-color: var(--text-on-ink); }
+button.btn { font-family: inherit; cursor: pointer; width: 100%; }
 @media (min-width: 760px) {
   .site-header .wrap { display: flex; align-items: center; justify-content: space-between; }
-  .tabs { padding: 0; width: 420px; }
+  .tabs { padding: 0; width: 520px; }
 }
 
 /* Buttons */
-.btn { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; padding: 14px 24px; font-weight: 700; font-size: 17px; text-decoration: none; border: 2px solid currentColor; text-align: center; line-height: 1.4; transition: background .15s, color .15s; }
+.btn { border-width: 1px !important; display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; padding: 14px 24px; font-weight: 500; font-size: 16px; letter-spacing: .12em; text-decoration: none; border: 2px solid currentColor; text-align: center; line-height: 1.4; transition: background .15s, color .15s; }
 .btn svg { width: 22px; height: 22px; flex: none; }
 .on-ink .btn-solid { background: var(--text-on-ink); color: var(--ink); border-color: var(--text-on-ink); }
 .on-ink .btn-solid:hover { background: transparent; color: var(--text-on-ink); }
@@ -82,23 +83,24 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .sub { color: var(--sub-on-ink); }
 .on-paper .sub { color: var(--sub-on-paper); }
 
-.status { display: inline-block; justify-self: start; font-size: 14px; font-weight: 700; letter-spacing: .08em; padding: 4px 12px; border: 2px solid currentColor; }
-.status.fill { background: var(--text-on-ink); color: var(--ink); border-color: var(--text-on-ink); }
-.on-paper .status.fill { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.status { display: inline-block; justify-self: start; font-size: 13px; font-weight: 500; letter-spacing: .16em; padding: 5px 14px; border: 1px solid currentColor; }
+.status.fill { background: transparent; color: var(--text-on-ink); border-color: var(--text-on-ink); }
+.on-paper .status.fill { background: transparent; color: var(--ink); border-color: var(--ink); }
 
 /* Hero */
 .hero { padding-block: 48px 56px; }
 .hero .stack { gap: 24px; }
-.hero-mark { width: min(300px, 72%); }
-.hero h1 { font-weight: 900; font-size: clamp(28px, 7.4vw, 60px); line-height: 1.35; letter-spacing: .02em; }
-.hero-lead { color: var(--sub-on-ink); font-size: 17px; max-width: 32em; }
+.hero-mark { width: min(440px, 86%); }
+.hero-name { font-family: var(--display); font-weight: 300; font-stretch: 125%; letter-spacing: .62em; font-size: clamp(12px, 3.4vw, 18px); margin-top: -8px; }
+.hero h1 { font-weight: 500; font-size: clamp(22px, 5.6vw, 38px); line-height: 1.6; letter-spacing: .12em; }
+.hero-lead { color: var(--sub-on-ink); font-size: 16px; letter-spacing: .04em; max-width: 32em; }
 
 /* Section head */
 .sec-head { display: grid; gap: 14px; }
-.sec-logo img { height: clamp(44px, 11vw, 76px); width: auto; }
+.sec-logo img { height: clamp(40px, 10vw, 68px); width: auto; }
 .sec-title { font-family: var(--display); font-weight: 400; font-stretch: 125%; letter-spacing: .1em; font-size: clamp(34px, 9vw, 64px); line-height: 1.05; }
 .sec-title b { font-weight: 800; }
-.sec-head h2.catch { font-weight: 900; font-size: clamp(26px, 6.6vw, 40px); line-height: 1.45; }
+.catch { font-weight: 500 !important; font-size: clamp(18px, 4.7vw, 30px) !important; line-height: 1.7 !important; letter-spacing: .06em; }
 .lead { font-size: 17px; max-width: 34em; }
 
 /* Points */
@@ -108,15 +110,15 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .on-ink .point { border-color: var(--line-dark); background: var(--ink-2); }
 .point .en { font-size: 12px; color: var(--sub-on-paper); }
 .on-ink .point .en { color: var(--sub-on-ink); }
-.point h3 { font-size: 20px; font-weight: 900; line-height: 1.45; }
+.point h3 { font-size: 18px; font-weight: 700; letter-spacing: .06em; line-height: 1.45; }
 .point p { font-size: 16px; line-height: 1.75; }
 
 /* Flow + price cards */
 .flow { list-style: none; padding: 0; display: grid; gap: 0; border-top: 2px solid var(--ink); }
 .flow li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 4px 14px; padding: 22px 0; border-bottom: 1px solid var(--line-light); }
-.flow .num { font-family: var(--display); font-weight: 800; font-stretch: 112%; font-size: 22px; line-height: 1.3; grid-row: span 3; }
-.flow .name { font-size: 18px; font-weight: 900; line-height: 1.45; }
-.flow .price { font-family: var(--display); font-weight: 800; font-size: 30px; line-height: 1.2; font-variant-numeric: tabular-nums; letter-spacing: .01em; }
+.flow .num { font-family: var(--display); font-weight: 300; font-stretch: 125%; font-size: 22px; line-height: 1.3; grid-row: span 3; }
+.flow .name { font-size: 17px; font-weight: 700; letter-spacing: .06em; line-height: 1.45; }
+.flow .price { font-family: var(--display); font-weight: 500; font-stretch: 112%; font-size: 28px; line-height: 1.2; font-variant-numeric: tabular-nums; letter-spacing: .01em; }
 .flow .price small { font-family: var(--body); font-size: 14px; font-weight: 500; color: var(--sub-on-paper); margin-left: 6px; letter-spacing: 0; }
 .flow .desc { font-size: 15px; color: var(--sub-on-paper); line-height: 1.7; }
 @media (min-width: 760px) {
@@ -125,7 +127,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   .flow .price { grid-column: 3; grid-row: 1 / span 2; text-align: right; }
 }
 .note-box { padding: 20px; border-left: 4px solid var(--ink); background: #ffffff; font-size: 16px; line-height: 1.8; }
-.note-box b { font-weight: 900; }
+.note-box b { font-weight: 700; }
 
 /* Kids/gym list */
 .checks { list-style: none; padding: 0; display: grid; border-top: 2px solid currentColor; }
@@ -136,10 +138,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 /* Contact */
 .contact-grid { display: grid; gap: 12px; }
 @media (min-width: 760px) { .contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.c-card { display: grid; gap: 4px; padding: 20px 22px; border: 2px solid var(--text-on-ink); text-decoration: none; transition: background .15s, color .15s; min-width: 0; }
+.c-card { display: grid; gap: 4px; padding: 20px 22px; border: 1px solid var(--text-on-ink); text-decoration: none; transition: background .15s, color .15s; min-width: 0; }
 .c-card:hover { background: var(--text-on-ink); color: var(--ink); }
 .c-card .en { font-size: 12px; opacity: .75; }
-.c-card strong { font-size: 19px; font-weight: 900; display: flex; align-items: center; gap: 10px; }
+.c-card strong { font-size: 17px; font-weight: 500; letter-spacing: .06em; display: flex; align-items: center; gap: 10px; }
 .c-card strong svg { width: 24px; height: 24px; flex: none; }
 .c-card .s { font-size: 14px; opacity: .8; }
 .c-card.main { background: var(--text-on-ink); color: var(--ink); }
@@ -147,12 +149,50 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
 /* Sticky CTA */
 .cta-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 18; background: var(--ink); border-top: 1px solid var(--line-dark); padding: 10px var(--gr) calc(10px + env(safe-area-inset-bottom, 0px)) var(--gl); display: flex; gap: 10px; }
-.cta-bar a { flex: 1; min-height: 52px; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 900; font-size: 16px; text-decoration: none; }
+.cta-bar a { flex: 1; min-height: 52px; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 500; font-size: 15px; letter-spacing: .1em; text-decoration: none; }
 .cta-bar .p { background: var(--text-on-ink); color: var(--ink); }
-.cta-bar .s { flex: 0 0 auto; padding: 0 18px; border: 2px solid var(--text-on-ink); }
+.cta-bar .s { flex: 0 0 auto; padding: 0 18px; border: 1px solid var(--text-on-ink); }
 .cta-bar svg { width: 22px; height: 22px; flex: none; }
 @media (min-width: 760px) { .cta-bar { justify-content: flex-end; } .cta-bar a.p { flex: 0 0 340px; } }
 
+/* Logo lockups: VX ｜ NAME（GYM/SOCCERのロゴと同じ比率） */
+.lockup { --h: clamp(40px, 10vw, 68px); display: flex; align-items: center; gap: calc(var(--h) * .44); height: var(--h); }
+.lockup img { height: 100%; width: auto; }
+.lockup i { width: 2px; height: 72%; background: currentColor; }
+.lockup span { font-family: var(--display); font-weight: 300; font-stretch: 125%; letter-spacing: .2em; font-size: calc(var(--h) * .42); line-height: 1; }
+
+/* Apparel */
+.apparel-img { width: 100%; height: auto; border: 1px solid var(--line-dark); }
+.products { display: grid; gap: 12px; }
+@media (min-width: 760px) { .products { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.product { border: 1px solid var(--line-dark); background: var(--ink-2); padding: 20px; display: grid; gap: 4px; align-content: start; min-width: 0; }
+.product .name { font-size: 16px; font-weight: 500; letter-spacing: .06em; }
+.product .price { font-family: var(--display); font-weight: 400; font-stretch: 112%; font-size: 26px; font-variant-numeric: tabular-nums; }
+.product .price small { font-family: var(--body); font-size: 13px; color: var(--sub-on-ink); margin-left: 6px; }
+.product .meta { font-size: 14px; color: var(--sub-on-ink); line-height: 1.7; }
+.product.set { border-color: var(--text-on-ink); }
+.order { border: 1px solid var(--line-dark); padding: 22px 20px; display: grid; gap: 18px; }
+.order h3 { font-family: var(--display); font-weight: 300; font-stretch: 125%; letter-spacing: .3em; font-size: 14px; }
+.field { display: grid; gap: 8px; }
+.field > span { font-size: 14px; color: var(--sub-on-ink); letter-spacing: .08em; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips label { position: relative; }
+.chips input { position: absolute; opacity: 0; inset: 0; margin: 0; }
+.chips label span { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 14px; border: 1px solid var(--line-dark); font-size: 14px; letter-spacing: .04em; cursor: pointer; }
+.chips input:checked + span { border-color: var(--text-on-ink); background: var(--text-on-ink); color: var(--ink); }
+.chips input:focus-visible + span { outline: 2px solid var(--text-on-ink); outline-offset: 2px; }
+.sw { width: 14px; height: 14px; border-radius: 50%; border: 1px solid #ffffff55; flex: none; }
+.qty { display: flex; align-items: center; gap: 8px; }
+.qty button { width: 44px; height: 44px; background: transparent; color: inherit; border: 1px solid var(--line-dark); font-size: 20px; cursor: pointer; }
+.qty output { min-width: 2.5em; text-align: center; font-family: var(--display); font-size: 20px; }
+.summary { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; padding-top: 16px; border-top: 1px solid var(--line-dark); }
+.summary .total { font-family: var(--display); font-weight: 400; font-stretch: 112%; font-size: 30px; font-variant-numeric: tabular-nums; }
+.copy-msg { font-size: 14px; color: var(--sub-on-ink); min-height: 1.5em; }
+.order-text { width: 100%; min-height: 120px; background: var(--ink-2); color: var(--text-on-ink); border: 1px solid var(--line-dark); padding: 12px; font: 14px/1.7 var(--body); }
+
+.targets { display: grid; gap: 10px; }
+.targets p { display: flex; gap: 10px; }
+.targets b { font-family: var(--display); font-weight: 400; font-stretch: 125%; letter-spacing: .14em; font-size: 26px; padding: 10px 22px; border: 1px solid currentColor; }
 footer .wrap { padding-block: 28px; display: grid; gap: 6px; font-size: 13px; color: var(--sub-on-ink); border-top: 1px solid var(--line-dark); }
 footer .en { color: var(--text-on-ink); font-size: 12px; }
 </style>
@@ -169,8 +209,9 @@ footer .en { color: var(--text-on-ink); font-size: 12px; }
     </div>
     <nav class="tabs" aria-label="事業">
       <a class="main" href="#personal">PERSONAL</a>
-      <a href="#gym">GYM</a>
       <a href="#soccer">SOCCER</a>
+      <a href="#gym">GYM</a>
+      <a href="#apparel">APPAREL</a>
     </nav>
   </div>
 </header>
@@ -180,7 +221,7 @@ footer .en { color: var(--text-on-ink); font-size: 12px; }
   <!-- HERO：今の主役はVX PERSONAL -->
   <section class="hero on-ink">
     <div class="wrap stack">
-      <img class="hero-mark" src="assets/logo.svg" alt="VX SPORTS ACADEMY">
+      <div style="display:grid;gap:18px"><img class="hero-mark" src="assets/logo.svg" alt="VX"><p class="hero-name">SPORTS ACADEMY</p></div>
       <span class="status fill">VX PERSONAL 受付中</span>
       <h1>身体能力と<br>サッカーの技術を、<br>マンツーマンで伸ばす。</h1>
       <p class="hero-lead">欧州基準のトレーニングで「本気でうまくなりたい選手」を全力でサポートします。まずは初回体験から。</p>
@@ -195,8 +236,8 @@ footer .en { color: var(--text-on-ink); font-size: 12px; }
   <section class="band on-paper" id="personal">
     <div class="wrap stack">
       <div class="sec-head">
-        <p class="sec-title">VX <b>PERSONAL</b></p>
-        <h2 class="catch">一人ひとりの課題に合わせて、<br>動ける身体とプレーの質を引き上げる。</h2>
+        <h2 class="lockup" aria-label="VX PERSONAL"><img src="assets/logo-black.svg" alt=""><i></i><span>PERSONAL</span></h2>
+        <p class="catch">一人ひとりの課題に合わせて、<br>動ける身体とプレーの質を引き上げる。</p>
       </div>
       <div class="points">
         <div class="point">
@@ -229,11 +270,35 @@ footer .en { color: var(--text-on-ink); font-size: 12px; }
     </div>
   </section>
 
-  <!-- VX GYM：入会受付開始・開業準備中 -->
-  <section class="band on-ink" id="gym">
+  <!-- VX SOCCER：これから発足 -->
+  <section class="band on-ink" id="soccer">
     <div class="wrap stack">
       <div class="sec-head">
-        <h2 class="sec-logo"><img src="assets/vx-gym-white.svg" alt="VX GYM"></h2>
+        <h2 class="sec-logo"><img src="assets/vx-soccer-white.svg" alt="VX SOCCER"></h2>
+        <span class="status fill">まもなく発足・U-12／U-9 メンバー募集</span>
+        <p class="catch" style="font-weight:900;font-size:clamp(26px,6.6vw,40px);line-height:1.45">選手一人ひとりが、<br>生き生きとサッカーできるチームを。</p>
+      </div>
+      <p class="lead sub">アカデミーにはまだない、身体能力を本気で伸ばすトレーニング。そのうえで、トップレベルのサッカー教育を受けられる。VX SOCCERは、この2つを両立するチームとして発足します。</p>
+      <div class="points four">
+        <div class="point"><p class="en">Agility</p><h3>アジリティ</h3><p>相手より一歩先に動ける身体へ。</p></div>
+        <div class="point"><p class="en">Physical</p><h3>フィジカル</h3><p>当たり負けしない体幹と走りきる体力。</p></div>
+        <div class="point"><p class="en">Athleticism</p><h3>運動能力向上</h3><p>すべてのプレーの土台になる力。</p></div>
+        <div class="point"><p class="en">Pass Football</p><h3>パスサッカー</h3><p>トップレベルの指導で、全員でボールをつなぐ。</p></div>
+      </div>
+      <div class="targets"><span class="en sub">Category</span><p><b>U-12</b><b>U-9</b></p></div>
+      <p class="sub">練習日・会場は決まり次第お知らせします。</p>
+      <div class="btn-row">
+        <!-- VX SOCCER用LINEのURLが決まったら href を差し替え（今はInstagram） -->
+        <a class="btn btn-solid" href="https://www.instagram.com/vx_sports_academy/" target="_blank" rel="noopener" data-line="soccer">入団について問い合わせる</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VX GYM：入会受付開始・開業準備中 -->
+  <section class="band on-paper" id="gym">
+    <div class="wrap stack">
+      <div class="sec-head">
+        <h2 class="sec-logo"><img src="assets/vx-gym-black.svg" alt="VX GYM"></h2>
         <span class="status fill">入会受付開始・開業準備中</span>
         <p class="catch" style="font-weight:900;font-size:clamp(26px,6.6vw,40px);line-height:1.45">サッカーだけじゃない。<br>すべての競技の土台をつくる。</p>
       </div>
@@ -252,31 +317,69 @@ footer .en { color: var(--text-on-ink); font-size: 12px; }
     </div>
   </section>
 
-  <!-- VX SOCCER：これから発足 -->
-  <section class="band on-paper" id="soccer">
+  <!-- VX APPAREL：予約注文 -->
+  <section class="band on-ink" id="apparel">
     <div class="wrap stack">
       <div class="sec-head">
-        <h2 class="sec-logo"><img src="assets/vx-soccer-black.svg" alt="VX SOCCER"></h2>
-        <span class="status fill">まもなく発足・メンバー募集</span>
-        <p class="catch" style="font-weight:900;font-size:clamp(26px,6.6vw,40px);line-height:1.45">選手一人ひとりが、<br>生き生きとサッカーできるチームを。</p>
+        <h2 class="lockup" aria-label="VX APPAREL"><img src="assets/logo.svg" alt=""><i></i><span>APPAREL</span></h2>
+        <span class="status fill">予約受付中 ／ PRE-ORDER</span>
+        <p class="catch">コーチが着ているウェアを、<br>そのまま。VX COACH KIT</p>
       </div>
-      <p class="lead sub">アカデミーにはまだない、身体能力を本気で伸ばすトレーニング。そのうえで、トップレベルのサッカー教育を受けられる。VX SOCCERは、この2つを両立するチームとして発足します。</p>
-      <div class="points four">
-        <div class="point"><p class="en">Agility</p><h3>アジリティ</h3><p>相手より一歩先に動ける身体へ。</p></div>
-        <div class="point"><p class="en">Physical</p><h3>フィジカル</h3><p>当たり負けしない体幹と走りきる体力。</p></div>
-        <div class="point"><p class="en">Athleticism</p><h3>運動能力向上</h3><p>すべてのプレーの土台になる力。</p></div>
-        <div class="point"><p class="en">Pass Football</p><h3>パスサッカー</h3><p>トップレベルの指導で、全員でボールをつなぐ。</p></div>
+      <img class="apparel-img" src="assets/apparel-colors.jpg" alt="VX COACH KIT。メンズはインクブラック・セージグリーン・ストーン、ウィメンズはライラック・ブラッシュピンク・アイボリー" loading="lazy" width="1536" height="1024">
+      <p class="lead sub">軽量・速乾・吸汗速乾。4方向ストレッチと撥水性、動きやすいスリット、夜でも目立つリフレクティブ。トレーニングにも普段着にも使えるセットアップです。</p>
+      <div class="products">
+        <div class="product"><p class="en sub">T-Shirt</p><p class="name">コーチTシャツ</p><p class="price">¥11,000<small>税込</small></p><p class="meta">高通気・速乾メッシュ</p></div>
+        <div class="product"><p class="en sub">Shorts</p><p class="name">コーチショーツ</p><p class="price">¥8,800<small>税込</small></p><p class="meta">4方向ストレッチ・撥水</p></div>
+        <div class="product"><p class="en sub">Socks</p><p class="name">コーチソックス</p><p class="price">¥2,200<small>税込</small></p><p class="meta">約22cm丈・ブラック</p></div>
+        <div class="product set"><p class="en sub">Full Kit</p><p class="name">3点セット</p><p class="price">¥19,800<small>税込</small></p><p class="meta">Tシャツ＋ショーツ＋ソックス<br>単品合計より¥2,200お得</p></div>
       </div>
-      <p class="sub">対象学年・練習日・会場は決まり次第お知らせします。</p>
-      <div class="btn-row">
-        <!-- VX SOCCER用LINEのURLが決まったら href を差し替え（今はInstagram） -->
-        <a class="btn btn-solid" href="https://www.instagram.com/vx_sports_academy/" target="_blank" rel="noopener" data-line="soccer">入団について問い合わせる</a>
-      </div>
+      <img class="apparel-img" src="assets/apparel-kit.jpg" alt="VX COACH KITの着用イメージとディテール" loading="lazy" width="1536" height="1024">
+
+      <form class="order" id="order-form" aria-label="予約内容をつくる">
+        <h3>PRE-ORDER</h3>
+        <div class="field"><span>アイテム</span>
+          <div class="chips" id="f-item">
+            <label><input type="radio" name="item" value="3点セット" data-price="19800" checked><span>3点セット ¥19,800</span></label>
+            <label><input type="radio" name="item" value="Tシャツ＋ショーツ" data-price="19800"><span>Tシャツ＋ショーツ ¥19,800</span></label>
+            <label><input type="radio" name="item" value="Tシャツ" data-price="11000"><span>Tシャツ ¥11,000</span></label>
+            <label><input type="radio" name="item" value="ショーツ" data-price="8800"><span>ショーツ ¥8,800</span></label>
+            <label><input type="radio" name="item" value="ソックス" data-price="2200"><span>ソックス ¥2,200</span></label>
+          </div>
+        </div>
+        <div class="field"><span>カラー</span>
+          <div class="chips" id="f-color">
+            <label><input type="radio" name="color" value="メンズ インクブラック" checked><span><i class="sw" style="background:#1a1a1c"></i>Ink Black</span></label>
+            <label><input type="radio" name="color" value="メンズ セージグリーン"><span><i class="sw" style="background:#7d8466"></i>Sage Green</span></label>
+            <label><input type="radio" name="color" value="メンズ ストーン"><span><i class="sw" style="background:#cfc7bd"></i>Stone</span></label>
+            <label><input type="radio" name="color" value="ウィメンズ ライラック"><span><i class="sw" style="background:#a99ad1"></i>Lilac</span></label>
+            <label><input type="radio" name="color" value="ウィメンズ ブラッシュピンク"><span><i class="sw" style="background:#d9a3a8"></i>Blush Pink</span></label>
+            <label><input type="radio" name="color" value="ウィメンズ アイボリー"><span><i class="sw" style="background:#efe9dc"></i>Ivory</span></label>
+          </div>
+        </div>
+        <div class="field"><span>サイズ</span>
+          <div class="chips" id="f-size">
+            <label><input type="radio" name="size" value="S"><span>S</span></label>
+            <label><input type="radio" name="size" value="M" checked><span>M</span></label>
+            <label><input type="radio" name="size" value="L"><span>L</span></label>
+            <label><input type="radio" name="size" value="XL"><span>XL</span></label>
+          </div>
+        </div>
+        <div class="field"><span>数量</span>
+          <div class="qty"><button type="button" id="q-minus" aria-label="1つ減らす">−</button><output id="q-val">1</output><button type="button" id="q-plus" aria-label="1つ増やす">＋</button></div>
+        </div>
+        <div class="summary"><span class="sub">合計（税込）</span><span class="total" id="total">¥19,800</span></div>
+        <label class="field" for="order-text"><span>LINEに送る予約内容</span><textarea class="order-text" id="order-text" readonly></textarea></label>
+        <div class="btn-row on-ink">
+          <button type="submit" class="btn btn-solid"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 4C7 4 3 7.2 3 11.2c0 3.6 3.2 6.6 7.5 7.1-.2.9-.6 2.1-.7 2.4 0 .3.3.5.6.3 1.2-.8 4.3-2.8 5.9-4.3 2.3-1.3 3.7-3.3 3.7-5.5C21 7.2 17 4 12 4Z"/></svg>内容をコピーしてLINEで予約</button>
+        </div>
+        <p class="copy-msg" id="copy-msg" aria-live="polite">コピーされたら、開いたLINEのトークに貼り付けて送信してください。</p>
+        <p class="sub" style="font-size:14px">予約注文のため、お届けは予約締切後の生産となります。お支払い方法とお届け時期はLINEでご案内します。</p>
+      </form>
     </div>
   </section>
 
   <!-- Contact -->
-  <section class="band on-ink" id="contact">
+  <section class="band on-ink" id="contact" style="border-top:1px solid var(--line-dark)">
     <div class="wrap stack">
       <div class="sec-head">
         <p class="en sub">Contact</p>
@@ -291,7 +394,7 @@ footer .en { color: var(--text-on-ink); font-size: 12px; }
         <a class="c-card" href="https://www.instagram.com/vx_sports_academy/" target="_blank" rel="noopener">
           <span class="en">Instagram</span>
           <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@vx_sports_academy</strong>
-          <span class="s">VX GYM・VX SOCCERの最新情報とお問い合わせ（DM）</span>
+          <span class="s">VX SOCCER・VX GYMの最新情報とお問い合わせ（DM）</span>
         </a>
       </div>
     </div>
@@ -310,5 +413,30 @@ footer .en { color: var(--text-on-ink); font-size: 12px; }
   <a class="s" href="#price">料金</a>
 </div>
 
+<script>
+(function(){
+  var LINE='https://lin.ee/P7ZYT6p';
+  var f=document.getElementById('order-form'); if(!f) return;
+  var q=1, out=document.getElementById('q-val'), total=document.getElementById('total'), ta=document.getElementById('order-text'), msg=document.getElementById('copy-msg');
+  function val(n){var e=f.querySelector('input[name="'+n+'"]:checked');return e?e:null;}
+  function yen(n){return '¥'+n.toLocaleString('ja-JP');}
+  function update(){
+    var it=val('item'), price=+it.dataset.price*q;
+    out.textContent=q; total.textContent=yen(price);
+    ta.value='【VX COACH KIT 予約】\nアイテム：'+it.value+'\nカラー：'+val('color').value+'\nサイズ：'+val('size').value+'\n数量：'+q+'\n合計：'+yen(price)+'（税込）\nお名前：\n';
+  }
+  f.addEventListener('change',update);
+  document.getElementById('q-minus').onclick=function(){if(q>1){q--;update();}};
+  document.getElementById('q-plus').onclick=function(){if(q<20){q++;update();}};
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var done=function(){msg.textContent='予約内容をコピーしました。LINEのトークに貼り付けて送信してください。';};
+    var fail=function(){ta.select();msg.textContent='上の予約内容を長押しでコピーして、LINEに貼り付けてください。';};
+    try{ navigator.clipboard.writeText(ta.value).then(done,fail); }catch(err){ fail(); }
+    window.open(LINE,'_blank','noopener');
+  });
+  update();
+})();
+</script>
 </body>
 </html>
