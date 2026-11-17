@@ -494,3 +494,43 @@ body { font-feature-settings: "palt" 1; font-kerning: normal; }
 .hero-lead { letter-spacing: .05em; }
 .catch { letter-spacing: .05em; }
 .hero-lead, .cat-copy, .catch { word-break: auto-phrase; text-wrap: balance; }
+
+/* ===== Typography v2：書体と文字組みの統一 =====
+   日本語＝Noto Sans JP（くせのない端正なゴシック）、英数字＝Archivo（ロゴと同じ系統）
+   かなは詰め（palt）、太さは 400 本文／500 強調／700 見出し の3段だけ */
+:root {
+  --body: "Archivo", "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+}
+body { font-family: var(--body); font-weight: 400; font-size: 16px; line-height: 1.9; letter-spacing: .04em; font-feature-settings: "palt" 1; text-rendering: optimizeLegibility; }
+h1, h2, h3, .catch, .gym-catch, .cat-kind, .svc-copy, .point h3, .flow .name, .pcard h3 { font-feature-settings: "palt" 1; }
+
+/* 見出し：大きいほど字間を詰め、太さは700でそろえる */
+.hero h1 { font-weight: 700; font-size: 25px; line-height: 1.55; letter-spacing: .04em; }
+.catch { font-weight: 700 !important; font-size: 20px !important; line-height: 1.6 !important; letter-spacing: .04em; }
+.catch.big { font-size: 30px !important; line-height: 1.45 !important; letter-spacing: .02em; }
+.gym-catch { font-weight: 700; letter-spacing: .02em; }
+h2.catch[style] { font-weight: 700 !important; }
+.cat-kind { font-size: 20px; font-weight: 700; letter-spacing: .06em; }
+.svc-copy, .pcard h3 { font-weight: 700; letter-spacing: .04em; }
+.point h3, .flow .name { font-weight: 700; letter-spacing: .04em; }
+
+/* 本文・補足 */
+.hero-lead { font-size: 15px; line-height: 2; letter-spacing: .05em; color: var(--sub-on-ink); }
+.cat-copy { font-size: 15px; font-weight: 500; letter-spacing: .08em; color: #fff; }
+.cat-facts li { font-size: 14px; font-weight: 400; letter-spacing: .08em; color: #cfcfd4; }
+.svc-kind, .field > span, .kit-price { letter-spacing: .08em; }
+
+/* ラベル・ボタン：小さい文字は字間を広めに */
+.status, .svc-status { font-weight: 500; letter-spacing: .12em; }
+.btn, .svc-more, .cta-bar a, .drawer .drawer-line { font-weight: 700 !important; letter-spacing: .1em !important; }
+
+/* 価格・数字は英数字書体で等幅 */
+.flow .price, .product .price, .summary .total, .gp-row strong, .m-r strong { font-variant-numeric: tabular-nums lining-nums; }
+
+/* 実際のフォントで幅がはみ出していた所の修正 */
+.hero2-h { font-stretch: 100%; font-size: min(46px, 11vw); letter-spacing: 0; }
+.topbar .brand { min-width: 0; }
+.topbar .brand span { font-stretch: 100%; font-size: 10px !important; letter-spacing: .2em !important; }
+@media (max-width: 400px) { .topbar .lang button { min-width: 30px; padding: 4px 5px; } }
+@media (max-width: 370px) { .tabs a { font-stretch: 100%; font-size: 10px; letter-spacing: .1em; padding-inline: 2px; } }
+.tabs a { font-stretch: 112%; letter-spacing: .16em; }
