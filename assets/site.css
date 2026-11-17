@@ -393,3 +393,8 @@ mark.hl { background: linear-gradient(transparent 55%, var(--neon) 55%); color: 
 #personal-top .lockup { --c: #8c3a3a; }
 .svc-copy { word-break: auto-phrase; text-wrap: balance; }
 .hero h1 { word-break: auto-phrase; }
+
+/* No category colors on menus */
+.tabs a::after { display: none !important; }
+.drawer a { border-left-color: transparent !important; }
+.drawer a.on { border-left-color: #fff !important; }
