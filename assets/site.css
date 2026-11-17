@@ -466,3 +466,14 @@ mark.hl { background: linear-gradient(transparent 55%, var(--neon) 55%); color: 
 
 .topbar .lang button { white-space: nowrap; }
 @media (max-width: 370px) { .topbar .brand span { display: none; } .topbar .brand img { height: 15px !important; } }
+
+/* Clearer numbers */
+.cat-jump a { column-gap: 12px; }
+.cat-jump a b { font-family: var(--display); font-stretch: 100%; font-weight: 700; font-size: 24px; color: #fff; letter-spacing: 0; padding-right: 12px; border-right: 1px solid #3a3a40; line-height: 1; font-variant-numeric: tabular-nums; }
+.cat-num { font-family: var(--display); font-stretch: 100%; font-weight: 700; font-size: 18px; letter-spacing: .08em; color: #fff; }
+
+.cat-jump a { padding: 14px 12px; column-gap: 10px; }
+.cat-jump a::after { display: none; }
+.cat-jump a b { font-size: 22px; padding-right: 10px; }
+.cat-jump a strong { font-size: 13px; letter-spacing: .1em; white-space: nowrap; }
+.cat-jump a span { white-space: nowrap; font-size: 11.5px; }
