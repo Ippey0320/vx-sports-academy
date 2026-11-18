@@ -97,9 +97,9 @@ PAGES = {
    'audience': {'@type': 'PeopleAudience', 'audienceType': 'U-12・U-9の子ども'},
   }]),
  'apparel': dict(
-  path='apparel.html', title='VX COACH KIT｜普段着にもなるアパレル 予約受付中｜VX APPAREL',
-  desc='VX SPORTS ACADEMYのアパレル「VX COACH KIT」の予約注文を受付中。Tシャツ ¥11,000、ショーツ ¥8,800、ソックス ¥2,200、3点セット ¥19,800（税込）。軽量・速乾、4方向ストレッチ、撥水。6色・S〜XL。',
-  og='動ける服を、毎日の服に。VX COACH KIT 3点セット ¥19,800（税込）。予約受付中。',
+  path='apparel.html', title='VX MOTION｜普段着にもなるアパレル 予約受付中｜VX APPAREL',
+  desc='VX SPORTS ACADEMYのアパレル「VX MOTION」の予約注文を受付中。Tシャツ ¥11,000、ショーツ ¥8,800、ソックス ¥2,200、3点セット ¥19,800（税込）。軽量・速乾、4方向ストレッチ、撥水。6色・S〜XL。',
+  og='動ける服を、毎日の服に。VX MOTION 3点セット ¥19,800（税込）。予約受付中。',
   name='VX APPAREL',
   faq=[
    ('何を買えますか？', 'Tシャツ ¥11,000、ショーツ ¥8,800、ソックス ¥2,200、3点セット ¥19,800です（すべて税込）。3点セットは単品合計より¥2,200お得です。'),
@@ -111,7 +111,7 @@ PAGES = {
    {'@type': 'Product', 'name': n, 'brand': {'@type': 'Brand', 'name': 'VX SPORTS ACADEMY'}, 'description': d,
     'image': BASE + 'assets/apparel-colors.jpg',
     'offers': JPY(p, n, {'availability': 'https://schema.org/PreOrder', 'seller': {'@id': BASE + '#org'}})}
-   for n, p, d in [('VX COACH KIT 3点セット', 19800, 'Tシャツ・ショーツ・ソックスのセット。6色・S〜XL。'),
+   for n, p, d in [('VX MOTION 3点セット', 19800, 'Tシャツ・ショーツ・ソックスのセット。6色・S〜XL。'),
                    ('VX Tシャツ', 11000, '高通気・速乾メッシュ。'),
                    ('VX ショーツ', 8800, '4方向ストレッチ・撥水。'),
                    ('VX ソックス', 2200, '約22cm丈・ブラック。')]]),
@@ -284,7 +284,7 @@ ABOUT = '''  <section class="band on-ink about" id="about" style="border-top:1px
 H1_SWAPS = {
  'gym': ('<p class="gym-catch">お子さんの成長が、<br><em>数字</em>で見える。</p>', '<h1 class="gym-catch">お子さんの成長が、<br><em>数字</em>で見える。</h1>'),
  'soccer': ('<p class="catch" style="font-weight:900;font-size:27.1px;line-height:1.45">選手一人ひとりが、<br>生き生きとサッカーできるチームを。</p>', '<h1 class="catch big">選手一人ひとりが、<br>生き生きとサッカーできるチームを。</h1>'),
- 'apparel': ('<p class="catch">動ける服を、<br>毎日の服に。VX COACH KIT</p>', '<h1 class="catch">動ける服を、<br>毎日の服に。VX COACH KIT</h1>'),
+ 'apparel': ('<p class="catch">動ける服を、<br>毎日の服に。VX MOTION</p>', '<h1 class="catch">動ける服を、<br>毎日の服に。VX MOTION</h1>'),
 }
 
 esc = lambda s: s.replace('&', '&amp;').replace('"', '&quot;').replace('<', '&lt;')

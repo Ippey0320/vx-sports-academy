@@ -42,6 +42,8 @@ p.lead{font-family:'Noto Sans JP';font-weight:500;font-size:34px;line-height:1.7
 .bar{width:84px;height:5px;background:${NEON};margin:34px 0 0}
 .foot{position:absolute;left:72px;right:72px;bottom:56px;display:flex;justify-content:space-between;font-stretch:125%;font-size:18px;letter-spacing:.3em;color:#7d7d85;z-index:5}
 .neon{color:${NEON}}
+.whole{position:absolute;left:0;top:140px;width:1080px;height:auto;display:block}
+.below{position:absolute;left:72px;right:72px;bottom:110px;z-index:5}
 .list{margin-top:44px;border-top:1px solid #2a2a2e}
 .list div{display:grid;grid-template-columns:200px 1fr;align-items:baseline;padding:26px 0;border-bottom:1px solid #2a2a2e}
 .list b{font-stretch:112%;font-weight:500;font-size:30px;color:#9a9aa2;letter-spacing:.04em}
@@ -68,8 +70,8 @@ p.lead{font-family:'Noto Sans JP';font-weight:500;font-size:34px;line-height:1.7
 .price.hl b{color:${NEON}}
 `;
 
-const page = (n, total, inner, { photo, pos, color } = {}) => `
-${photo ? `<div class="photo" style="background-image:url(${photo});background-position:${pos || 'center'}${color ? ';filter:none' : ''}"></div><div class="shade"></div>` : ''}
+const page = (n, total, inner, { photo, pos, color, whole } = {}) => `
+${photo && whole ? `<img class="whole" src="${photo}">` : ''}${photo && !whole ? `<div class="photo" style="background-image:url(${photo});background-position:${pos || 'center'}${color ? ';filter:none' : ''}"></div><div class="shade"></div>` : ''}
 <div class="top"><img src="${LOGO}"><span>${String(n).padStart(2, '0')} / ${String(total).padStart(2, '0')}</span></div>
 ${inner}
 <div class="foot"><span>VX SPORTS ACADEMY</span><span>@vx_sports_academy</span></div>`;
@@ -93,10 +95,10 @@ const SETS = {
     (n, t) => page(n, t, `<div class="mid"><p class="kicker">PRE-REGISTRATION</p><h2>オープン情報を、<br>いちばん先に。</h2><div class="cta"><p>先行予約は、プロフィールのLINEで<br>「ジム」と送ってください。</p><small>オープン日・料金・体験会のご案内を優先してお送りします（無料）</small></div></div>`),
   ],
   wear: [
-    (n, t) => page(n, t, `<div class="body"><p class="kicker">VX APPAREL｜PRE-ORDER</p><h1>動ける服を、<br>毎日の服に。</h1><div class="bar"></div><p class="lead">VX COACH KIT</p></div>`, { photo: asset('apparel-kit-2.webp'), pos: 'center 35%', color: true }),
+    (n, t) => page(n, t, `<div class="below"><p class="kicker">VX APPAREL｜PRE-ORDER</p><h1>動ける服を、<br>毎日の服に。</h1><div class="bar"></div><p class="lead">VX MOTION</p></div>`, { photo: asset('apparel-kit-2.webp'), whole: true }),
     (n, t) => page(n, t, `<div class="mid"><p class="kicker">MATERIAL</p><h2>街でも、<br>練習でも。</h2><div class="list"><div><b>01</b><span>軽量・速乾</span></div><div><b>02</b><span>4方向ストレッチ</span></div><div><b>03</b><span>撥水</span></div><div><b>04</b><span>動きやすいスリット</span></div><div><b>05</b><span>夜でも目立つリフレクティブ</span></div></div></div>`),
-    (n, t) => page(n, t, `<div class="body" style="bottom:120px"><p class="kicker">6 COLORS</p><h2>メンズ・ウィメンズ<br>6色。</h2><p class="lead">Ink Black／Sage Green／Stone<br>Lilac／Blush Pink／Ivory</p></div>`, { photo: asset('apparel-colors.webp'), pos: 'center 30%', color: true }),
-    (n, t) => page(n, t, `<div class="mid"><p class="kicker">PRICE｜税込</p><h2>VX COACH KIT</h2><div style="margin-top:40px;border-top:1px solid #2a2a2e"><div class="price"><span>Tシャツ</span><b>¥11,000</b></div><div class="price"><span>ショーツ</span><b>¥8,800</b></div><div class="price"><span>ソックス</span><b>¥2,200</b></div><div class="price hl"><span>3点セット</span><b>¥19,800</b></div></div><p class="small">3点セットは単品合計より¥2,200お得｜サイズ S・M・L・XL</p></div>`),
+    (n, t) => page(n, t, `<div class="below"><p class="kicker">6 COLORS</p><h2>メンズ・ウィメンズ<br>6色。</h2><p class="lead">Ink Black／Sage Green／Stone<br>Lilac／Blush Pink／Ivory</p></div>`, { photo: asset('apparel-colors.webp'), whole: true }),
+    (n, t) => page(n, t, `<div class="mid"><p class="kicker">PRICE｜税込</p><h2>VX MOTION</h2><div style="margin-top:40px;border-top:1px solid #2a2a2e"><div class="price"><span>Tシャツ</span><b>¥11,000</b></div><div class="price"><span>ショーツ</span><b>¥8,800</b></div><div class="price"><span>ソックス</span><b>¥2,200</b></div><div class="price hl"><span>3点セット</span><b>¥19,800</b></div></div><p class="small">3点セットは単品合計より¥2,200お得｜サイズ S・M・L・XL</p></div>`),
     (n, t) => page(n, t, `<div class="mid"><p class="kicker">PRE-ORDER</p><h2>予約受付中。</h2><div class="cta"><p>ご予約は、プロフィールのリンクから。<br>サイズ・色のご相談はDMで。</p><small>予約締切後の生産です。お届け時期はLINEでご案内します。</small></div></div>`),
   ],
 };
