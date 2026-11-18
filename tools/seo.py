@@ -14,7 +14,9 @@ ORG = {
     'logo': BASE + 'assets/apple-touch-icon.png', 'image': BASE + 'assets/og-image.png',
     'description': 'サッカーのパーソナル指導（VX PERSONAL）、キッズからアスリートまでのジム（VX GYM・東京 西麻布）、U-12・U-9のサッカーチーム（VX SOCCER）、コーチウェア（VX APPAREL）を運営するスポーツアカデミー。',
     'sport': ['サッカー', 'Soccer'],
-    'founder': {'@type': 'Person', 'name': '篠塚一平'},
+    'founder': {'@type': 'Person', '@id': BASE + '#founder', 'name': '篠塚一平', 'alternateName': ['イッペイ・シノヅカ', 'Ippey Shinozuka'], 'jobTitle': '代表',
+                'description': '元プロサッカー選手（MF）。U-18ロシア代表。スパルタク・モスクワ、横浜F・マリノス、大宮アルディージャ、柏レイソル、アルビレックス新潟でプレー。Jリーグ通算95試合11ゴール9アシスト（J1・J2リーグ戦）。',
+                'image': BASE + 'assets/founder.jpg', 'sameAs': ['https://en.wikipedia.org/wiki/Ippey_Shinozuka']},
     'sameAs': [IG],
     'contactPoint': {'@type': 'ContactPoint', 'contactType': 'customer service', 'url': LINE, 'availableLanguage': ['ja']},
 }
@@ -28,6 +30,7 @@ PAGES = {
   name='ホーム',
   faq=[
    ('VX SPORTS ACADEMYとは何ですか？', 'サッカーの技術と、年齢を問わずキッズからアスリートを目指す選手までの運動能力を伸ばすスポーツアカデミーです。サッカーのパーソナル指導「VX PERSONAL」、キッズからアスリートまでのジム「VX GYM」、サッカーチーム「VX SOCCER」、コーチウェア「VX APPAREL」の4つを運営しています。'),
+   ('代表はどんな人ですか？', '代表の篠塚一平は元プロサッカー選手（MF）です。U-18ロシア代表、スパルタク・モスクワ（ロシア）を経て、横浜F・マリノス、大宮アルディージャ、柏レイソル、アルビレックス新潟でプレーしました。Jリーグ通算95試合11ゴール9アシスト（J1・J2リーグ戦）です。'),
    ('どこにありますか？', 'VX GYMは東京・西麻布に2027年1月オープン予定です。VX PERSONALは東京・神奈川・千葉・埼玉で対応しています。'),
    ('今申し込めるサービスは？', 'VX PERSONAL（初回体験 ¥5,500・税込）は受付中です。VX GYMは先行予約、VX SOCCERはU-12・U-9のメンバーを募集中、VX APPARELは予約注文を受け付けています。'),
    ('問い合わせ方法は？', 'LINE公式アカウントから、メッセージでお問い合わせください。最新情報はInstagram（@vx_sports_academy）でもお知らせしています。'),
@@ -114,6 +117,24 @@ PAGES = {
 
 # ---- 英語・中国語（言語切替用） ----
 TR = {
+ 'VX SPORTS ACADEMY 代表': ('Founder, VX SPORTS ACADEMY', 'VX SPORTS ACADEMY 代表'),
+ '代表 篠塚一平': ('Founder: Ippey Shinozuka', '代表 篠塚一平'),
+ '篠塚一平': ('Ippey Shinozuka', '篠塚一平'),
+ '代表・元プロサッカー選手（MF）': ('Founder · Former professional footballer (MF)', '代表・前职业足球运动员（中场）'),
+ '試合': ('Apps', '出场'),
+ 'ゴール': ('Goals', '进球'),
+ 'アシスト': ('Assists', '助攻'),
+ 'Jリーグ通算（J1・J2リーグ戦／2017〜2022年）出典：Football LAB': ('J.League career totals (J1 & J2 league matches, 2017–2022). Source: Football LAB', 'J联赛生涯合计（J1・J2联赛，2017〜2022年）。来源：Football LAB'),
+ 'U-18ロシア代表': ('Russia U-18 national team', '俄罗斯U-18国家队'),
+ 'スパルタク・モスクワ（ロシア）': ('Spartak Moscow (Russia)', '莫斯科斯巴达克（俄罗斯）'),
+ '横浜F・マリノス（J1）': ('Yokohama F. Marinos (J1)', '横滨水手（J1）'),
+ '大宮アルディージャ（J2）': ('Omiya Ardija (J2)', '大宫松鼠（J2）'),
+ '柏レイソル（J1）': ('Kashiwa Reysol (J1)', '柏太阳神（J1）'),
+ 'アルビレックス新潟（J2）': ('Albirex Niigata (J2)', '新潟天鹅（J2）'),
+ '16歳でロシアへ渡り、スパルタク・モスクワでプロのキャリアをスタート。U-18ロシア代表を経て、Jリーグでは4クラブでプレーしました。': ('Moved to Russia at 16 and began his professional career at Spartak Moscow. After playing for Russia at U-18 level, he played for four J.League clubs.', '16岁远赴俄罗斯，在莫斯科斯巴达克开始职业生涯。入选俄罗斯U-18国家队后，在J联赛效力过4家俱乐部。'),
+ 'トップレベルで戦ってきた経験を、次の世代の選手へ。': ('Passing on what he learned at the top level to the next generation of players.', '将在顶级舞台积累的经验，传给下一代球员。'),
+ '代表はどんな人ですか？': ('Who is the founder?', '代表是谁？'),
+ '代表の篠塚一平は元プロサッカー選手（MF）です。U-18ロシア代表、スパルタク・モスクワ（ロシア）を経て、横浜F・マリノス、大宮アルディージャ、柏レイソル、アルビレックス新潟でプレーしました。Jリーグ通算95試合11ゴール9アシスト（J1・J2リーグ戦）です。': ('Founder Ippey Shinozuka is a former professional footballer (midfielder). After Russia U-18 and Spartak Moscow, he played for Yokohama F. Marinos, Omiya Ardija, Kashiwa Reysol and Albirex Niigata, with 95 appearances, 11 goals and 9 assists in the J.League (J1 and J2 league matches).', '代表篠塚一平是前职业足球运动员（中场）。曾入选俄罗斯U-18国家队、效力莫斯科斯巴达克，之后在横滨水手、大宫松鼠、柏太阳神、新潟天鹅踢球。J联赛（J1・J2联赛）生涯出场95次，进球11个，助攻9次。'),
  '対象年齢はありますか？': ('Is there an age limit?', '有年龄限制吗？'),
  'ありません。キッズからアスリートを目指す選手まで、年齢を問わず受けられます。': ('No. Anyone can join, at any age, from kids to players aiming to become athletes.', '没有。从儿童到立志成为运动员的选手，不限年龄均可参加。'),
  'キッズ〜アスリート・年齢不問': ('Kids to athletes, any age', '儿童到运动员・不限年龄'),
@@ -203,6 +224,40 @@ def faq_html(items):
 
 '''
 
+FOUNDER = '''  <section class="band on-ink founder" id="founder" style="border-top:1px solid var(--line-dark)">
+    <div class="wrap stack">
+      <div class="sec-head">
+        <p class="en sub">Founder</p>
+        <h2 class="catch">代表 篠塚一平</h2>
+      </div>
+      <figure class="f-photo"><img src="assets/founder.jpg" alt="横浜F・マリノス在籍時にプレーする篠塚一平" loading="lazy" width="660" height="440"></figure>
+      <div class="f-name">
+        <p class="f-ja">篠塚一平</p>
+        <p class="f-en">IPPEY SHINOZUKA</p>
+        <p class="f-role">代表・元プロサッカー選手（MF）</p>
+      </div>
+      <div class="f-stats" role="group" aria-label="Jリーグ通算成績">
+        <div><b>95</b><span>試合</span></div>
+        <div><b>11</b><span>ゴール</span></div>
+        <div><b>9</b><span>アシスト</span></div>
+      </div>
+      <p class="f-src">Jリーグ通算（J1・J2リーグ戦／2017〜2022年）出典：Football LAB</p>
+      <ol class="f-career">
+        <li><span class="y">2012–13</span><span class="c">U-18ロシア代表</span></li>
+        <li><span class="y">2012–17</span><span class="c">スパルタク・モスクワ（ロシア）</span></li>
+        <li><span class="y">2017–19</span><span class="c">横浜F・マリノス（J1）</span></li>
+        <li><span class="y">2019–20</span><span class="c">大宮アルディージャ（J2）</span></li>
+        <li><span class="y">2021</span><span class="c">柏レイソル（J1）</span></li>
+        <li><span class="y">2022</span><span class="c">アルビレックス新潟（J2）</span></li>
+        <li><span class="y">NOW</span><span class="c">VX SPORTS ACADEMY 代表</span></li>
+      </ol>
+      <p class="f-text">16歳でロシアへ渡り、スパルタク・モスクワでプロのキャリアをスタート。U-18ロシア代表を経て、Jリーグでは4クラブでプレーしました。</p>
+      <p class="f-msg">トップレベルで戦ってきた経験を、次の世代の選手へ。</p>
+    </div>
+  </section>
+
+'''
+
 ABOUT = '''  <section class="band on-ink about" id="about" style="border-top:1px solid var(--line-dark)">
     <div class="wrap stack">
       <div class="sec-head">
@@ -238,6 +293,7 @@ for key, p in PAGES.items():
     s = re.sub(r'\n<!-- SEO -->.*?<!-- /SEO -->', '', s, flags=re.S)
     s = re.sub(r'  <section class="band on-ink faq" id="faq".*?</section>\n\n', '', s, flags=re.S)
     s = re.sub(r'  <section class="band on-ink about" id="about".*?</section>\n\n', '', s, flags=re.S)
+    s = re.sub(r'  <section class="band on-ink founder" id="founder".*?</section>\n\n', '', s, flags=re.S)
     s = re.sub(r'<title>.*?</title>', f'<title>{p["title"]}</title>', s, count=1)
     s = re.sub(r'<meta name="description"[^>]*>', f'<meta name="description" content="{esc(p["desc"])}">', s, count=1)
     s = re.sub(r'<meta property="og:title"[^>]*>', f'<meta property="og:title" content="{esc(p["title"])}">', s, count=1)
@@ -273,7 +329,7 @@ for key, p in PAGES.items():
 
     marker = '  <section class="band on-ink" id="contact"'
     assert marker in s, key
-    s = s.replace(marker, (ABOUT if key == 'index' else '') + faq_html(p['faq']) + marker, 1)
+    s = s.replace(marker, (FOUNDER + ABOUT if key == 'index' else '') + faq_html(p['faq']) + marker, 1)
     if key in H1_SWAPS:
         a, b = H1_SWAPS[key]
         if a in s: s = s.replace(a, b)

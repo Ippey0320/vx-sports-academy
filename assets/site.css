@@ -555,3 +555,31 @@ h1.gym-catch, h1.catch { margin: 0; }
 @media (max-width: 420px) { .cta-bar a { letter-spacing: .03em !important; white-space: nowrap; font-size: 14px; } .cta-bar a svg { flex: none; } }
 @media (max-width: 360px) { .cta-bar a { font-size: 12.5px; padding-left: 10px; padding-right: 10px; } }
 @media (max-width: 360px) { .cta-bar .p { white-space: normal; min-width: 0; line-height: 1.35; text-align: center; } }
+
+/* ===== Founder（代表の経歴） ===== */
+.founder .f-photo { margin: 0; border: 1px solid var(--line-dark); overflow: hidden; aspect-ratio: 3 / 2; }
+.founder .f-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; filter: grayscale(1) contrast(1.05); }
+.founder .f-name { text-align: center; }
+.founder .f-name p { margin: 0; }
+.founder .f-ja { font-size: 26px; font-weight: 700; letter-spacing: .12em; color: #fff; }
+.founder .f-en { margin-top: 2px !important; font-family: var(--display); font-stretch: 125%; font-size: 11px; letter-spacing: .32em; color: var(--sub-on-ink); }
+.founder .f-role { margin-top: 10px !important; font-size: 13px; font-weight: 500; letter-spacing: .08em; color: #cfcfd4; }
+.founder .f-stats { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line-dark); border-bottom: 1px solid var(--line-dark); }
+.founder .f-stats div { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 18px 4px 14px; }
+.founder .f-stats div + div { border-left: 1px solid var(--line-dark); }
+.founder .f-stats b { font-family: var(--display); font-stretch: 112%; font-weight: 600; font-size: 40px; line-height: 1; letter-spacing: 0; color: var(--neon); font-variant-numeric: tabular-nums lining-nums; }
+.founder .f-stats span { font-size: 12px; font-weight: 500; letter-spacing: .12em; color: #cfcfd4; }
+.founder .f-src { margin: -8px 0 0; font-size: 11px; line-height: 1.6; letter-spacing: .04em; color: var(--sub-on-ink); text-align: center; }
+.founder .f-career { list-style: none; margin: 0; padding: 0 0 0 4px; position: relative; }
+.founder .f-career::before { content: ""; position: absolute; left: 4px; top: 10px; bottom: 10px; width: 1px; background: var(--line-dark); }
+.founder .f-career li { position: relative; display: grid; grid-template-columns: 76px 1fr; gap: 12px; align-items: baseline; padding: 9px 0 9px 20px; }
+.founder .f-career li::before { content: ""; position: absolute; left: -3px; top: 17px; width: 7px; height: 7px; border-radius: 50%; background: var(--ink); border: 1px solid var(--sub-on-ink); }
+.founder .f-career li:last-child::before { background: var(--neon); border-color: var(--neon); }
+.founder .f-career .y { font-family: var(--display); font-size: 13px; letter-spacing: .06em; color: var(--sub-on-ink); font-variant-numeric: tabular-nums; }
+.founder .f-career .c { font-size: 14.5px; font-weight: 500; letter-spacing: .04em; color: #fff; }
+.founder .f-text { margin: 0; font-size: 14.5px; line-height: 2; letter-spacing: .04em; color: #cfcfd4; }
+.founder .f-msg { margin: 4px 0 0; padding-top: 18px; border-top: 1px solid var(--line-dark); text-align: center; font-size: 16px; font-weight: 700; letter-spacing: .06em; color: #fff; }
+.founder .f-msg, .founder .f-text { text-wrap: balance; word-break: auto-phrase; }
+.founder .f-photo { aspect-ratio: 4 / 3; }
+.founder .f-photo img { object-position: 38% 50%; }
+html[lang="en"] .founder .f-en { display: none; }
