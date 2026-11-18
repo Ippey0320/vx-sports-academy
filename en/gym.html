@@ -28,14 +28,15 @@
 <!-- /SEO -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300;62..125,400;62..125,500;62..125,600&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=1794964754">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300;62..125,400;62..125,500;62..125,600&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300;62..125,400;62..125,500;62..125,600&family=Noto+Sans+JP:wght@400;500;700&display=swap"></noscript>
+<link rel="stylesheet" href="../assets/site.css?v=1794966502">
 </head>
 <body>
 <header class="site-header">
   <div class="wrap">
     <div class="topbar"><button type="button" class="menu-btn" aria-expanded="false" aria-controls="drawer" aria-label="Menu"><span></span><span></span><span></span></button><a class="brand" href="index.html" aria-label="VX SPORTS ACADEMY トップへ">
-        <img src="../assets/logo.svg" alt="VX">
+        <img src="../assets/logo.svg" alt="VX" width="332" height="104">
         <span>SPORTS ACADEMY</span>
       </a><div class="lang" role="group" aria-label="Language">
       <button type="button" data-l="ja" aria-pressed="false">JP</button><button type="button" data-l="en" aria-pressed="true">EN</button><button type="button" data-l="zh" aria-pressed="false">中文</button>
@@ -51,7 +52,7 @@
 </header>
 <div class="drawer-bg" hidden=""></div>
 <nav class="drawer" id="drawer" aria-label="Menu" hidden="">
-  <div class="drawer-head"><img src="../assets/logo.svg" alt="VX"><button type="button" class="drawer-close" aria-label="Close">✕</button></div>
+  <div class="drawer-head"><img src="../assets/logo.svg" alt="VX" width="332" height="104"><button type="button" class="drawer-close" aria-label="Close">✕</button></div>
   <a href="index.html" data-c="index"><b>HOME</b><span>VX SPORTS ACADEMY</span></a>
   <a href="personal.html" data-c="personal"><b>VX PERSONAL</b><span>Personal football coaching</span></a>
   <a class="on" href="gym.html" data-c="gym"><b>VX GYM</b><span>Gym for kids to athletes, any age</span></a>
@@ -65,12 +66,12 @@
 <section class="band on-ink gym page-top" id="gym">
     <div class="wrap stack">
       <div class="sec-head">
-        <h2 class="lockup big-word" aria-label="VX GYM"><img src="../assets/logo.svg" alt=""><i></i><span>GYM</span></h2>
+        <h2 class="lockup big-word" aria-label="VX GYM"><img src="../assets/logo.svg" alt="" width="332" height="104"><i></i><span>GYM</span></h2>
         <span class="neon-badge">NISHI-AZABU｜COMING SOON</span>
       </div>
       <h1 class="gym-catch">See your child's growth<br><em>in numbers</em>.</h1>
       <p class="gym-sub">Measure. Train. Measure again.<br>For any sport,<br>from kids to aspiring athletes —<br>a gym that builds athletic ability.</p>
-      <figure class="gym-photo"><img src="../assets/gym-entrance.jpg" alt="VX GYM 西麻布の完成イメージ。白い壁のVXロゴと距離の数字が入ったスプリントレーン" loading="lazy" width="1536" height="1024"><figcaption>*Concept image</figcaption></figure>
+      <figure class="gym-photo"><img src="../assets/gym-entrance.webp" srcset="../assets/gym-entrance-800.webp 800w, ../assets/gym-entrance.webp 1536w" sizes="(max-width: 480px) 100vw, 480px" alt="VX GYM 西麻布の完成イメージ。白い壁のVXロゴと距離の数字が入ったスプリントレーン" fetchpriority="high" width="1536" height="1024"><figcaption>*Concept image</figcaption></figure>
       <div class="dash" aria-label="計測項目">
         <div class="m"><div class="m-l"><b>POWER</b><span>Power Output</span><em>Force produced in an instant</em></div><div class="m-u">W</div><svg class="spark" viewBox="0 0 200 48" preserveAspectRatio="none" aria-hidden="true"><polyline points="4,42 40,38 76,36 112,30 148,24 196,12" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"></polyline></svg></div>
         <div class="m"><div class="m-l"><b>JUMP</b><span>Jump</span><em>Jumping power and spring</em></div><div class="m-u">cm</div><svg class="spark" viewBox="0 0 200 48" preserveAspectRatio="none" aria-hidden="true"><polyline points="4,40 40,40 76,32 112,30 148,20 196,14" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"></polyline></svg></div>
@@ -149,7 +150,7 @@
   <a class="s" href="#gym-price">Pricing</a>
 </div>
 
-<script src="../assets/i18n.js?v=1794964754"></script>
+<script src="../assets/i18n.js?v=1794966502"></script>
 
 
 </body></html>

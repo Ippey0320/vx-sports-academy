@@ -423,7 +423,7 @@ mark.hl { background: linear-gradient(transparent 55%, var(--neon) 55%); color: 
 
 /* Landing hero v2 */
 .hero2 { position: relative; overflow: hidden; min-height: min(86svh, 760px); display: grid; align-items: end; color: #fff; background: #050506; }
-.hero2-bg { position: absolute; inset: 0; background: url(gym-entrance.jpg) center 40% / cover no-repeat; filter: grayscale(1) contrast(1.1) brightness(.55); transform: scale(1.06); }
+.hero2-bg { position: absolute; inset: 0; background: url(gym-entrance.webp) center 40% / cover no-repeat; filter: grayscale(1) contrast(1.1) brightness(.55); transform: scale(1.06); }
 .hero2::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,5,6,.35) 0%, rgba(5,5,6,.55) 45%, #0b0b0c 100%); }
 .hero2-in { position: relative; z-index: 1; display: grid; justify-items: center; text-align: center; gap: 14px; padding-block: 72px 48px; }
 .hero2-logo { width: 120px; height: auto; }
@@ -605,3 +605,8 @@ html[lang="zh-Hans"] .founder .f-en { display: none; }
 footer .f-legal { color: var(--sub-on-ink); text-decoration: underline; text-underline-offset: 3px; font-size: 12px; justify-self: start; }
 .drawer a.drawer-legal { display: block; margin-top: 14px; padding: 10px 12px; border: none; font-size: 12.5px; letter-spacing: .06em; color: var(--sub-on-ink); text-decoration: underline; text-underline-offset: 3px; text-align: center; }
 .drawer a.drawer-legal.on { background: transparent; color: #fff; }
+
+/* optimize.py */
+@media (max-width: 800px) { .hero2-bg { background-image: url(gym-entrance-800.webp); } }
+.point h2 { font-size: 18px; font-weight: 700; letter-spacing: .04em; line-height: 1.45; font-feature-settings: "palt" 1; }
+.order h2 { font-family: var(--display); font-weight: 300; font-stretch: 125%; letter-spacing: .3em; font-size: 14px; }
