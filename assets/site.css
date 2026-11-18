@@ -583,3 +583,4 @@ h1.gym-catch, h1.catch { margin: 0; }
 .founder .f-photo { aspect-ratio: 4 / 3; }
 .founder .f-photo img { object-position: 38% 50%; }
 html[lang="en"] .founder .f-en { display: none; }
+html[lang="zh-Hans"] .founder .f-en { display: none; }

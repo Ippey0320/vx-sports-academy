@@ -14,7 +14,7 @@ ORG = {
     'logo': BASE + 'assets/apple-touch-icon.png', 'image': BASE + 'assets/og-image.png',
     'description': 'サッカーのパーソナル指導（VX PERSONAL）、キッズからアスリートまでのジム（VX GYM・東京 西麻布）、U-12・U-9のサッカーチーム（VX SOCCER）、コーチウェア（VX APPAREL）を運営するスポーツアカデミー。',
     'sport': ['サッカー', 'Soccer'],
-    'founder': {'@type': 'Person', '@id': BASE + '#founder', 'name': '篠塚一平', 'alternateName': ['イッペイ・シノヅカ', 'Ippey Shinozuka'], 'jobTitle': '代表',
+    'founder': {'@type': 'Person', '@id': BASE + '#founder', 'name': 'シノヅカイッペイ', 'alternateName': ['イッペイ・シノヅカ', 'Ippey Shinozuka', '篠塚一平'], 'jobTitle': '代表',
                 'description': '元プロサッカー選手（MF）。U-18ロシア代表。スパルタク・モスクワ、横浜F・マリノス、大宮アルディージャ、柏レイソル、アルビレックス新潟でプレー。Jリーグ通算95試合11ゴール9アシスト（J1・J2リーグ戦）。',
                 'image': BASE + 'assets/founder.jpg', 'sameAs': ['https://en.wikipedia.org/wiki/Ippey_Shinozuka']},
     'sameAs': [IG],
@@ -30,7 +30,7 @@ PAGES = {
   name='ホーム',
   faq=[
    ('VX SPORTS ACADEMYとは何ですか？', 'サッカーの技術と、年齢を問わずキッズからアスリートを目指す選手までの運動能力を伸ばすスポーツアカデミーです。サッカーのパーソナル指導「VX PERSONAL」、キッズからアスリートまでのジム「VX GYM」、サッカーチーム「VX SOCCER」、コーチウェア「VX APPAREL」の4つを運営しています。'),
-   ('代表はどんな人ですか？', '代表の篠塚一平は元プロサッカー選手（MF）です。U-18ロシア代表、スパルタク・モスクワ（ロシア）を経て、横浜F・マリノス、大宮アルディージャ、柏レイソル、アルビレックス新潟でプレーしました。Jリーグ通算95試合11ゴール9アシスト（J1・J2リーグ戦）です。'),
+   ('代表はどんな人ですか？', '代表のシノヅカイッペイは元プロサッカー選手（MF）です。U-18ロシア代表、スパルタク・モスクワ（ロシア）を経て、横浜F・マリノス、大宮アルディージャ、柏レイソル、アルビレックス新潟でプレーしました。Jリーグ通算95試合11ゴール9アシスト（J1・J2リーグ戦）です。'),
    ('どこにありますか？', 'VX GYMは東京・西麻布に2027年1月オープン予定です。VX PERSONALは東京・神奈川・千葉・埼玉で対応しています。'),
    ('今申し込めるサービスは？', 'VX PERSONAL（初回体験 ¥5,500・税込）は受付中です。VX GYMは先行予約、VX SOCCERはU-12・U-9のメンバーを募集中、VX APPARELは予約注文を受け付けています。'),
    ('問い合わせ方法は？', 'LINE公式アカウントから、メッセージでお問い合わせください。最新情報はInstagram（@vx_sports_academy）でもお知らせしています。'),
@@ -118,8 +118,8 @@ PAGES = {
 # ---- 英語・中国語（言語切替用） ----
 TR = {
  'VX SPORTS ACADEMY 代表': ('Founder, VX SPORTS ACADEMY', 'VX SPORTS ACADEMY 代表'),
- '代表 篠塚一平': ('Founder: Ippey Shinozuka', '代表 篠塚一平'),
- '篠塚一平': ('Ippey Shinozuka', '篠塚一平'),
+ '代表 シノヅカイッペイ': ('Founder: Ippey Shinozuka', '代表 Ippey Shinozuka'),
+ 'シノヅカイッペイ': ('Ippey Shinozuka', 'Ippey Shinozuka'),
  '代表・元プロサッカー選手（MF）': ('Founder · Former professional footballer (MF)', '代表・前职业足球运动员（中场）'),
  '試合': ('Apps', '出场'),
  'ゴール': ('Goals', '进球'),
@@ -134,7 +134,7 @@ TR = {
  '16歳でロシアへ渡り、スパルタク・モスクワでプロのキャリアをスタート。U-18ロシア代表を経て、Jリーグでは4クラブでプレーしました。': ('Moved to Russia at 16 and began his professional career at Spartak Moscow. After playing for Russia at U-18 level, he played for four J.League clubs.', '16岁远赴俄罗斯，在莫斯科斯巴达克开始职业生涯。入选俄罗斯U-18国家队后，在J联赛效力过4家俱乐部。'),
  'トップレベルで戦ってきた経験を、次の世代の選手へ。': ('Passing on what he learned at the top level to the next generation of players.', '将在顶级舞台积累的经验，传给下一代球员。'),
  '代表はどんな人ですか？': ('Who is the founder?', '代表是谁？'),
- '代表の篠塚一平は元プロサッカー選手（MF）です。U-18ロシア代表、スパルタク・モスクワ（ロシア）を経て、横浜F・マリノス、大宮アルディージャ、柏レイソル、アルビレックス新潟でプレーしました。Jリーグ通算95試合11ゴール9アシスト（J1・J2リーグ戦）です。': ('Founder Ippey Shinozuka is a former professional footballer (midfielder). After Russia U-18 and Spartak Moscow, he played for Yokohama F. Marinos, Omiya Ardija, Kashiwa Reysol and Albirex Niigata, with 95 appearances, 11 goals and 9 assists in the J.League (J1 and J2 league matches).', '代表篠塚一平是前职业足球运动员（中场）。曾入选俄罗斯U-18国家队、效力莫斯科斯巴达克，之后在横滨水手、大宫松鼠、柏太阳神、新潟天鹅踢球。J联赛（J1・J2联赛）生涯出场95次，进球11个，助攻9次。'),
+ '代表のシノヅカイッペイは元プロサッカー選手（MF）です。U-18ロシア代表、スパルタク・モスクワ（ロシア）を経て、横浜F・マリノス、大宮アルディージャ、柏レイソル、アルビレックス新潟でプレーしました。Jリーグ通算95試合11ゴール9アシスト（J1・J2リーグ戦）です。': ('Founder Ippey Shinozuka is a former professional footballer (midfielder). After Russia U-18 and Spartak Moscow, he played for Yokohama F. Marinos, Omiya Ardija, Kashiwa Reysol and Albirex Niigata, with 95 appearances, 11 goals and 9 assists in the J.League (J1 and J2 league matches).', '代表Ippey Shinozuka是前职业足球运动员（中场）。曾入选俄罗斯U-18国家队、效力莫斯科斯巴达克，之后在横滨水手、大宫松鼠、柏太阳神、新潟天鹅踢球。J联赛（J1・J2联赛）生涯出场95次，进球11个，助攻9次。'),
  '対象年齢はありますか？': ('Is there an age limit?', '有年龄限制吗？'),
  'ありません。キッズからアスリートを目指す選手まで、年齢を問わず受けられます。': ('No. Anyone can join, at any age, from kids to players aiming to become athletes.', '没有。从儿童到立志成为运动员的选手，不限年龄均可参加。'),
  'キッズ〜アスリート・年齢不問': ('Kids to athletes, any age', '儿童到运动员・不限年龄'),
@@ -144,8 +144,8 @@ TR = {
  'よくある質問': ('Frequently asked questions', '常见问题'),
  UPDATED_JP: ('Last updated: Nov 18, 2026', '信息更新日期：2026年11月18日'),
  'VX SPORTS ACADEMYとは': ('About VX SPORTS ACADEMY', '关于VX SPORTS ACADEMY'),
- 'VX SPORTS ACADEMYは、篠塚一平が代表を務める、サッカーの技術と、年齢を問わずキッズからアスリートを目指す選手までの運動能力を伸ばすスポーツアカデミーです。':
-   ('VX SPORTS ACADEMY is a sports academy led by Ippei Shinozuka that develops football skill and athletic ability for every age, from kids to aspiring athletes.', 'VX SPORTS ACADEMY是由篠塚一平担任代表、致力于提升足球技术，以及不限年龄、从儿童到立志成为运动员的选手的运动能力的体育学院。'),
+ 'VX SPORTS ACADEMYは、シノヅカイッペイが代表を務める、サッカーの技術と、年齢を問わずキッズからアスリートを目指す選手までの運動能力を伸ばすスポーツアカデミーです。':
+   ('VX SPORTS ACADEMY is a sports academy led by Ippei Shinozuka that develops football skill and athletic ability for every age, from kids to aspiring athletes.', 'VX SPORTS ACADEMY是由Ippey Shinozuka担任代表、致力于提升足球技术，以及不限年龄、从儿童到立志成为运动员的选手的运动能力的体育学院。'),
  '元プロ・専門コーチ陣が、身体能力とサッカーの技術を一人ひとりに合わせて指導します。':
    ('Former pros and specialist coaches tailor athletic and football training to each player.', '由前职业球员和专业教练根据每位学员的情况指导身体素质与足球技术。'),
  'VX PERSONAL｜サッカーのパーソナル指導（受付中）': ('VX PERSONAL | Personal football coaching (open)', 'VX PERSONAL｜足球私教指导（接受报名中）'),
@@ -228,11 +228,11 @@ FOUNDER = '''  <section class="band on-ink founder" id="founder" style="border-t
     <div class="wrap stack">
       <div class="sec-head">
         <p class="en sub">Founder</p>
-        <h2 class="catch">代表 篠塚一平</h2>
+        <h2 class="catch">代表 シノヅカイッペイ</h2>
       </div>
-      <figure class="f-photo"><img src="assets/founder.jpg" alt="横浜F・マリノス在籍時にプレーする篠塚一平" loading="lazy" width="660" height="440"></figure>
+      <figure class="f-photo"><img src="assets/founder.jpg" alt="横浜F・マリノス在籍時にプレーするシノヅカイッペイ" loading="lazy" width="660" height="440"></figure>
       <div class="f-name">
-        <p class="f-ja">篠塚一平</p>
+        <p class="f-ja">シノヅカイッペイ</p>
         <p class="f-en">IPPEY SHINOZUKA</p>
         <p class="f-role">代表・元プロサッカー選手（MF）</p>
       </div>
@@ -264,7 +264,7 @@ ABOUT = '''  <section class="band on-ink about" id="about" style="border-top:1px
         <p class="en sub">About</p>
         <h2 class="catch">VX SPORTS ACADEMYとは</h2>
       </div>
-      <p class="about-lead">VX SPORTS ACADEMYは、篠塚一平が代表を務める、サッカーの技術と、年齢を問わずキッズからアスリートを目指す選手までの運動能力を伸ばすスポーツアカデミーです。</p>
+      <p class="about-lead">VX SPORTS ACADEMYは、シノヅカイッペイが代表を務める、サッカーの技術と、年齢を問わずキッズからアスリートを目指す選手までの運動能力を伸ばすスポーツアカデミーです。</p>
       <p class="about-lead">元プロ・専門コーチ陣が、身体能力とサッカーの技術を一人ひとりに合わせて指導します。</p>
       <ul class="about-list">
         <li><a href="personal.html">VX PERSONAL｜サッカーのパーソナル指導（受付中）</a></li>
