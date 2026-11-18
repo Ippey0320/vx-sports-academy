@@ -12,7 +12,7 @@ ORG = {
     '@type': 'SportsOrganization', '@id': BASE + '#org',
     'name': 'VX SPORTS ACADEMY', 'url': BASE,
     'logo': BASE + 'assets/apple-touch-icon.png', 'image': BASE + 'assets/og-image.png',
-    'description': 'サッカーのパーソナル指導（VX PERSONAL）、キッズ・ジュニアアスリートのジム（VX GYM・東京 西麻布）、U-12・U-9のサッカーチーム（VX SOCCER）、コーチウェア（VX APPAREL）を運営するスポーツアカデミー。',
+    'description': 'サッカーのパーソナル指導（VX PERSONAL）、キッズからアスリートまでのジム（VX GYM・東京 西麻布）、U-12・U-9のサッカーチーム（VX SOCCER）、コーチウェア（VX APPAREL）を運営するスポーツアカデミー。',
     'sport': ['サッカー', 'Soccer'],
     'founder': {'@type': 'Person', 'name': '篠塚一平'},
     'sameAs': [IG],
@@ -22,24 +22,25 @@ JPY = lambda p, name, extra=None: dict({'@type': 'Offer', 'name': name, 'price':
 
 PAGES = {
  'index': dict(
-  path='', title='VX SPORTS ACADEMY｜サッカーのパーソナル指導・キッズ・ジュニアアスリートのジム',
-  desc='VX SPORTS ACADEMYは、サッカーのパーソナル指導「VX PERSONAL」、キッズからアスリートを目指すジュニア世代までの運動能力を数字で伸ばす「VX GYM」（東京・西麻布／2027年1月オープン予定）、U-12・U-9のサッカーチーム「VX SOCCER」、コーチウェア「VX APPAREL」を運営するスポーツアカデミーです。',
-  og='プロの視点を、すべての選手に。サッカーのパーソナル指導・キッズ・ジュニアジム・サッカーチーム・ウェア。',
+  path='', title='VX SPORTS ACADEMY｜サッカーのパーソナル指導・キッズからアスリートまでのジム',
+  desc='VX SPORTS ACADEMYは、サッカーのパーソナル指導「VX PERSONAL」、年齢を問わず、キッズからアスリートを目指す選手までの運動能力を数字で伸ばす「VX GYM」（東京・西麻布／2027年1月オープン予定）、U-12・U-9のサッカーチーム「VX SOCCER」、コーチウェア「VX APPAREL」を運営するスポーツアカデミーです。',
+  og='プロの視点を、すべての選手に。サッカーのパーソナル指導・キッズ〜アスリート・サッカーチーム・ウェア。',
   name='ホーム',
   faq=[
-   ('VX SPORTS ACADEMYとは何ですか？', 'サッカーの技術と、子どもからアスリートを目指す選手までの運動能力を伸ばすスポーツアカデミーです。サッカーのパーソナル指導「VX PERSONAL」、キッズ・ジュニアアスリートのジム「VX GYM」、サッカーチーム「VX SOCCER」、コーチウェア「VX APPAREL」の4つを運営しています。'),
+   ('VX SPORTS ACADEMYとは何ですか？', 'サッカーの技術と、年齢を問わずキッズからアスリートを目指す選手までの運動能力を伸ばすスポーツアカデミーです。サッカーのパーソナル指導「VX PERSONAL」、キッズからアスリートまでのジム「VX GYM」、サッカーチーム「VX SOCCER」、コーチウェア「VX APPAREL」の4つを運営しています。'),
    ('どこにありますか？', 'VX GYMは東京・西麻布に2027年1月オープン予定です。VX PERSONALは東京・神奈川・千葉・埼玉で対応しています。'),
    ('今申し込めるサービスは？', 'VX PERSONAL（初回体験 ¥5,500・税込）は受付中です。VX GYMは先行予約、VX SOCCERはU-12・U-9のメンバーを募集中、VX APPARELは予約注文を受け付けています。'),
    ('問い合わせ方法は？', 'LINE公式アカウントから、メッセージでお問い合わせください。最新情報はInstagram（@vx_sports_academy）でもお知らせしています。'),
   ]),
  'personal': dict(
-  path='personal.html', title='サッカーのパーソナルトレーニング｜VX PERSONAL｜VX SPORTS ACADEMY',
-  desc='VX PERSONALは、身体能力（スピード・アジリティ・パワー・体幹）とサッカーの技術を、マンツーマンで伸ばすパーソナル指導です。初心者から上級者まで。初回体験 ¥5,500、本レッスン ¥16,500／回（税込）。東京・神奈川・千葉・埼玉で対応。',
+  path='personal.html', title='キッズからアスリートまで、サッカーのパーソナルトレーニング｜VX PERSONAL',
+  desc='VX PERSONALは、身体能力（スピード・アジリティ・パワー・体幹）とサッカーの技術を、マンツーマンで伸ばすパーソナル指導です。年齢を問わず、キッズからアスリートを目指す選手まで、初心者から上級者まで対応。初回体験 ¥5,500、本レッスン ¥16,500／回（税込）。東京・神奈川・千葉・埼玉で対応。',
   og='身体能力とサッカーの技術を、マンツーマンで伸ばす。初回体験 ¥5,500（税込）。',
   name='VX PERSONAL',
   faq=[
    ('VX PERSONALでは何を教えてもらえますか？', '身体能力（スピード・アジリティ・パワー・体幹）と、止める・蹴るの基礎から上級スキルまでのサッカーの技術を、マンツーマンで指導します。'),
    ('料金はいくらですか？', '初回体験 ¥5,500、本レッスン ¥16,500／回（最低4回から）、初月の1ヶ月契約（週1回）¥66,000、2ヶ月目以降の3ヶ月契約 ¥198,000です。すべて税込です。'),
+   ('対象年齢はありますか？', 'ありません。キッズからアスリートを目指す選手まで、年齢を問わず受けられます。'),
    ('初心者でも受けられますか？', 'はい。初心者から上級者まで、一人ひとりのレベルと課題に合わせて指導します。'),
    ('どのエリアで受けられますか？', '東京・神奈川・千葉・埼玉で対応しています。ご希望のエリアはLINEでお知らせください。'),
    ('どのくらいの頻度で通えばいいですか？', '週1回の継続をおすすめしています。続けて取り組むことで、確実な成長を目指します。'),
@@ -48,28 +49,28 @@ PAGES = {
   extra=lambda: [{
    '@type': 'Service', '@id': BASE + 'personal.html#service', 'name': 'VX PERSONAL',
    'serviceType': 'サッカーのパーソナルトレーニング', 'provider': {'@id': BASE + '#org'},
-   'description': '身体能力とサッカーの技術を、マンツーマンで伸ばすパーソナル指導。初心者から上級者まで。',
+   'description': '身体能力とサッカーの技術を、マンツーマンで伸ばすパーソナル指導。年齢を問わず、キッズからアスリートを目指す選手まで、初心者から上級者まで。',
    'areaServed': [{'@type': 'AdministrativeArea', 'name': n} for n in ['東京都', '神奈川県', '千葉県', '埼玉県']],
    'offers': [JPY(5500, '初回体験（1回）'), JPY(16500, '本レッスン（1回・最低4回から）'), JPY(66000, '初月 1ヶ月契約（週1回）'), JPY(198000, '2ヶ月目以降 3ヶ月契約')],
   }]),
  'gym': dict(
-  path='gym.html', title='西麻布のキッズ・ジュニアアスリートジム｜VX GYM（2027年1月オープン予定）',
-  desc='VX GYMは、東京・西麻布に2027年1月オープン予定の、キッズからアスリートを目指すジュニア世代までのジムです。競技を問わず、パワー・ジャンプ・スピードを毎回計測して成長をグラフで記録。年代別グループクラス（定員8人）。月額 ¥17,800〜（税込）。LINEで先行予約受付中。',
+  path='gym.html', title='西麻布のキッズ・アスリートジム｜VX GYM（2027年1月オープン予定）',
+  desc='VX GYMは、東京・西麻布に2027年1月オープン予定の、年齢を問わず、キッズからアスリートを目指す選手まで通えるジムです。競技を問わず、パワー・ジャンプ・スピードを毎回計測して成長をグラフで記録。年代別グループクラス（定員8人）。月額 ¥17,800〜（税込）。LINEで先行予約受付中。',
   og='お子さんの成長が、数字で見える。西麻布・2027年1月オープン予定。先行予約受付中。',
   name='VX GYM',
   faq=[
    ('VX GYMはいつ、どこにオープンしますか？', '東京・西麻布に2027年1月オープン予定です。現在、LINEで先行予約を受け付けています。'),
-   ('どんな人が対象ですか？', 'サッカー、野球、バスケ、陸上など競技を問わず、運動能力を伸ばしたいキッズから、アスリートを目指すジュニア世代までが対象です。クラスは年代別のグループで、定員8人・指導者1人です。'),
+   ('どんな人が対象ですか？', 'サッカー、野球、バスケ、陸上など競技を問わず、運動能力を伸ばしたいキッズから、アスリートを目指す選手まで、年齢を問わず対象です。クラスは年代別のグループで、定員8人・指導者1人です。'),
    ('何を計測しますか？', 'パワー出力（W）、ジャンプ（cm）、スピード（秒）を毎回計測し、入会時からの伸びをグラフで記録します。'),
    ('料金はいくらですか？', '月額（税込）で、週1回（月4回）¥17,800、週2回（月8回）¥28,000です。月1回のマンツーマンと測定結果のフィードバックがつく「エリート」は＋¥15,000で追加できます。'),
    ('先行予約に料金はかかりますか？', 'かかりません。先行予約は、オープン日・料金・体験会のご案内を優先してお送りするための登録です。'),
   ],
   extra=lambda: [{
    '@type': 'Service', '@id': BASE + 'gym.html#service', 'name': 'VX GYM',
-   'serviceType': 'キッズ・ジュニアアスリートのジム（キッズ向けアスレチックトレーニング）', 'provider': {'@id': BASE + '#org'},
-   'description': '東京・西麻布に2027年1月オープン予定。競技を問わず、パワー・ジャンプ・スピードを毎回計測して、キッズからアスリートを目指すジュニア世代までの運動能力を伸ばすジム。年代別グループクラス（定員8人・指導者1人）。',
+   'serviceType': 'キッズからアスリートまでのジム（年齢不問のアスレチックトレーニング）', 'provider': {'@id': BASE + '#org'},
+   'description': '東京・西麻布に2027年1月オープン予定。競技を問わず、パワー・ジャンプ・スピードを毎回計測して、年齢を問わずキッズからアスリートを目指す選手までの運動能力を伸ばすジム。年代別グループクラス（定員8人・指導者1人）。',
    'areaServed': {'@type': 'Place', 'name': '東京都港区西麻布'},
-   'audience': {'@type': 'PeopleAudience', 'audienceType': 'キッズ・ジュニアアスリート'},
+   'audience': {'@type': 'PeopleAudience', 'audienceType': 'キッズからアスリートを目指す選手まで（年齢不問）'},
    'offers': [JPY(17800, '週1回（月4回）月額', {'availability': 'https://schema.org/PreOrder'}), JPY(28000, '週2回（月8回）月額', {'availability': 'https://schema.org/PreOrder'}), JPY(15000, 'エリート（追加・月額）', {'availability': 'https://schema.org/PreOrder'})],
   }]),
  'soccer': dict(
@@ -113,23 +114,27 @@ PAGES = {
 
 # ---- 英語・中国語（言語切替用） ----
 TR = {
+ '対象年齢はありますか？': ('Is there an age limit?', '有年龄限制吗？'),
+ 'ありません。キッズからアスリートを目指す選手まで、年齢を問わず受けられます。': ('No. Anyone can join, at any age, from kids to players aiming to become athletes.', '没有。从儿童到立志成为运动员的选手，不限年龄均可参加。'),
+ 'キッズ〜アスリート・年齢不問': ('Kids to athletes, any age', '儿童到运动员・不限年龄'),
+ 'はい。初心者から上級者まで、一人ひとりのレベルと課題に合わせて指導します。': ('Yes. We coach beginners through advanced players, matched to each player\'s level and goals.', '可以。从初学者到高水平球员，我们都会根据每个人的水平和课题进行指导。'),
  'ユニフォーム': ('Kit', '队服'),
  '予約': ('Order', '预订'),
  'よくある質問': ('Frequently asked questions', '常见问题'),
  UPDATED_JP: ('Last updated: Nov 18, 2026', '信息更新日期：2026年11月18日'),
  'VX SPORTS ACADEMYとは': ('About VX SPORTS ACADEMY', '关于VX SPORTS ACADEMY'),
- 'VX SPORTS ACADEMYは、篠塚一平が代表を務める、サッカーの技術と、子どもからアスリートを目指す選手までの運動能力を伸ばすスポーツアカデミーです。':
-   ('VX SPORTS ACADEMY is a sports academy led by Ippei Shinozuka that develops football skill and athletic ability, from kids to aspiring athletes.', 'VX SPORTS ACADEMY是由篠塚一平担任代表、致力于提升足球技术，以及从儿童到立志成为运动员的青少年运动能力的体育学院。'),
+ 'VX SPORTS ACADEMYは、篠塚一平が代表を務める、サッカーの技術と、年齢を問わずキッズからアスリートを目指す選手までの運動能力を伸ばすスポーツアカデミーです。':
+   ('VX SPORTS ACADEMY is a sports academy led by Ippei Shinozuka that develops football skill and athletic ability for every age, from kids to aspiring athletes.', 'VX SPORTS ACADEMY是由篠塚一平担任代表、致力于提升足球技术，以及不限年龄、从儿童到立志成为运动员的选手的运动能力的体育学院。'),
  '元プロ・専門コーチ陣が、身体能力とサッカーの技術を一人ひとりに合わせて指導します。':
    ('Former pros and specialist coaches tailor athletic and football training to each player.', '由前职业球员和专业教练根据每位学员的情况指导身体素质与足球技术。'),
  'VX PERSONAL｜サッカーのパーソナル指導（受付中）': ('VX PERSONAL | Personal football coaching (open)', 'VX PERSONAL｜足球私教指导（接受报名中）'),
- 'VX GYM｜キッズ・ジュニアアスリートのジム（東京・西麻布／2027年1月オープン予定）': ('VX GYM | Gym for kids & junior athletes (Nishi-Azabu, Tokyo / opening Jan 2027)', 'VX GYM｜儿童・青少年运动员健身房（东京・西麻布／预计2027年1月开业）'),
+ 'VX GYM｜キッズからアスリートまでのジム（東京・西麻布／2027年1月オープン予定）': ('VX GYM | Gym for kids to athletes, any age (Nishi-Azabu, Tokyo / opening Jan 2027)', 'VX GYM｜儿童到运动员健身房（不限年龄）（东京・西麻布／预计2027年1月开业）'),
  'VX SOCCER｜U-12・U-9の新しいサッカーチーム（メンバー募集中）': ('VX SOCCER | New U-12・U-9 football team (recruiting)', 'VX SOCCER｜全新U-12・U-9足球队（招募中）'),
  'VX APPAREL｜コーチ着用のトレーニングウェア（予約受付中）': ('VX APPAREL | Coach training wear (pre-orders open)', 'VX APPAREL｜教练同款训练服（接受预订中）'),
  # index
  'VX SPORTS ACADEMYとは何ですか？': ('What is VX SPORTS ACADEMY?', 'VX SPORTS ACADEMY是什么？'),
- 'サッカーの技術と、子どもからアスリートを目指す選手までの運動能力を伸ばすスポーツアカデミーです。サッカーのパーソナル指導「VX PERSONAL」、キッズ・ジュニアアスリートのジム「VX GYM」、サッカーチーム「VX SOCCER」、コーチウェア「VX APPAREL」の4つを運営しています。':
-   ('A sports academy that develops football skill and athletic ability, from kids to aspiring athletes. We run four services: VX PERSONAL (personal football coaching), VX GYM (gym for kids and junior athletes), VX SOCCER (football team) and VX APPAREL (coach wear).', '一所提升足球技术及从儿童到立志成为运动员的青少年运动能力的体育学院，运营足球私教「VX PERSONAL」、儿童・青少年运动员健身房「VX GYM」、足球队「VX SOCCER」和教练服装「VX APPAREL」四项服务。'),
+ 'サッカーの技術と、年齢を問わずキッズからアスリートを目指す選手までの運動能力を伸ばすスポーツアカデミーです。サッカーのパーソナル指導「VX PERSONAL」、キッズからアスリートまでのジム「VX GYM」、サッカーチーム「VX SOCCER」、コーチウェア「VX APPAREL」の4つを運営しています。':
+   ('A sports academy that develops football skill and athletic ability for every age, from kids to aspiring athletes. We run four services: VX PERSONAL (personal football coaching), VX GYM (gym for kids to athletes, any age), VX SOCCER (football team) and VX APPAREL (coach wear).', '一所提升足球技术及不限年龄、从儿童到立志成为运动员的选手的运动能力的体育学院，运营足球私教「VX PERSONAL」、儿童到运动员健身房（不限年龄）「VX GYM」、足球队「VX SOCCER」和教练服装「VX APPAREL」四项服务。'),
  'どこにありますか？': ('Where are you located?', '在哪里？'),
  'VX GYMは東京・西麻布に2027年1月オープン予定です。VX PERSONALは東京・神奈川・千葉・埼玉で対応しています。': ('VX GYM opens in Nishi-Azabu, Tokyo in January 2027. VX PERSONAL is available in Tokyo, Kanagawa, Chiba and Saitama.', 'VX GYM预计于2027年1月在东京西麻布开业。VX PERSONAL可在东京、神奈川、千叶、埼玉提供服务。'),
  '今申し込めるサービスは？': ('What can I sign up for now?', '现在可以报名哪些服务？'),
@@ -153,7 +158,7 @@ TR = {
  'VX GYMはいつ、どこにオープンしますか？': ('When and where does VX GYM open?', 'VX GYM何时在哪里开业？'),
  '東京・西麻布に2027年1月オープン予定です。現在、LINEで先行予約を受け付けています。': ('In Nishi-Azabu, Tokyo, planned for January 2027. Early registration is open on LINE.', '预计2027年1月在东京西麻布开业。目前正在通过LINE接受预约登记。'),
  'どんな人が対象ですか？': ('Who is it for?', '面向哪些人？'),
- 'サッカー、野球、バスケ、陸上など競技を問わず、運動能力を伸ばしたいキッズから、アスリートを目指すジュニア世代までが対象です。クラスは年代別のグループで、定員8人・指導者1人です。': ('Kids who want to build athletic ability through to young players aiming to become athletes, whatever the sport: football, baseball, basketball, track and more. Classes are grouped by age, up to 8 per coach.', '面向希望提升运动能力的儿童，以及立志成为运动员的青少年，不限项目：足球、棒球、篮球、田径等。按年龄分组上课，每班最多8人、1名教练。'),
+ 'サッカー、野球、バスケ、陸上など競技を問わず、運動能力を伸ばしたいキッズから、アスリートを目指す選手まで、年齢を問わず対象です。クラスは年代別のグループで、定員8人・指導者1人です。': ('Anyone, at any age, from kids to players aiming to become athletes, whatever the sport: football, baseball, basketball, track and more. Classes are grouped by age, up to 8 per coach.', '不限年龄，面向从儿童到立志成为运动员的选手，不限项目：足球、棒球、篮球、田径等。按年龄分组上课，每班最多8人、1名教练。'),
  '何を計測しますか？': ('What do you measure?', '测量哪些项目？'),
  'パワー出力（W）、ジャンプ（cm）、スピード（秒）を毎回計測し、入会時からの伸びをグラフで記録します。': ('Power output (W), jump (cm) and speed (s), every session, with progress since joining recorded on a graph.', '每次测量爆发力（W）、跳跃（cm）、速度（秒），并用图表记录入会以来的成长。'),
  '月額（税込）で、週1回（月4回）¥17,800、週2回（月8回）¥28,000です。月1回のマンツーマンと測定結果のフィードバックがつく「エリート」は＋¥15,000で追加できます。': ('Monthly, incl. tax: once a week (4/month) ¥17,800; twice a week (8/month) ¥28,000. Add "Elite" (a monthly one-on-one plus feedback on results) for +¥15,000.', '月费（含税）：每周1次（每月4次）¥17,800；每周2次（每月8次）¥28,000。可追加「精英」（每月1次一对一＋测量结果反馈）+¥15,000。'),
@@ -204,11 +209,11 @@ ABOUT = '''  <section class="band on-ink about" id="about" style="border-top:1px
         <p class="en sub">About</p>
         <h2 class="catch">VX SPORTS ACADEMYとは</h2>
       </div>
-      <p class="about-lead">VX SPORTS ACADEMYは、篠塚一平が代表を務める、サッカーの技術と、子どもからアスリートを目指す選手までの運動能力を伸ばすスポーツアカデミーです。</p>
+      <p class="about-lead">VX SPORTS ACADEMYは、篠塚一平が代表を務める、サッカーの技術と、年齢を問わずキッズからアスリートを目指す選手までの運動能力を伸ばすスポーツアカデミーです。</p>
       <p class="about-lead">元プロ・専門コーチ陣が、身体能力とサッカーの技術を一人ひとりに合わせて指導します。</p>
       <ul class="about-list">
         <li><a href="personal.html">VX PERSONAL｜サッカーのパーソナル指導（受付中）</a></li>
-        <li><a href="gym.html">VX GYM｜キッズ・ジュニアアスリートのジム（東京・西麻布／2027年1月オープン予定）</a></li>
+        <li><a href="gym.html">VX GYM｜キッズからアスリートまでのジム（東京・西麻布／2027年1月オープン予定）</a></li>
         <li><a href="soccer.html">VX SOCCER｜U-12・U-9の新しいサッカーチーム（メンバー募集中）</a></li>
         <li><a href="apparel.html">VX APPAREL｜コーチ着用のトレーニングウェア（予約受付中）</a></li>
       </ul>
