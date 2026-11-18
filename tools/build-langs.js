@@ -19,7 +19,7 @@ const META = {
       'VX GYM opens in Nishi-Azabu, Tokyo in January 2027: a gym for all ages, from kids to players aiming to become athletes, in any sport. Power, jump and speed measured every session. From ¥17,800/month (incl. tax). Early registration open on LINE.'],
     soccer: ['New U-12 & U-9 football team | VX SOCCER',
       'VX SOCCER is a new football team combining serious athletic training with top-level football education. U-12 and U-9 players wanted. Ask about joining on LINE.'],
-    apparel: ['VX MOTION: everyday apparel, pre-orders open | VX APPAREL',
+    apparel: ['VX APPAREL: everyday T-shirt, shorts & socks, pre-orders open',
       'Pre-order VX everyday apparel. T-shirt ¥11,000, shorts ¥8,800, socks ¥2,200, 3-piece set ¥19,800 (incl. tax). Lightweight, quick-dry, four-way stretch. Six colours, S–XL.'],
   },
   zh: {
@@ -32,7 +32,7 @@ const META = {
       'VX GYM预计2027年1月在东京西麻布开业，不限年龄，面向从儿童到立志成为运动员的选手，不限运动项目。每次测量爆发力、跳跃、速度。月费 ¥17,800起（含税）。可通过LINE预约登记。'],
     soccer: ['全新U-12・U-9足球队 招募中｜VX SOCCER',
       'VX SOCCER是一支兼顾身体素质训练与顶级足球教育的新球队，正在招募U-12・U-9成员。入队咨询请通过LINE。'],
-    apparel: ['VX MOTION 日常服饰 接受预订｜VX APPAREL',
+    apparel: ['VX APPAREL 日常T恤・短裤・袜子 接受预订',
       'VX服饰接受预订。T恤 ¥11,000、短裤 ¥8,800、袜子 ¥2,200、三件套 ¥19,800（含税）。轻量速干、四向弹力。6色、S〜XL。'],
   },
 };
