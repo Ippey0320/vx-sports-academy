@@ -12,7 +12,7 @@ ORG = {
     '@type': 'SportsOrganization', '@id': BASE + '#org',
     'name': 'VX SPORTS ACADEMY', 'url': BASE,
     'logo': BASE + 'assets/apple-touch-icon.png', 'image': BASE + 'assets/og-image.png',
-    'description': 'サッカーのパーソナル指導（VX PERSONAL）、キッズからアスリートまでのジム（VX GYM・東京 西麻布）、U-12・U-9のサッカーチーム（VX SOCCER）、コーチウェア（VX APPAREL）を運営するスポーツアカデミー。',
+    'description': 'サッカーのパーソナル指導（VX PERSONAL）、キッズからアスリートまでのジム（VX GYM・東京 西麻布）、U-12・U-9のサッカーチーム（VX SOCCER）、アパレルブランド（VX APPAREL）を運営するスポーツアカデミー。',
     'sport': ['サッカー', 'Soccer'],
     'founder': {'@type': 'Person', '@id': BASE + '#founder', 'name': 'シノヅカイッペイ', 'alternateName': ['イッペイ・シノヅカ', 'Ippey Shinozuka', '篠塚一平'], 'jobTitle': '代表',
                 'description': '元プロサッカー選手（MF）。U-18ロシア代表。スパルタク・モスクワ、横浜F・マリノス、大宮アルディージャ、柏レイソル、アルビレックス新潟でプレー。Jリーグ通算95試合11ゴール9アシスト（J1・J2リーグ戦）。',
@@ -26,11 +26,11 @@ JPY = lambda p, name, extra=None: dict({'@type': 'Offer', 'name': name, 'price':
 PAGES = {
  'index': dict(
   path='', title='VX SPORTS ACADEMY｜サッカーのパーソナル指導・キッズからアスリートまでのジム',
-  desc='VX SPORTS ACADEMYは、サッカーのパーソナル指導「VX PERSONAL」、年齢を問わず、キッズからアスリートを目指す選手までの運動能力を数字で伸ばす「VX GYM」（東京・西麻布／2027年1月オープン予定）、U-12・U-9のサッカーチーム「VX SOCCER」、コーチウェア「VX APPAREL」を運営するスポーツアカデミーです。',
+  desc='VX SPORTS ACADEMYは、サッカーのパーソナル指導「VX PERSONAL」、年齢を問わず、キッズからアスリートを目指す選手までの運動能力を数字で伸ばす「VX GYM」（東京・西麻布／2027年1月オープン予定）、U-12・U-9のサッカーチーム「VX SOCCER」、アパレルブランド「VX APPAREL」を運営するスポーツアカデミーです。',
   og='プロの視点を、すべての選手に。サッカーのパーソナル指導・キッズ〜アスリート・サッカーチーム・ウェア。',
   name='ホーム',
   faq=[
-   ('VX SPORTS ACADEMYとは何ですか？', 'サッカーの技術と、年齢を問わずキッズからアスリートを目指す選手までの運動能力を伸ばすスポーツアカデミーです。サッカーのパーソナル指導「VX PERSONAL」、キッズからアスリートまでのジム「VX GYM」、サッカーチーム「VX SOCCER」、コーチウェア「VX APPAREL」の4つを運営しています。'),
+   ('VX SPORTS ACADEMYとは何ですか？', 'サッカーの技術と、年齢を問わずキッズからアスリートを目指す選手までの運動能力を伸ばすスポーツアカデミーです。サッカーのパーソナル指導「VX PERSONAL」、キッズからアスリートまでのジム「VX GYM」、サッカーチーム「VX SOCCER」、アパレルブランド「VX APPAREL」の4つを運営しています。'),
    ('代表はどんな人ですか？', '代表のシノヅカイッペイは元プロサッカー選手（MF）です。U-18ロシア代表、スパルタク・モスクワ（ロシア）を経て、横浜F・マリノス、大宮アルディージャ、柏レイソル、アルビレックス新潟でプレーしました。Jリーグ通算95試合11ゴール9アシスト（J1・J2リーグ戦）です。'),
    ('どこにありますか？', 'VX GYMは東京・西麻布に2027年1月オープン予定です。VX PERSONALは東京・神奈川・千葉・埼玉で対応しています。'),
    ('今申し込めるサービスは？', 'VX PERSONAL（初回体験 ¥5,500・税込）は受付中です。VX GYMは先行予約、VX SOCCERはU-12・U-9のメンバーを募集中、VX APPARELは予約注文を受け付けています。'),
@@ -97,12 +97,12 @@ PAGES = {
    'audience': {'@type': 'PeopleAudience', 'audienceType': 'U-12・U-9の子ども'},
   }]),
  'apparel': dict(
-  path='apparel.html', title='VX COACH KIT｜コーチ着用のトレーニングウェア 予約受付中｜VX APPAREL',
-  desc='VX SPORTS ACADEMYのコーチが着ているトレーニングウェア「VX COACH KIT」の予約注文を受付中。Tシャツ ¥11,000、ショーツ ¥8,800、ソックス ¥2,200、3点セット ¥19,800（税込）。軽量・速乾、4方向ストレッチ、撥水。6色・S〜XL。',
-  og='コーチが着ているウェアを、そのまま。VX COACH KIT 3点セット ¥19,800（税込）。予約受付中。',
+  path='apparel.html', title='VX COACH KIT｜普段着にもなるアパレル 予約受付中｜VX APPAREL',
+  desc='VX SPORTS ACADEMYのアパレル「VX COACH KIT」の予約注文を受付中。Tシャツ ¥11,000、ショーツ ¥8,800、ソックス ¥2,200、3点セット ¥19,800（税込）。軽量・速乾、4方向ストレッチ、撥水。6色・S〜XL。',
+  og='動ける服を、毎日の服に。VX COACH KIT 3点セット ¥19,800（税込）。予約受付中。',
   name='VX APPAREL',
   faq=[
-   ('何を買えますか？', 'コーチTシャツ ¥11,000、コーチショーツ ¥8,800、コーチソックス ¥2,200、3点セット ¥19,800です（すべて税込）。3点セットは単品合計より¥2,200お得です。'),
+   ('何を買えますか？', 'Tシャツ ¥11,000、ショーツ ¥8,800、ソックス ¥2,200、3点セット ¥19,800です（すべて税込）。3点セットは単品合計より¥2,200お得です。'),
    ('カラーとサイズは？', 'Ink Black・Sage Green・Stone・Lilac・Blush Pink・Ivoryの6色、サイズはS・M・L・XLです。'),
    ('どんな素材・機能ですか？', '軽量・速乾で、4方向ストレッチと撥水性、動きやすいスリット、夜でも目立つリフレクティブがついています。トレーニングにも普段着にも使えます。'),
    ('いつ届きますか？', '予約注文のため、予約締切後の生産となります。お届け時期とお支払い方法はLINEでご案内します。'),
@@ -111,10 +111,10 @@ PAGES = {
    {'@type': 'Product', 'name': n, 'brand': {'@type': 'Brand', 'name': 'VX SPORTS ACADEMY'}, 'description': d,
     'image': BASE + 'assets/apparel-colors.jpg',
     'offers': JPY(p, n, {'availability': 'https://schema.org/PreOrder', 'seller': {'@id': BASE + '#org'}})}
-   for n, p, d in [('VX COACH KIT 3点セット', 19800, 'コーチTシャツ・コーチショーツ・コーチソックスのセット。6色・S〜XL。'),
-                   ('VX コーチTシャツ', 11000, '高通気・速乾メッシュ。'),
-                   ('VX コーチショーツ', 8800, '4方向ストレッチ・撥水。'),
-                   ('VX コーチソックス', 2200, '約22cm丈・ブラック。')]]),
+   for n, p, d in [('VX COACH KIT 3点セット', 19800, 'Tシャツ・ショーツ・ソックスのセット。6色・S〜XL。'),
+                   ('VX Tシャツ', 11000, '高通気・速乾メッシュ。'),
+                   ('VX ショーツ', 8800, '4方向ストレッチ・撥水。'),
+                   ('VX ソックス', 2200, '約22cm丈・ブラック。')]]),
 }
 
 # ---- 英語・中国語（言語切替用） ----
@@ -155,11 +155,11 @@ TR = {
  'VX PERSONAL｜サッカーのパーソナル指導（受付中）': ('VX PERSONAL | Personal football coaching (open)', 'VX PERSONAL｜足球私教指导（接受报名中）'),
  'VX GYM｜キッズからアスリートまでのジム（東京・西麻布／2027年1月オープン予定）': ('VX GYM | Gym for kids to athletes, any age (Nishi-Azabu, Tokyo / opening Jan 2027)', 'VX GYM｜儿童到运动员健身房（不限年龄）（东京・西麻布／预计2027年1月开业）'),
  'VX SOCCER｜U-12・U-9の新しいサッカーチーム（メンバー募集中）': ('VX SOCCER | New U-12・U-9 football team (recruiting)', 'VX SOCCER｜全新U-12・U-9足球队（招募中）'),
- 'VX APPAREL｜コーチ着用のトレーニングウェア（予約受付中）': ('VX APPAREL | Coach training wear (pre-orders open)', 'VX APPAREL｜教练同款训练服（接受预订中）'),
+ 'VX APPAREL｜普段着にもなるアパレル（予約受付中）': ('VX APPAREL | Everyday apparel (pre-orders open)', 'VX APPAREL｜日常服饰（接受预订中）'),
  # index
  'VX SPORTS ACADEMYとは何ですか？': ('What is VX SPORTS ACADEMY?', 'VX SPORTS ACADEMY是什么？'),
- 'サッカーの技術と、年齢を問わずキッズからアスリートを目指す選手までの運動能力を伸ばすスポーツアカデミーです。サッカーのパーソナル指導「VX PERSONAL」、キッズからアスリートまでのジム「VX GYM」、サッカーチーム「VX SOCCER」、コーチウェア「VX APPAREL」の4つを運営しています。':
-   ('A sports academy that develops football skill and athletic ability for every age, from kids to aspiring athletes. We run four services: VX PERSONAL (personal football coaching), VX GYM (gym for kids to athletes, any age), VX SOCCER (football team) and VX APPAREL (coach wear).', '一所提升足球技术及不限年龄、从儿童到立志成为运动员的选手的运动能力的体育学院，运营足球私教「VX PERSONAL」、儿童到运动员健身房（不限年龄）「VX GYM」、足球队「VX SOCCER」和教练服装「VX APPAREL」四项服务。'),
+ 'サッカーの技術と、年齢を問わずキッズからアスリートを目指す選手までの運動能力を伸ばすスポーツアカデミーです。サッカーのパーソナル指導「VX PERSONAL」、キッズからアスリートまでのジム「VX GYM」、サッカーチーム「VX SOCCER」、アパレルブランド「VX APPAREL」の4つを運営しています。':
+   ('A sports academy that develops football skill and athletic ability for every age, from kids to aspiring athletes. We run four services: VX PERSONAL (personal football coaching), VX GYM (gym for kids to athletes, any age), VX SOCCER (football team) and VX APPAREL (apparel brand).', '一所提升足球技术及不限年龄、从儿童到立志成为运动员的选手的运动能力的体育学院，运营足球私教「VX PERSONAL」、儿童到运动员健身房（不限年龄）「VX GYM」、足球队「VX SOCCER」和服饰品牌「VX APPAREL」四项服务。'),
  'どこにありますか？': ('Where are you located?', '在哪里？'),
  'VX GYMは東京・西麻布に2027年1月オープン予定です。VX PERSONALは東京・神奈川・千葉・埼玉で対応しています。': ('VX GYM opens in Nishi-Azabu, Tokyo in January 2027. VX PERSONAL is available in Tokyo, Kanagawa, Chiba and Saitama.', 'VX GYM预计于2027年1月在东京西麻布开业。VX PERSONAL可在东京、神奈川、千叶、埼玉提供服务。'),
  '今申し込めるサービスは？': ('What can I sign up for now?', '现在可以报名哪些服务？'),
@@ -202,7 +202,7 @@ TR = {
  'HOME（ブラック）・AWAY（ホワイト）・THIRD（グレー）のオフィシャルユニフォームがあります。シャツ・パンツ・ソックスのセットで、背中に名前と背番号を入れられます。': ('Yes: official HOME (black), AWAY (white) and THIRD (grey) kits. Each is a shirt, shorts and socks set, with name and number on the back.', '有。官方队服分为HOME（黑）、AWAY（白）、THIRD（灰），包括球衣、球裤和球袜，背后可印名字和号码。'),
  # apparel
  '何を買えますか？': ('What can I buy?', '可以买什么？'),
- 'コーチTシャツ ¥11,000、コーチショーツ ¥8,800、コーチソックス ¥2,200、3点セット ¥19,800です（すべて税込）。3点セットは単品合計より¥2,200お得です。': ('Coach T-shirt ¥11,000, coach shorts ¥8,800, coach socks ¥2,200, or the 3-piece set for ¥19,800 (all incl. tax), ¥2,200 less than buying separately.', '教练T恤 ¥11,000、教练短裤 ¥8,800、教练袜 ¥2,200、三件套 ¥19,800（均含税），比单买合计便宜¥2,200。'),
+ 'Tシャツ ¥11,000、ショーツ ¥8,800、ソックス ¥2,200、3点セット ¥19,800です（すべて税込）。3点セットは単品合計より¥2,200お得です。': ('T-shirt ¥11,000, shorts ¥8,800, socks ¥2,200, or the 3-piece set for ¥19,800 (all incl. tax), ¥2,200 less than buying separately.', 'T恤 ¥11,000、短裤 ¥8,800、袜子 ¥2,200、三件套 ¥19,800（均含税），比单买合计便宜¥2,200。'),
  'カラーとサイズは？': ('Which colours and sizes?', '有哪些颜色和尺码？'),
  'Ink Black・Sage Green・Stone・Lilac・Blush Pink・Ivoryの6色、サイズはS・M・L・XLです。': ('Six colours (Ink Black, Sage Green, Stone, Lilac, Blush Pink, Ivory) in S, M, L and XL.', '共6色（Ink Black、Sage Green、Stone、Lilac、Blush Pink、Ivory），尺码S、M、L、XL。'),
  'どんな素材・機能ですか？': ('What are the materials and features?', '面料和功能如何？'),
@@ -274,7 +274,7 @@ ABOUT = '''  <section class="band on-ink about" id="about" style="border-top:1px
         <li><a href="personal.html">VX PERSONAL｜サッカーのパーソナル指導（受付中）</a></li>
         <li><a href="gym.html">VX GYM｜キッズからアスリートまでのジム（東京・西麻布／2027年1月オープン予定）</a></li>
         <li><a href="soccer.html">VX SOCCER｜U-12・U-9の新しいサッカーチーム（メンバー募集中）</a></li>
-        <li><a href="apparel.html">VX APPAREL｜コーチ着用のトレーニングウェア（予約受付中）</a></li>
+        <li><a href="apparel.html">VX APPAREL｜普段着にもなるアパレル（予約受付中）</a></li>
       </ul>
     </div>
   </section>
@@ -284,7 +284,7 @@ ABOUT = '''  <section class="band on-ink about" id="about" style="border-top:1px
 H1_SWAPS = {
  'gym': ('<p class="gym-catch">お子さんの成長が、<br><em>数字</em>で見える。</p>', '<h1 class="gym-catch">お子さんの成長が、<br><em>数字</em>で見える。</h1>'),
  'soccer': ('<p class="catch" style="font-weight:900;font-size:27.1px;line-height:1.45">選手一人ひとりが、<br>生き生きとサッカーできるチームを。</p>', '<h1 class="catch big">選手一人ひとりが、<br>生き生きとサッカーできるチームを。</h1>'),
- 'apparel': ('<p class="catch">コーチが着ているウェアを、<br>そのまま。VX COACH KIT</p>', '<h1 class="catch">コーチが着ているウェアを、<br>そのまま。VX COACH KIT</h1>'),
+ 'apparel': ('<p class="catch">動ける服を、<br>毎日の服に。VX COACH KIT</p>', '<h1 class="catch">動ける服を、<br>毎日の服に。VX COACH KIT</h1>'),
 }
 
 esc = lambda s: s.replace('&', '&amp;').replace('"', '&quot;').replace('<', '&lt;')
