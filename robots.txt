@@ -1,0 +1,36 @@
+# VX SPORTS ACADEMY
+# 検索エンジンとAI検索（ChatGPT・Perplexity・Claude・Gemini など）に、すべてのページを読んでもらう設定
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+Sitemap: https://ippey0320.github.io/vx-sports-academy/sitemap.xml

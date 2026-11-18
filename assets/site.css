@@ -534,3 +534,24 @@ h2.catch[style] { font-weight: 700 !important; }
 @media (max-width: 400px) { .topbar .lang button { min-width: 30px; padding: 4px 5px; } }
 @media (max-width: 370px) { .tabs a { font-stretch: 100%; font-size: 10px; letter-spacing: .1em; padding-inline: 2px; } }
 .tabs a { font-stretch: 112%; letter-spacing: .16em; }
+
+/* ===== FAQ・About（検索・AI検索向けの説明ブロック） ===== */
+.faq-list { border-top: 1px solid var(--line-dark); }
+.faq-item { border-bottom: 1px solid var(--line-dark); }
+.faq-item summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 2px; font-size: 15px; font-weight: 700; line-height: 1.6; letter-spacing: .04em; color: #fff; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; font-family: var(--display); font-weight: 400; font-size: 20px; line-height: 1; color: var(--sub-on-ink); flex: none; transition: transform .2s; }
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item p { margin: 0 2px 20px; font-size: 14.5px; line-height: 1.9; letter-spacing: .04em; color: #cfcfd4; }
+.faq-upd { margin: 4px 0 0; font-size: 12px; letter-spacing: .08em; color: var(--sub-on-ink); text-align: right; }
+.about-lead { margin: 0; font-size: 15px; line-height: 2; letter-spacing: .04em; color: #e6e6ea; }
+.about-list { list-style: none; margin: 8px 0 0; padding: 0; border-top: 1px solid var(--line-dark); }
+.about-list li { border-bottom: 1px solid var(--line-dark); }
+.about-list a { display: block; padding: 14px 2px; font-size: 14px; line-height: 1.7; letter-spacing: .04em; color: #fff; text-decoration: none; }
+.about-list a::after { content: " ›"; color: var(--sub-on-ink); }
+h1.gym-catch, h1.catch { margin: 0; }
+.about-list a { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.about-list a::after { content: "›"; font-size: 18px; flex: none; }
+@media (max-width: 420px) { .cta-bar a { letter-spacing: .03em !important; white-space: nowrap; font-size: 14px; } .cta-bar a svg { flex: none; } }
+@media (max-width: 360px) { .cta-bar a { font-size: 12.5px; padding-left: 10px; padding-right: 10px; } }
+@media (max-width: 360px) { .cta-bar .p { white-space: normal; min-width: 0; line-height: 1.35; text-align: center; } }

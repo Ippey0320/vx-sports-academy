@@ -1,0 +1,15 @@
+# VX SPORTS ACADEMY
+
+> VX SPORTS ACADEMYは、篠塚一平が代表を務める、サッカーと子どもの運動能力を伸ばすスポーツアカデミーです。サッカーのパーソナル指導（VX PERSONAL）、子どもの運動能力ジム（VX GYM・東京 西麻布／2027年1月オープン予定）、U-12・U-9のサッカーチーム（VX SOCCER）、コーチウェア（VX APPAREL）を運営しています。料金はすべて税込。情報更新日：2026-11-18。
+
+## サービス
+
+- [VX PERSONAL｜サッカーのパーソナル指導](https://ippey0320.github.io/vx-sports-academy/personal.html): 身体能力（スピード・アジリティ・パワー・体幹）とサッカーの技術をマンツーマンで指導。初心者〜上級者。初回体験 ¥5,500、本レッスン ¥16,500／回（最低4回）、初月1ヶ月契約（週1回）¥66,000、2ヶ月目以降3ヶ月契約 ¥198,000。東京・神奈川・千葉・埼玉で対応。受付中。
+- [VX GYM｜子どもの運動能力ジム](https://ippey0320.github.io/vx-sports-academy/gym.html): 東京・西麻布に2027年1月オープン予定。競技を問わず、パワー（W）・ジャンプ（cm）・スピード（秒）を毎回計測し成長をグラフで記録。年代別グループクラス（定員8人・指導者1人）。月額 週1回 ¥17,800／週2回 ¥28,000、エリート（月1回マンツーマン＋フィードバック）＋¥15,000。先行予約は無料。
+- [VX SOCCER｜U-12・U-9の新しいサッカーチーム](https://ippey0320.github.io/vx-sports-academy/soccer.html): 身体能力トレーニングとトップレベルのサッカー教育を両立。パスサッカー。メンバー募集中。練習日・会場は決まり次第告知。オフィシャルユニフォームHOME黒／AWAY白／THIRDグレー。
+- [VX APPAREL｜VX COACH KIT](https://ippey0320.github.io/vx-sports-academy/apparel.html): コーチ着用ウェアの予約注文。Tシャツ ¥11,000、ショーツ ¥8,800、ソックス ¥2,200、3点セット ¥19,800。6色・S〜XL。
+
+## お問い合わせ
+
+- [LINE公式アカウント](https://lin.ee/P7ZYT6p): 体験の申し込み・各種お問い合わせ
+- [Instagram @vx_sports_academy](https://www.instagram.com/vx_sports_academy/): 最新情報・DMでのお問い合わせ
