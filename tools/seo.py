@@ -318,6 +318,7 @@ for key, p in PAGES.items():
     block = f'''
 <!-- SEO -->
 <meta name="google-site-verification" content="3zVP4AfZtZoqzpeqEUuoPGedQ1RHEeVxRpytjptbPYk">
+<meta name="msvalidate.01" content="FFAA17851A2F6A55200AE1E326148E97">
 <link rel="canonical" href="{url}">
 <link rel="alternate" hreflang="ja" href="{url}">
 <link rel="alternate" hreflang="en" href="{BASE}en/{p['path']}">
