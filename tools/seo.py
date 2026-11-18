@@ -18,7 +18,8 @@ ORG = {
                 'description': '元プロサッカー選手（MF）。U-18ロシア代表。スパルタク・モスクワ、横浜F・マリノス、大宮アルディージャ、柏レイソル、アルビレックス新潟でプレー。Jリーグ通算95試合11ゴール9アシスト（J1・J2リーグ戦）。',
                 'image': BASE + 'assets/founder.jpg', 'sameAs': ['https://en.wikipedia.org/wiki/Ippey_Shinozuka']},
     'sameAs': [IG],
-    'contactPoint': {'@type': 'ContactPoint', 'contactType': 'customer service', 'url': LINE, 'availableLanguage': ['ja']},
+    'contactPoint': [{'@type': 'ContactPoint', 'contactType': 'customer service', 'url': LINE, 'availableLanguage': ['ja']},
+                     {'@type': 'ContactPoint', 'contactType': 'sponsorship', 'url': IG, 'availableLanguage': ['ja']}],
 }
 JPY = lambda p, name, extra=None: dict({'@type': 'Offer', 'name': name, 'price': str(p), 'priceCurrency': 'JPY'}, **(extra or {}))
 
@@ -33,6 +34,7 @@ PAGES = {
    ('代表はどんな人ですか？', '代表のシノヅカイッペイは元プロサッカー選手（MF）です。U-18ロシア代表、スパルタク・モスクワ（ロシア）を経て、横浜F・マリノス、大宮アルディージャ、柏レイソル、アルビレックス新潟でプレーしました。Jリーグ通算95試合11ゴール9アシスト（J1・J2リーグ戦）です。'),
    ('どこにありますか？', 'VX GYMは東京・西麻布に2027年1月オープン予定です。VX PERSONALは東京・神奈川・千葉・埼玉で対応しています。'),
    ('今申し込めるサービスは？', 'VX PERSONAL（初回体験 ¥5,500・税込）は受付中です。VX GYMは先行予約、VX SOCCERはU-12・U-9のメンバーを募集中、VX APPARELは予約注文を受け付けています。'),
+   ('スポンサー・協賛の依頼はどこからできますか？', 'LINE公式アカウント、またはInstagram（@vx_sports_academy）のDMからお送りください。'),
    ('問い合わせ方法は？', 'LINE公式アカウントから、メッセージでお問い合わせください。最新情報はInstagram（@vx_sports_academy）でもお知らせしています。'),
   ]),
  'personal': dict(
@@ -117,6 +119,8 @@ PAGES = {
 
 # ---- 英語・中国語（言語切替用） ----
 TR = {
+ 'スポンサー・協賛の依頼はどこからできますか？': ('How can I propose a sponsorship or partnership?', '如何提出赞助・合作请求？'),
+ 'LINE公式アカウント、またはInstagram（@vx_sports_academy）のDMからお送りください。': ('Message us on our official LINE account or by Instagram DM (@vx_sports_academy).', '请通过LINE官方账号或Instagram（@vx_sports_academy）私信联系。'),
  'VX SPORTS ACADEMY 代表': ('Founder, VX SPORTS ACADEMY', 'VX SPORTS ACADEMY 代表'),
  '代表 シノヅカイッペイ': ('Founder: Ippey Shinozuka', '代表 Ippey Shinozuka'),
  'シノヅカイッペイ': ('Ippey Shinozuka', 'Ippey Shinozuka'),
