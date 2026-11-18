@@ -1,0 +1,8 @@
+{
+  "name": "agility",
+  "slides": [
+    {"type": "cover", "photo": "personal-coach.webp", "kicker": "PRO EYE", "title": "家でできる、<br>3分アジリティ。", "lead": "（例）一平さんが内容を確認してから投稿"},
+    {"type": "list", "kicker": "MENU", "title": "毎日3分、3つだけ。", "items": [["01", "（例）種目1"], ["02", "（例）種目2"], ["03", "（例）種目3"]], "small": "（例）回数・注意点"},
+    {"type": "cta", "kicker": "JOIN", "title": "続きは、<br>体験で。", "small": "キッズからアスリートまで・初回体験 ¥5,500（税込）"}
+  ]
+}

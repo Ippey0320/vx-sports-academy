@@ -101,6 +101,28 @@ const SETS = {
   ],
 };
 
+// 台本（JSON）からカルーセルを作る：node tools/sns/carousels.js <出力> --spec 台本.json
+// 台本の形：{"name":"agility","slides":[{"type":"cover","photo":"gym-entrance.webp","kicker":"PRO EYE","title":"タイトル<br>2行目","lead":"補足"},
+//   {"type":"text","kicker":"..","title":"..","lead":".."},{"type":"list","kicker":"..","title":"..","items":[["01","項目"],["02","項目"]],"small":".."},
+//   {"type":"cta","kicker":"JOIN","title":"..","cta":"体験・入会は…","small":".."}]}
+function fromSpec(spec) {
+  const esc = (x) => String(x ?? '');
+  return spec.slides.map((sl) => (n, t) => {
+    const k = sl.kicker ? `<p class="kicker">${esc(sl.kicker)}</p>` : '';
+    if (sl.type === 'cover') return page(n, t, `<div class="body">${k}<h1>${esc(sl.title)}</h1><div class="bar"></div>${sl.lead ? `<p class="lead">${esc(sl.lead)}</p>` : ''}</div>`, sl.photo ? { photo: asset(sl.photo), pos: sl.pos, color: sl.color } : {});
+    if (sl.type === 'list') return page(n, t, `<div class="mid">${k}<h2>${esc(sl.title)}</h2><div class="list">${(sl.items || []).map(([b, s]) => `<div><b>${esc(b)}</b><span>${esc(s)}</span></div>`).join('')}</div>${sl.small ? `<p class="small">${esc(sl.small)}</p>` : ''}</div>`);
+    if (sl.type === 'cta') return page(n, t, `<div class="mid">${k}<h2>${esc(sl.title)}</h2><div class="cta"><p>${esc(sl.cta || CTA_LINE)}</p>${sl.small ? `<small>${esc(sl.small)}</small>` : ''}</div></div>`);
+    return page(n, t, `<div class="mid">${k}<h2>${esc(sl.title)}</h2>${sl.lead ? `<p class="lead">${esc(sl.lead)}</p>` : ''}${sl.small ? `<p class="small">${esc(sl.small)}</p>` : ''}</div>`);
+  });
+}
+const specIdx = process.argv.indexOf('--spec');
+if (specIdx > 0) {
+  const spec = JSON.parse(fs.readFileSync(process.argv[specIdx + 1], 'utf8'));
+  for (const k of Object.keys(SETS)) delete SETS[k];
+  SETS[spec.name] = fromSpec(spec);
+  ONLY.length = 0;
+}
+
 (async () => {
   fs.mkdirSync(OUT, { recursive: true });
   const css = fontCss();
