@@ -11,6 +11,8 @@ PAGES = ['index.html', 'personal.html', 'gym.html', 'soccer.html', 'apparel.html
 # 1) 写真を WebP に（スマホ用 800px と 元サイズ）
 SIZES = {}
 for jpg in glob.glob('assets/*.jpg'):
+    if os.path.basename(jpg).startswith('og-'):  # SNS共有画像はそのまま
+        continue
     base = jpg[:-4]
     im = Image.open(jpg).convert('RGB')
     w, h = im.size
