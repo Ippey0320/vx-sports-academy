@@ -97,7 +97,7 @@ for (const w of [320, 375, 390, 430]) {
     const r = await page.evaluate(() => {
       const W = innerWidth, bad = [];
       document.querySelectorAll('h1,h2,h3,p,a,button,li,span,b,strong,img').forEach((e) => {
-        if (e.closest('.drawer,[aria-hidden="true"]')) return;
+        if (e.closest('.drawer,[aria-hidden="true"],.lb-track')) return; // .lb-track は横スワイプ用（はみ出しが正常）
         const b = e.getBoundingClientRect();
         if (b.width && b.right > W + 1) bad.push((e.textContent || e.getAttribute('alt') || e.tagName).trim().slice(0, 20));
       });
