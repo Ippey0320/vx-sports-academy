@@ -302,6 +302,7 @@ for key, p in PAGES.items():
     s = re.sub(r'<meta name="description"[^>]*>', f'<meta name="description" content="{esc(p["desc"])}">', s, count=1)
     s = re.sub(r'<meta property="og:title"[^>]*>', f'<meta property="og:title" content="{esc(p["title"])}">', s, count=1)
     s = re.sub(r'<meta property="og:description"[^>]*>', f'<meta property="og:description" content="{esc(p["og"])}">', s, count=1)
+    s = re.sub(r'<meta property="og:image"[^>]*>', f'<meta property="og:image" content="{BASE}assets/og-{key}.jpg">', s, count=1)
 
     crumbs = [{'@type': 'ListItem', 'position': 1, 'name': 'VX SPORTS ACADEMY', 'item': BASE}]
     if key != 'index':
@@ -310,7 +311,7 @@ for key, p in PAGES.items():
              {'@type': 'WebSite', '@id': BASE + '#website', 'url': BASE, 'name': 'VX SPORTS ACADEMY', 'inLanguage': 'ja', 'publisher': {'@id': BASE + '#org'}},
              {'@type': 'WebPage', '@id': url + '#webpage', 'url': url, 'name': p['title'], 'description': p['desc'], 'inLanguage': 'ja',
               'isPartOf': {'@id': BASE + '#website'}, 'about': {'@id': BASE + '#org'}, 'dateModified': UPDATED_ISO,
-              'primaryImageOfPage': BASE + 'assets/og-image.png'},
+              'primaryImageOfPage': BASE + f'assets/og-{key}.jpg'},
              {'@type': 'BreadcrumbList', 'itemListElement': crumbs},
              {'@type': 'FAQPage', '@id': url + '#faq', 'mainEntity': [{'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in p['faq']]}]
     graph += p.get('extra', lambda: [])()
@@ -327,7 +328,10 @@ for key, p in PAGES.items():
 <meta property="og:url" content="{url}">
 <meta property="og:site_name" content="VX SPORTS ACADEMY">
 <meta property="og:locale" content="ja_JP">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{BASE}assets/og-{key}.jpg">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <script type="application/ld+json">{ld}</script>
 <!-- /SEO -->'''
