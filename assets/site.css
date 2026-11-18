@@ -603,3 +603,5 @@ html[lang="zh-Hans"] .founder .f-en { display: none; }
 .legal-list a { color: #fff; text-underline-offset: 3px; }
 .legal h1.catch { font-size: 22px !important; }
 footer .f-legal { color: var(--sub-on-ink); text-decoration: underline; text-underline-offset: 3px; font-size: 12px; justify-self: start; }
+.drawer a.drawer-legal { display: block; margin-top: 14px; padding: 10px 12px; border: none; font-size: 12.5px; letter-spacing: .06em; color: var(--sub-on-ink); text-decoration: underline; text-underline-offset: 3px; text-align: center; }
+.drawer a.drawer-legal.on { background: transparent; color: #fff; }
