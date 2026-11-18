@@ -317,6 +317,7 @@ for key, p in PAGES.items():
     ld = json.dumps({'@context': 'https://schema.org', '@graph': graph}, ensure_ascii=False, separators=(',', ':'))
     block = f'''
 <!-- SEO -->
+<meta name="google-site-verification" content="3zVP4AfZtZoqzpeqEUuoPGedQ1RHEeVxRpytjptbPYk">
 <link rel="canonical" href="{url}">
 <link rel="alternate" hreflang="ja" href="{url}">
 <link rel="alternate" hreflang="en" href="{BASE}en/{p['path']}">
