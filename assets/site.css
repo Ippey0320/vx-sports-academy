@@ -594,3 +594,12 @@ html[lang="zh-Hans"] .founder .f-en { display: none; }
 .c-card .sp-links { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
 .c-card .sp-links a { display: flex; align-items: center; justify-content: center; min-height: 44px; border: 1px solid var(--text-on-ink); font-family: var(--display); font-size: 13px; font-weight: 600; letter-spacing: .12em; color: inherit; text-decoration: none; transition: background .15s, color .15s; }
 .c-card .sp-links a:hover { background: var(--text-on-ink); color: var(--ink); }
+
+/* 特定商取引法に基づく表記 */
+.legal-list { margin: 0; border-top: 1px solid var(--line-dark); }
+.legal-list > div { padding: 16px 2px; border-bottom: 1px solid var(--line-dark); display: grid; gap: 6px; }
+.legal-list dt { font-size: 13px; font-weight: 700; letter-spacing: .08em; color: var(--sub-on-ink); }
+.legal-list dd { margin: 0; font-size: 14.5px; line-height: 1.9; letter-spacing: .04em; color: #e6e6ea; }
+.legal-list a { color: #fff; text-underline-offset: 3px; }
+.legal h1.catch { font-size: 22px !important; }
+footer .f-legal { color: var(--sub-on-ink); text-decoration: underline; text-underline-offset: 3px; font-size: 12px; justify-self: start; }

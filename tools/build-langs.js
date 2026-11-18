@@ -66,6 +66,7 @@ const esc = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g
         .replace(/<link rel="canonical"[^>]*>/, `<link rel="canonical" href="${own}">`)
         .replace(/<meta property="og:url"[^>]*>/, `<meta property="og:url" content="${own}">`)
         .replace(/(src|href)="assets\//g, '$1="../assets/')
+        .replace(/href="tokushoho\.html"/g, 'href="../tokushoho.html"')
         .replace(/<html[^>]*>/, `<html lang="${m.htmlLang}" data-static-lang="${lang}">`);
       fs.writeFileSync(path.join(ROOT, lang, file), html);
       console.log('wrote', lang + '/' + file);
