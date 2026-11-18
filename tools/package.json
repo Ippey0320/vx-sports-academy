@@ -1,0 +1,13 @@
+{
+  "name": "vx-site-tools",
+  "private": true,
+  "description": "VX SPORTS ACADEMY サイトの点検・組み立てツール",
+  "scripts": {
+    "build": "bash build.sh",
+    "audit": "node audit.mjs"
+  },
+  "dependencies": {
+    "chrome-launcher": "^1.1.2",
+    "lighthouse": "^12.0.0"
+  }
+}

@@ -610,3 +610,6 @@ footer .f-legal { color: var(--sub-on-ink); text-decoration: underline; text-und
 @media (max-width: 800px) { .hero2-bg { background-image: url(gym-entrance-800.webp); } }
 .point h2 { font-size: 18px; font-weight: 700; letter-spacing: .04em; line-height: 1.45; font-feature-settings: "palt" 1; }
 .order h2 { font-family: var(--display); font-weight: 300; font-stretch: 125%; letter-spacing: .3em; font-size: 14px; }
+@media (max-width: 360px) { .cat-jump a { padding: 12px 10px; column-gap: 8px; } .cat-jump a span { font-size: 11px; letter-spacing: 0; } .cat-jump a strong { letter-spacing: .08em; font-size: 13px; } .cat-jump a b { font-size: 17px; } }
+.cat-jump a > * { min-width: 0; }
+.cat-jump a span { overflow-wrap: anywhere; }
