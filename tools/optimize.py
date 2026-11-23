@@ -40,6 +40,7 @@ def img_tag(m):
 LOGO = 'width="332" height="104"'
 LABELS = {'personal.html': 'VX PERSONALを見る', 'gym.html': 'VX GYMを見る', 'soccer.html': 'VX SOCCERを見る', 'apparel.html': 'VX APPARELを見る'}
 FONT_RE = re.compile(r'<link rel="stylesheet" href="(https://fonts\.googleapis\.com/[^"]+)">')
+FONT_DONE_RE = re.compile(r'<link rel="preload" as="style" href="(https://fonts\.googleapis\.com/[^"]+)"[^>]*>\n(?:<noscript><link rel="preload" as="style" href="https://fonts\.googleapis\.com/[^"]+"[^>]*>\n)*<noscript><link rel="stylesheet" href="https://fonts\.googleapis\.com/[^"]+"></noscript>(?:</noscript>)*')
 
 for f in PAGES:
     if not os.path.exists(f):
@@ -54,6 +55,8 @@ for f in PAGES:
         s = s.replace(f'<a class="cat-img" href="{href}">', f'<a class="cat-img" href="{href}" aria-label="{label}">')
     s = re.sub(r'(<img src="assets/personal-coach\.webp"[^>]*?) alt=""', r'\1 alt="VX PERSONALでマンツーマン指導をするコーチ"', s)
     # 文字の読み込みで最初の表示を止めない
+    #   （組み立てを繰り返しても <noscript> が重ならないよう、前回の結果を1本の stylesheet に戻してから変換する）
+    s = FONT_DONE_RE.sub(lambda m: f'<link rel="stylesheet" href="{m.group(1)}">', s)
     s = FONT_RE.sub(lambda m: f'<link rel="preload" as="style" href="{m.group(1)}" onload="this.onload=null;this.rel=\'stylesheet\'">\n<noscript><link rel="stylesheet" href="{m.group(1)}"></noscript>', s)
     # 見出しの順番（h1 → h2 → h3）
     if f == 'personal.html':
