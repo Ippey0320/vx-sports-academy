@@ -13,6 +13,7 @@ const ONLY = process.argv.slice(3);
 const asset = (f) => 'data:image/' + (f.endsWith('.svg') ? 'svg+xml' : f.endsWith('.webp') ? 'webp' : 'jpeg') + ';base64,' + fs.readFileSync(path.join(ROOT, 'assets', f)).toString('base64');
 const LOGO = asset('logo.svg');
 const NEON = '#d4ff2a';
+let NOPAGE = false; // 台本に "pageNumbers": false でページ番号（01 / 07）を消す
 
 function fontCss() {
   let css = '';
@@ -72,7 +73,7 @@ p.lead{font-family:'Noto Sans JP';font-weight:500;font-size:34px;line-height:1.7
 
 const page = (n, total, inner, { photo, pos, color, whole } = {}) => `
 ${photo && whole ? `<img class="whole" src="${photo}">` : ''}${photo && !whole ? `<div class="photo" style="background-image:url(${photo});background-position:${pos || 'center'}${color ? ';filter:none' : ''}"></div><div class="shade"></div>` : ''}
-<div class="top"><img src="${LOGO}"><span>${String(n).padStart(2, '0')} / ${String(total).padStart(2, '0')}</span></div>
+<div class="top"><img src="${LOGO}">${NOPAGE ? '' : `<span>${String(n).padStart(2, '0')} / ${String(total).padStart(2, '0')}</span>`}</div>
 ${inner}
 <div class="foot"><span>VX SPORTS ACADEMY</span><span>@vx_sports_academy</span></div>`;
 
@@ -122,6 +123,7 @@ if (specIdx > 0) {
   const spec = JSON.parse(fs.readFileSync(process.argv[specIdx + 1], 'utf8'));
   for (const k of Object.keys(SETS)) delete SETS[k];
   SETS[spec.name] = fromSpec(spec);
+  NOPAGE = spec.pageNumbers === false;
   ONLY.length = 0;
 }
 
