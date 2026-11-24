@@ -92,9 +92,9 @@ personal_vs = vs(OTHER_PRACTICE, "VX PERSONAL", [
 personal_proof = ('<div class="s10 s10-trust">' + head("Proof", t("いまも現場で、選手を指導しています。", "Coaching players on the pitch, right now.", "现在依然在一线指导球员。"))
     + '<div class="s10-stats">'
     + f'<div><b>30+</b><span>{t("個人指導中の選手", "Players in one-on-one coaching", "正在个人指导的球员")}</span></div>'
-    + f'<div><b>4</b><span>{t("合宿の開催回数", "Training camps held", "已举办集训次数")}</span></div>'
-    + f'<div><b>25</b><span>{t("合宿1回の参加人数", "Players per camp", "每次集训人数")}</span></div></div>'
-    + f'<p class="s10-src">{t("2026年11月時点", "As of November 2026", "截至2026年11月")}</p></div>')
+    + f'<div><b>26</b><span>{t("12月の合宿の参加者", "Players at the December camp", "12月集训参加人数")}</span></div>'
+    + f'<div><b>{t("約20", "~20", "约20")}</b><span>{t("毎回の合宿の参加者", "Players at each camp", "每次集训参加人数")}</span></div></div>'
+    + f'<p class="s10-src">{t("2026年11月時点。12月14日からの合宿で4回目。", "As of November 2026. The camp from 14 December is our fourth.", "截至2026年11月。12月14日起的集训为第4次。")}</p></div>')
 personal_now = now(t("マンツーマンのため、受けられる人数に限りがあります。", "Because every session is one-on-one, places are limited.", "因为是一对一，名额有限。"),
                    t("始めたいと思った今が、いちばん早いタイミングです。", "The moment you want to start is the earliest you can.", "想开始的现在，就是最早的时机。"))
 personal_start = steps(START_T, [ADD_LINE,
@@ -157,6 +157,17 @@ index_start = steps(START_T, [ADD_LINE,
     (t("ご案内が届く", "We reply with details", "收到说明"), t("日時・料金・次の流れをお送りします。", "We’ll send dates, prices and next steps.", "我们会发送日期、费用及后续流程。"))],
     "Start", cta=ADD_LINE[0])
 
+CAMP_SHOW = False  # 合宿写真（子どもの顔あり）：保護者の許可を一平さんに確認してから True に
+# 合宿（質問3の証拠：2026/11/24 一平さんの写真）
+CAMP_IMGS = [("camp-01.jpg", 1600, 1201, "合宿に参加した選手たちと指導者の集合写真"),
+             ("camp-02.jpg", 1600, 900, "合宿のトレーニングで選手に説明する代表"),
+             ("camp-03.jpg", 1600, 1201, "ナイターのグラウンドで指導を受ける選手たち"),
+             ("camp-04.jpg", 1600, 900, "合宿の夕食の時間")]
+camp = ('<div class="s10 s10-camp">' + head("Camp", t("合宿も、開催しています。", "We run training camps, too.", "我们也举办集训。"))
+    + '<ul class="camp-track">' + "".join(f'<li><img src="assets/{f}" alt="{a}" loading="lazy" width="{w}" height="{h}"></li>' for f, w, h, a in CAMP_IMGS) + '</ul>'
+    + f'<p>{t("12月14日からの合宿で4回目。今回は総勢26人が集まっています。毎回20人前後の選手が参加し、トレーニングから食事まで、仲間と一緒に過ごしながら身体と技術を磨きます。", "The camp from 14 December is our fourth, with 26 players this time. Around 20 players join each camp, spending the days together — from training to meals — to sharpen body and skill.", "12月14日起的集训是第4次，本次共有26名球员参加。每次约20名球员参加，从训练到用餐，与伙伴们一起磨练身体与技术。")}</p>'
+    + f'<p class="s10-src" data-ja-ok>{t("次回の合宿は、LINEで「合宿」と送ると優先してご案内します。", "Send “合宿” (camp) on LINE to hear first about the next camp.", "在LINE发送「合宿」，即可优先获取下次集训信息。")}</p></div>')
+
 # ---- 差し込む場所（正規表現の直前／直後） ----
 PLAN = {
     "personal.html": [
@@ -169,14 +180,14 @@ PLAN = {
         ("start", r'(?=<section class="band on-ink faq")', band(trust(), gym_vs, gym_now, gym_start)),
     ],
     "soccer.html": [
-        ("start", r'(?=<section class="band on-ink faq")', band(trust(), soccer_now, soccer_start)),
+        ("start", r'(?=<section class="band on-ink faq")', band(trust(), *([camp] if CAMP_SHOW else []), soccer_now, soccer_start)),
     ],
     "apparel.html": [
         ("why", r'(?=<div class="products">)', apparel_why + apparel_mech),
         ("start", r'(?=<form class="order")', apparel_now + apparel_start),
     ],
     "index.html": [
-        ("why", r'(?=<section class="band on-ink founder")', band(index_reasons, personal_proof)),
+        ("why", r'(?=<section class="band on-ink founder")', band(index_reasons, personal_proof, *([camp] if CAMP_SHOW else []))),
         ("start", r'(?=<section class="band on-ink" id="contact")', band(index_start)),
     ],
 }
