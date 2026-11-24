@@ -164,7 +164,7 @@ apparel_vs = vs(t("よくあるスポーツウェア", "Typical sportswear", "�
     (t("機能", "Function", "机能"), t("運動のときだけ", "Only for workouts", "只在运动时"), t("4方向ストレッチ・速乾・撥水を毎日に", "Four-way stretch, quick-dry and water-repellent, every day", "四向弹力・速干・防泼水，天天都能用")),
     (t("着る場面", "When you wear it", "穿着场合"), t("トレーニングだけ", "Training only", "仅限训练"), t("トレーニングも、街も", "Training and the street", "训练、街头都可以"))])
 apparel_trust = now(t("THE PRO PERSPECTIVE.", "THE PRO PERSPECTIVE.", "THE PRO PERSPECTIVE."),
-    t("プロの視点でつくった、動ける服を、毎日の服に。", "Made from a pro’s perspective: clothes you can move in, for every day.", "以职业视角打造：能运动的衣服，变成每天的衣服。"), kicker="VX APPAREL")
+    t("ジムから、着替えずにそのまま街へ。", "From the gym to the street, no change needed.", "从健身房出来，不用换衣服，直接上街。"), kicker="VX APPAREL")
 apparel_now = now(t("今は、予約注文のみ。", "Pre-order only for now.", "目前仅接受预订。"),
                   t("予約締切後に生産します。締切日はInstagramとLINEでお知らせします。", "Made after the pre-order deadline. We’ll announce the deadline on Instagram and LINE.", "预订截止后开始生产。截止日期将在Instagram和LINE公布。"))
 apparel_start = steps(START_T, [
