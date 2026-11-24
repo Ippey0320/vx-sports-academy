@@ -715,3 +715,10 @@ footer .f-legal { color: var(--sub-on-ink); text-decoration: underline; text-und
 .pd-back{font-size:14px;color:inherit}
 a.product{color:inherit;text-decoration:none}
 .product .more{font-size:13px;margin-top:6px;color:var(--text-on-ink)}
+
+/* 番号なしの箇条書き（sales10.py の dots） */
+.s10-dots { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line-dark); }
+.s10-dots li { position: relative; padding: 14px 0 14px 20px; border-bottom: 1px solid var(--line-dark); font-size: 16px; line-height: 1.6; }
+.s10-dots li::before { content: ""; position: absolute; left: 2px; top: 23px; width: 6px; height: 6px; border-radius: 50%; background: var(--neon); }
+.s10-dots-wrap { display: grid; gap: 18px; }
+.pd-dots li span { display: block; font-size: 13px; color: var(--sub-on-ink); margin-top: 2px; }

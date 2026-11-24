@@ -36,6 +36,11 @@ def steps(title, items, kicker, cta=None, cls="s10-steps"):  # 質問8・9
     btn = f'<div class="btn-row"><a class="btn btn-solid" href="{LINE}" target="_blank" rel="noopener">{LINE_SVG}{cta}</a></div>' if cta else ""
     return f'<div class="s10 {cls}">{head(kicker, title)}<ol class="s10-list">{li}</ol>{btn}</div>'
 
+def dots(title, items, foot=None, kicker="Style"):  # 箇条書き（番号なし・1行ずつ。スマホで読みやすく）
+    li = "".join(f"<li>{x}</li>" for x in items)
+    ft = f'<p class="s10-foot">{foot}</p>' if foot else ""
+    return f'<div class="s10 s10-dots-wrap">{head(kicker, title)}<ul class="s10-dots">{li}</ul>{ft}</div>'
+
 def facts(items):  # 脳の3段階：開いてすぐ分かる3点
     return '<ul class="s10-facts">' + "".join(f"<li>{x}</li>" for x in items) + "</ul>"
 
@@ -144,17 +149,15 @@ soccer_start = steps(START_T, [ADD_LINE,
 
 # ---- APPAREL ----
 # APPARELは「憧れ型」：悩み（Q4・Q5）は打ち出さない。かっこよさ・品質（Q1・Q2）で答える（2026/11/24 一平さん）
-apparel_why = why(t("かっこいいから、毎日着たくなる。", "Good-looking enough to wear every day.", "因为好看，所以每天都想穿。"),
+apparel_why = dots(t("かっこいいから、毎日着たくなる。", "Good-looking enough to wear every day.", "因为好看，所以每天都想穿。"),
     [t("無駄のない、シンプルなデザイン", "Clean, minimal design", "简洁利落的设计"),
      t("街に合う、ユニセックス6色", "Six unisex colours made for the street", "适合街头的男女同款6色"),
-     t("袖のリフレクティブやスリットまで、細部まで仕上げた高品質なつくり", "High-quality finish down to the reflective sleeve details and side slits", "从袖口反光到侧开衩，细节都精心打磨的高品质做工")],
-    t("動ける服を、毎日の服に。", "Clothes you can move in, made for every day.", "能运动的衣服，变成每天的衣服。"), kicker="Style")
-apparel_mech = steps(t("なぜ、動けるのか。", "Why you can move in it.", "为什么穿着能自由活动？"), [
-    (t("4方向ストレッチ", "Four-way stretch", "四向弹力"), t("どの方向にも伸びて、動きを邪魔しない。", "Stretches in every direction and never holds you back.", "向各个方向延展，不妨碍动作。")),
-    (t("軽量・速乾", "Light and quick-dry", "轻量速干"), t("汗をかいても、すぐ乾く。", "Dries fast, even after a sweat.", "出汗后也能很快变干。")),
-    (t("撥水", "Water-repellent", "防泼水"), t("水をはじく生地。", "Fabric that sheds water.", "能防泼水的面料。")),
-    (t("リフレクティブ", "Reflective", "反光设计"), t("夜でも目立つ反射のディテール。", "Reflective details that stand out at night.", "夜间也醒目的反光细节。"))],
-    "How it works", cls="s10-steps s10-mech")
+     t("4方向ストレッチで、どう動いても楽", "Four-way stretch: easy in every move", "四向弹力，怎么动都轻松"),
+     t("軽くて、汗をかいてもすぐ乾く", "Light, and dries fast after a sweat", "轻盈，出汗后很快变干"),
+     t("水をはじく撥水生地", "Water-repellent fabric", "防泼水面料"),
+     t("夜でも光るリフレクティブ", "Reflective details that shine at night", "夜间也会发光的反光设计"),
+     t("裾のスリットまで仕上げた、細部のつくり", "Finished down to the side slits", "连下摆开衩都精心打磨")],
+    t("動ける服を、毎日の服に。", "Clothes you can move in, made for every day.", "能运动的衣服，变成每天的衣服。"))
 # 他社との比較は出さない（2026/11/25 一平さん：アパレルはかっこよさだけでシンプルに）。使わないが残しておく
 apparel_vs = vs(t("よくあるスポーツウェア", "Typical sportswear", "常见运动服"), "VX APPAREL", [
     (t("デザイン", "Design", "设计"), t("いかにも運動用", "Looks like gym kit", "一看就是运动服"), t("普段着として着られる", "Wearable as everyday clothes", "可以当日常服穿")),
@@ -206,7 +209,7 @@ PLAN = {
         ("start", r'(?=<section class="band on-ink faq")', band(soccer_why, soccer_mech, trust(), soccer_vs, *([camp] if CAMP_SHOW else []), soccer_now, soccer_start)),
     ],
     "apparel.html": [
-        ("why", r'(?=<div class="products">)', apparel_why + apparel_mech + apparel_trust),
+        ("why", r'(?=<div class="products">)', apparel_why + apparel_trust),
         ("start", r'(?=<form class="order")', apparel_now + apparel_start),
     ],
     "index.html": [

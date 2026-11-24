@@ -230,7 +230,7 @@ def page(item, L):
     sizes = "".join(
         f'<label><input type="radio" name="size" value="{s}"{" checked" if s == "M" else ""}><span>{s}</span></label>'
         for s in ["S", "M", "L", "XL"])
-    feats = "".join(f"<li><b>{esc(a)}</b><span>{esc(b)}</span></li>" for a, b in it["feats"][L])
+    feats = "".join(f"<li>{esc(a)}<span>{esc(b)}</span></li>" for a, b in it["feats"][L])
     steps = "".join(f'<li><b>0{i+1}</b><div><h3>{esc(a)}</h3><p>{esc(b)}</p></div></li>' for i, (a, b) in enumerate(t["steps"]))
     others = "".join(
         f'<a href="{o}.html"><img src="{p}assets/apparel/{ITEMS[o]["thumb"]}-800.webp" alt="" loading="lazy" width="800" height="1055"><b>{esc(ITEMS[o]["name"][L])}</b><span>¥{ITEMS[o]["price"]:,}</span></a>'
@@ -368,7 +368,7 @@ def page(item, L):
     </form>
 
     <div class="sec-head"><p class="en sub">Features</p><h2 class="catch">{esc(t['features'])}</h2></div>
-    <ul class="pd-feats">{feats}</ul>
+    <ul class="s10-dots pd-dots">{feats}</ul>
 
     <div class="sec-head"><p class="en sub">Details</p><h2 class="catch">{esc(t['spec'])}</h2></div>
     <dl class="pd-spec">
