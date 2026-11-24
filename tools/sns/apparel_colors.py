@@ -24,15 +24,15 @@ foot(d); c.save(OUT+'colors-01.jpg',quality=92)
 for i,col in enumerate(cols): prod(col).save(OUT+f'colors-0{i+2}.jpg',quality=92)
 # end
 c=Image.new('RGB',(W,H),BG); d=ImageDraw.Draw(c)
-d.text((72,300),'PRE-ORDER',font=inter(26,'SemiBold'),fill=Q)
-d.text((72,350),'今は、予約受付中。',font=jp(80),fill=FG)
+d.text((72,300),'MADE TO ORDER',font=inter(26,'SemiBold'),fill=Q)
+d.text((72,350),'受注生産でお届け。',font=jp(80),fill=FG)
 rows=[('3点セット','¥14,300'),('Tシャツ','¥7,700'),('ショーツ','¥6,600'),('ソックス','¥2,200')]
 y=560
 for a,b in rows:
     d.line((72,y,W-72,y),fill=(42,42,46),width=2)
     d.text((72,y+36),a,font=jp(44),fill=FG); f=inter(52,'SemiBold'); d.text((W-72-d.textlength(b,font=f),y+30),b,font=f,fill=FG); y+=124
 d.line((72,y,W-72,y),fill=(42,42,46),width=2)
-d.text((72,y+30),'税込',font=jp(28),fill=Q)
+d.text((72,y+30),'税込｜ご注文から約2〜3週間でお届け',font=jp(28),fill=Q)
 d.text((72,y+150),'色とサイズは、プロフィールのリンクから。',font=jp(38),fill=FG)
 foot(d); c.save(OUT+'colors-08.jpg',quality=92)
 s=[Image.open(OUT+f'colors-0{i}.jpg').resize((270,360)) for i in (1,2,3,8)]
