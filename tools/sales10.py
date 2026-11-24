@@ -160,8 +160,8 @@ apparel_vs = vs(t("よくあるスポーツウェア", "Typical sportswear", "�
     (t("デザイン", "Design", "设计"), t("いかにも運動用", "Looks like gym kit", "一看就是运动服"), t("普段着として着られる", "Wearable as everyday clothes", "可以当日常服穿")),
     (t("機能", "Function", "机能"), t("運動のときだけ", "Only for workouts", "只在运动时"), t("4方向ストレッチ・速乾・撥水を毎日に", "Four-way stretch, quick-dry and water-repellent, every day", "四向弹力・速干・防泼水，天天都能用")),
     (t("着る場面", "When you wear it", "穿着场合"), t("トレーニングだけ", "Training only", "仅限训练"), t("トレーニングも、街も", "Training and the street", "训练、街头都可以"))])
-apparel_trust = now(t("つくるのは、元Jリーガーが代表を務めるVX SPORTS ACADEMY。", "Made by VX SPORTS ACADEMY, founded by a former J.League player.", "由前J联赛球员创办的 VX SPORTS ACADEMY 出品。"),
-    t("選手の動きを毎日見ているアカデミーが、動ける服を、毎日の服にしました。", "An academy that watches athletes move every day made clothes that move, for every day.", "每天关注球员动作的学院，把能活动的衣服变成了日常服装。"), kicker="Trust")
+apparel_trust = now(t("THE PRO PERSPECTIVE.", "THE PRO PERSPECTIVE.", "THE PRO PERSPECTIVE."),
+    t("プロの視点でつくった、動ける服を、毎日の服に。", "Made from a pro’s perspective: clothes you can move in, for every day.", "以职业视角打造：能运动的衣服，变成每天的衣服。"), kicker="VX APPAREL")
 apparel_now = now(t("DROP 01は、予約注文のみ。", "DROP 01 is pre-order only.", "DROP 01 仅接受预订。"),
                   t("予約締切後に生産します。締切日はInstagramとLINEでお知らせします。", "Made after the pre-order deadline. We’ll announce the deadline on Instagram and LINE.", "预订截止后开始生产。截止日期将在Instagram和LINE公布。"))
 apparel_start = steps(START_T, [
