@@ -143,11 +143,12 @@ soccer_start = steps(START_T, [ADD_LINE,
     "Start", cta=t("LINEで入団を問い合わせる", "Ask about joining on LINE", "通过LINE咨询入队"))
 
 # ---- APPAREL ----
-apparel_why = why(t("スポーツウェアは街で浮く。普段着は動きにくい。", "Sportswear stands out on the street. Everyday clothes hold you back.", "运动服在街上显得突兀，日常服又不方便活动。"),
-    [t("運動用の服は、デザインが「いかにも」", "Training gear looks too “gym”", "运动服的设计太“运动”"),
-     t("普段着は、汗や動きに弱い", "Everyday clothes can’t handle sweat or movement", "日常服怕汗、不耐动"),
-     t("結局、1日に何度も着替える", "So you end up changing several times a day", "结果一天要换好几次衣服")],
-    t("悪いのは、服のつくり。VX APPARELは、動ける機能を毎日のデザインに。", "The problem is how the clothes are made. VX APPAREL puts performance into everyday design.", "问题出在衣服的设计。VX APPAREL 把运动机能融入日常设计。"))
+# APPARELは「憧れ型」：悩み（Q4・Q5）は打ち出さない。かっこよさ・品質（Q1・Q2）で答える（2026/11/24 一平さん）
+apparel_why = why(t("かっこいいから、毎日着たくなる。", "Good-looking enough to wear every day.", "因为好看，所以每天都想穿。"),
+    [t("無駄のない、シンプルなデザイン", "Clean, minimal design", "简洁利落的设计"),
+     t("街に合う6色から選べる", "Six colours that work on the street", "6种适合街头的配色"),
+     t("袖のリフレクティブやスリットまで、細部まで仕上げた高品質なつくり", "High-quality finish down to the reflective sleeve details and side slits", "从袖口反光到侧开衩，细节都精心打磨的高品质做工")],
+    t("動ける服を、毎日の服に。", "Clothes you can move in, made for every day.", "能运动的衣服，变成每天的衣服。"), kicker="Why VX APPAREL")
 apparel_mech = steps(t("なぜ、動けるのか。", "Why you can move in it.", "为什么穿着能自由活动？"), [
     (t("4方向ストレッチ", "Four-way stretch", "四向弹力"), t("どの方向にも伸びて、動きを邪魔しない。", "Stretches in every direction and never holds you back.", "向各个方向延展，不妨碍动作。")),
     (t("軽量・速乾", "Light and quick-dry", "轻量速干"), t("汗をかいても、すぐ乾く。", "Dries fast, even after a sweat.", "出汗后也能很快变干。")),
