@@ -20,7 +20,7 @@ const META = {
     soccer: ['New U-12 & U-9 football team | VX SOCCER',
       'VX SOCCER is a new football team combining serious athletic training with top-level football education. U-12 and U-9 players wanted. Ask about joining on LINE.'],
     apparel: ['VX APPAREL: everyday T-shirt, shorts & socks, pre-orders open',
-      'Pre-order VX everyday apparel. T-shirt ¥7,700, shorts ¥7,700, socks ¥2,200, 3-piece set ¥15,400 (incl. tax). Lightweight, quick-dry, four-way stretch. Six colours, S–XL.'],
+      'Pre-order VX everyday apparel. T-shirt ¥7,700, shorts ¥6,600, socks ¥2,200, 3-piece set ¥14,300 (incl. tax). Lightweight, quick-dry, four-way stretch. Six colours, S–XL.'],
   },
   zh: {
     locale: 'zh_CN', htmlLang: 'zh-Hans',
@@ -33,7 +33,7 @@ const META = {
     soccer: ['全新U-12・U-9足球队 招募中｜VX SOCCER',
       'VX SOCCER是一支兼顾身体素质训练与顶级足球教育的新球队，正在招募U-12・U-9成员。入队咨询请通过LINE。'],
     apparel: ['VX APPAREL 日常T恤・短裤・袜子 接受预订',
-      'VX服饰接受预订。T恤 ¥7,700、短裤 ¥7,700、袜子 ¥2,200、三件套 ¥15,400（含税）。轻量速干、四向弹力。6色、S〜XL。'],
+      'VX服饰接受预订。T恤 ¥7,700、短裤 ¥6,600、袜子 ¥2,200、三件套 ¥14,300（含税）。轻量速干、四向弹力。6色、S〜XL。'],
   },
 };
 
