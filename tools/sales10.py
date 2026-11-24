@@ -68,28 +68,38 @@ START_T = t("はじめ方は、3ステップ。", "Getting started takes 3 steps
 OTHER_PRACTICE = t("よくある練習", "Typical training", "常见训练")
 
 # ---- PERSONAL ----
-personal_facts = facts([t("代表は元Jリーガー", "Founded by a former J.League player", "创始人为前J联赛球员"),
+personal_facts = facts([t("元Jリーガーが直接指導", "Coached in person by a former J.League player", "前J联赛球员亲自指导"),
                         t("1対1のマンツーマン", "One-on-one coaching", "一对一指导"),
                         t("初回体験 ¥5,500（税込）", "First trial ¥5,500 (incl. tax)", "首次体验 ¥5,500（含税）")])
+# 質問4・5（2026/11/24 一平さんの言葉から）
 personal_why = why(t("伸び悩むのは、才能のせいじゃない。", "If you’ve stopped improving, it isn’t your talent.", "进步停滞，不是天赋的问题。"),
-    [t("技術の練習ばかりで、身体の土台を鍛えていない", "All skill drills, no work on the athletic base", "只练技术，没有打好身体基础"),
-     t("大人数の練習で、自分の課題を見てもらえない", "In big group sessions, no one looks at your own weak points", "人数太多的训练，没人关注你自己的问题"),
-     t("何をどう直せばいいか、具体的に言われていない", "No one has told you exactly what to fix, and how", "没人具体告诉你该改什么、怎么改")],
-    t("足りなかったのは、やり方。VX PERSONALは、この3つを1対1で変えます。", "What was missing was the method. VX PERSONAL changes all three, one-on-one.", "缺少的是方法。VX PERSONAL 以一对一的方式改变这三点。"))
+    [t("頭ではこうしたいと思っても、体がついてこない", "You know what you want to do, but your body can’t keep up", "脑子里想这样做，身体却跟不上"),
+     t("思いどおりに身体を操作できず、イメージしたプレーができない", "You can’t control your body the way you want, so the play you picture never happens", "无法随心所欲地控制身体，做不出想象中的动作"),
+     t("ドリブルなど技術の練習ばかりで、フィジカルを見落としている", "All dribbling and skill work — the physical side gets overlooked", "只练盘带等技术，忽视了身体素质")],
+    t("土台は、体づくり。そこに技術が合わさって、はじめてやりたいプレーが表現できます。", "The foundation is the body. Add skill on top, and only then can you play the way you want.", "基础是身体。再加上技术，才能踢出你想要的比赛。"))
 personal_mech = steps(t("なぜ、伸びるのか。", "Why it works.", "为什么能进步？"), [
-    (t("課題を見る", "Find the gaps", "找出问题"), t("体験で、身体の動きとプレーの課題を確かめます。", "In the trial, we check how you move and where your game needs work.", "体验课中确认身体动作和比赛中的问题。")),
-    (t("身体と技術を、同時に鍛える", "Train body and skill together", "身体与技术同时训练"), t("スピード・アジリティ・パワー・体幹と、止める・蹴るを同じ時間で。", "Speed, agility, power and core, plus first touch and passing, in the same session.", "速度、敏捷、力量、核心，以及停球、踢球，在同一节课中完成。")),
-    (t("週1回、続ける", "Keep going, once a week", "每周一次，坚持下去"), t("積み上げるほど、動ける身体とプレーの質が変わります。", "The more you build, the more your body and your play change.", "积累越多，身体和比赛质量变化越大。"))],
+    (t("まず、体をつくる", "Build the body first", "先打造身体"), t("スピード・アジリティ・パワー・体幹。思いどおりに動ける身体が、すべての土台です。", "Speed, agility, power and core. A body that moves the way you want is the base of everything.", "速度、敏捷、力量、核心。能随心而动的身体，是一切的基础。")),
+    (t("そこに、技術を合わせる", "Then add the skill", "再结合技术"), t("止める・蹴るの基礎から上級スキルまで。身体と技術を、同じ時間で鍛えます。", "From first touch and passing to advanced skills, trained together with the body in the same session.", "从停球、踢球的基础到高级技巧，与身体训练在同一节课中完成。")),
+    (t("判断が速くなり、余裕が生まれる", "Faster decisions, more time on the ball", "判断更快，踢球更从容"), t("一瞬の動きや、フェイントのあとの判断。体の土台があるから、余裕を持ってプレーできます。", "The split-second move, the decision after a feint. With a strong base, you play with time to spare.", "瞬间的动作、假动作后的判断。有了身体基础，就能从容比赛。"))],
     "How it works", cls="s10-steps s10-mech")
+# 質問10（ほかとの違い）
 personal_vs = vs(OTHER_PRACTICE, "VX PERSONAL", [
-    (t("人数", "Group size", "人数"), t("大人数", "Large groups", "人数多"), t("1対1", "One-on-one", "一对一")),
-    (t("内容", "Focus", "内容"), t("技術が中心", "Mostly skills", "以技术为主"), t("身体能力×技術", "Athleticism × skill", "身体素质×技术")),
-    (t("進め方", "Approach", "方式"), t("決まったメニュー", "Fixed drills", "固定菜单"), t("一人ひとりの課題に合わせる", "Built around your gaps", "根据个人问题定制"))])
+    (t("練習の中心", "Main focus", "训练重点"), t("ドリブルなどの技術", "Dribbling and other skills", "盘带等技术"), t("体の土台＋技術", "Physical base + skill", "身体基础＋技术")),
+    (t("フィジカル", "Physical side", "身体素质"), t("見落とされがち", "Often overlooked", "常被忽视"), t("いちばん大事にする", "Our top priority", "最重视的部分")),
+    (t("一瞬の動き・判断", "Split-second moves and decisions", "瞬间动作・判断"), t("技術だけでは限界", "Skill alone hits a limit", "仅靠技术有局限"), t("土台があるから、判断が速く余裕が出る", "A strong base means faster decisions and more time", "有基础，判断更快、更从容")),
+    (t("人数", "Group size", "人数"), t("大人数", "Large groups", "人数多"), t("1対1", "One-on-one", "一对一"))])
+# 質問3（証拠：2026/11/24 一平さんから）
+personal_proof = ('<div class="s10 s10-trust">' + head("Proof", t("いまも現場で、選手を指導しています。", "Coaching players on the pitch, right now.", "现在依然在一线指导球员。"))
+    + '<div class="s10-stats">'
+    + f'<div><b>30+</b><span>{t("個人指導中の選手", "Players in one-on-one coaching", "正在个人指导的球员")}</span></div>'
+    + f'<div><b>4</b><span>{t("合宿の開催回数", "Training camps held", "已举办集训次数")}</span></div>'
+    + f'<div><b>25</b><span>{t("合宿1回の参加人数", "Players per camp", "每次集训人数")}</span></div></div>'
+    + f'<p class="s10-src">{t("2026年11月時点", "As of November 2026", "截至2026年11月")}</p></div>')
 personal_now = now(t("マンツーマンのため、受けられる人数に限りがあります。", "Because every session is one-on-one, places are limited.", "因为是一对一，名额有限。"),
                    t("始めたいと思った今が、いちばん早いタイミングです。", "The moment you want to start is the earliest you can.", "想开始的现在，就是最早的时机。"))
 personal_start = steps(START_T, [ADD_LINE,
     (t("「体験」と送る", "Send “体験” (trial)", "发送「体験」"), t("日時を選んで申し込みます。", "Choose a date and time to book.", "选择日期和时间即可预约。")),
-    (t("初回体験 ¥5,500", "First trial ¥5,500", "首次体验 ¥5,500"), t("続けるかどうかは、体験のあとで決められます。", "Decide whether to continue after the trial.", "体验后再决定是否继续。"))],
+    (t("初回体験 ¥5,500", "First trial ¥5,500", "首次体验 ¥5,500"), t("合う・合わないは人それぞれ。まず一度試して、良ければ続けてください。", "Everyone’s different. Try it once, and continue only if it suits you.", "适不适合因人而异。先试一次，觉得好再继续。"))],
     "Start", cta="LINEで体験を申し込む")
 
 # ---- GYM ----
@@ -139,7 +149,7 @@ apparel_start = steps(START_T, [
 # ---- トップ ----
 index_reasons = steps(t("VXにしかない、3つのこと。", "Three things only VX offers.", "只有VX才有的三件事。"), [
     (t("プロの視点", "The pro perspective", "职业视角"), t("元Jリーガーの代表が、トップレベルで戦ってきた経験を伝えます。", "Our founder, a former J.League player, passes on what it takes at the top.", "前J联赛球员出身的创始人，传授顶级赛场的经验。")),
-    (t("身体能力×技術", "Athleticism × skill", "身体素质×技术"), t("技術だけでなく、すべてのプレーの土台になる身体から鍛えます。", "Not just skills — we build the body every play depends on.", "不只练技术，更从支撑所有动作的身体开始训练。")),
+    (t("身体能力×技術", "Athleticism × skill", "身体素质×技术"), t("多くの練習が見落としているフィジカルから。体の土台があるから、判断が速く、余裕を持ってプレーできます。", "We start with the physical side most training overlooks. With a strong base, you decide faster and play with time to spare.", "从多数训练忽视的身体素质入手。有了身体基础，判断更快、比赛更从容。")),
     (t("成長が見える", "Progress you can see", "看得见的成长"), t("計測と、少人数・マンツーマンの指導で、一人ひとりの伸びを見逃しません。", "Measurement plus small groups and one-on-one coaching, so no one’s progress goes unnoticed.", "通过测量和小班・一对一指导，不错过每个人的进步。"))],
     "Why VX", cls="s10-steps s10-mech")
 index_start = steps(START_T, [ADD_LINE,
@@ -151,7 +161,7 @@ index_start = steps(START_T, [ADD_LINE,
 PLAN = {
     "personal.html": [
         ("hero-facts", r'(?=\s*</div>\s*</section>\s*<section class="band on-paper" id="personal">)', personal_facts),
-        ("why", r'(?=<section class="band on-paper" id="personal">)', band(personal_why, personal_mech, trust(), personal_vs)),
+        ("why", r'(?=<section class="band on-paper" id="personal">)', band(personal_why, personal_mech, trust(), personal_proof, personal_vs)),
         ("start", r'(?=<section class="band on-ink faq")', band(personal_now, personal_start)),
     ],
     "gym.html": [
@@ -166,7 +176,7 @@ PLAN = {
         ("start", r'(?=<form class="order")', apparel_now + apparel_start),
     ],
     "index.html": [
-        ("why", r'(?=<section class="band on-ink founder")', band(index_reasons)),
+        ("why", r'(?=<section class="band on-ink founder")', band(index_reasons, personal_proof)),
         ("start", r'(?=<section class="band on-ink" id="contact")', band(index_start)),
     ],
 }
