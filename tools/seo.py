@@ -105,7 +105,7 @@ PAGES = {
    ('何を買えますか？', 'Tシャツ ¥7,700、ショーツ ¥6,600、ソックス ¥2,200、3点セット ¥14,300です（すべて税込）。3点セットは単品合計より¥2,200お得です。'),
    ('カラーとサイズは？', 'Ink Black・Sage Green・Powder Blue・Petal Pink・Mist Lavender・Cloud Whiteのユニセックス6色、サイズはS・M・L・XLです。ソックスも同じ6色です。'),
    ('どんな素材・機能ですか？', '軽量・速乾で、4方向ストレッチと撥水性、動きやすいスリット、夜でも目立つリフレクティブがついています。トレーニングにも普段着にも使えます。'),
-   ('いつ届きますか？', '予約注文のため、予約締切後の生産となります。お届け時期とお支払い方法はLINEでご案内します。'),
+   ('いつ届きますか？', 'ご注文を受けてから生産し、約2〜3週間でお届けします。お支払い方法はLINEでご案内します。'),
   ],
   extra=lambda: [
    {'@type': 'Product', 'name': n, 'brand': {'@type': 'Brand', 'name': 'VX SPORTS ACADEMY'}, 'description': d,
@@ -209,7 +209,7 @@ TR = {
  'どんな素材・機能ですか？': ('What are the materials and features?', '面料和功能如何？'),
  '軽量・速乾で、4方向ストレッチと撥水性、動きやすいスリット、夜でも目立つリフレクティブがついています。トレーニングにも普段着にも使えます。': ('Lightweight and quick-drying, with four-way stretch, water repellency, side slits for movement and reflective details for night. Made for training and everyday wear.', '轻量速干，四向弹力、防泼水，带便于活动的开衩和夜间醒目的反光设计，训练和日常都适用。'),
  'いつ届きますか？': ('When will it arrive?', '什么时候送达？'),
- '予約注文のため、予約締切後の生産となります。お届け時期とお支払い方法はLINEでご案内します。': ('It\'s made to order after pre-orders close. We\'ll confirm delivery timing and payment on LINE.', '因是预订商品，将在预订截止后生产。送达时间和付款方式将通过LINE告知。'),
+ 'ご注文を受けてから生産し、約2〜3週間でお届けします。お支払い方法はLINEでご案内します。': ('Each item is made after you order and arrives in about 2–3 weeks. We\'ll explain payment on LINE.', '接单后开始生产，约2〜3周送达。付款方式将通过LINE告知。'),
 }
 
 def faq_html(items):

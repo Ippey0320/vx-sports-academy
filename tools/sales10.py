@@ -165,12 +165,12 @@ apparel_vs = vs(t("よくあるスポーツウェア", "Typical sportswear", "�
     (t("着る場面", "When you wear it", "穿着场合"), t("トレーニングだけ", "Training only", "仅限训练"), t("トレーニングも、街も", "Training and the street", "训练、街头都可以"))])
 apparel_trust = now(t("THE PRO PERSPECTIVE.", "THE PRO PERSPECTIVE.", "THE PRO PERSPECTIVE."),
     t("ジムから、着替えずにそのまま街へ。", "From the gym to the street, no change needed.", "从健身房出来，不用换衣服，直接上街。"), kicker="VX APPAREL")
-apparel_now = now(t("今は、予約注文のみ。", "Pre-order only for now.", "目前仅接受预订。"),
-                  t("予約締切後に生産します。締切日はInstagramとLINEでお知らせします。", "Made after the pre-order deadline. We’ll announce the deadline on Instagram and LINE.", "预订截止后开始生产。截止日期将在Instagram和LINE公布。"))
+apparel_now = now(t("受注生産で、約2〜3週間でお届け。", "Made to order. Delivered in about 2–3 weeks.", "接单生产，约2〜3周送达。"),
+                  t("ご注文を受けてから、1着ずつ生産します。お支払い方法はLINEでご案内します。", "We make each piece after you order. We’ll explain payment on LINE.", "接单后逐件生产。付款方式将通过LINE告知。"))
 apparel_start = steps(START_T, [
     (t("色とサイズを選ぶ", "Choose colour and size", "选择颜色和尺码"), t("下のフォームで選びます。", "Pick them in the form below.", "在下方表格中选择。")),
     (t("LINEで送信", "Send on LINE", "通过LINE发送"), t("選んだ内容を、VXのLINEに送ります。", "Your choices are sent to VX on LINE.", "将所选内容发送到VX的LINE。")),
-    (t("締切後に生産・お届け", "Made and delivered after the deadline", "截止后生产・配送"), t("お支払い方法とお届け時期は、LINEでご案内します。", "We’ll explain payment and delivery timing on LINE.", "付款方式和配送时间将通过LINE告知。"))], "Start")
+    (t("約2〜3週間でお届け", "Delivered in about 2–3 weeks", "约2〜3周送达"), t("ご注文を受けてから生産します。お支払い方法はLINEでご案内します。", "Made after you order. We’ll explain payment on LINE.", "接单后开始生产。付款方式将通过LINE告知。"))], "Start")
 
 # ---- トップ ----
 index_reasons = steps(t("VXにしかない、3つのこと。", "Three things only VX offers.", "只有VX才有的三件事。"), [
