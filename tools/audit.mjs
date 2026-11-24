@@ -109,7 +109,7 @@ for (const w of [320, 375, 390, 430]) {
       const left = await page.evaluate((lang) => {
         const out = [], w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
         let x; while ((x = w.nextNode())) {
-          if (x.parentElement.closest('script,style,textarea')) continue;
+          if (x.parentElement.closest('script,style,textarea,[data-ja-ok]')) continue; // data-ja-ok：LINEで送る言葉など、わざと日本語のもの
           const t = x.nodeValue.trim(); if (!t) continue;
           if ((lang === 'en' ? /[぀-ヺー-ヿ一-鿿]/ : /[぀-ヺー-ヿ]/).test(t)) out.push(t.slice(0, 30));
         }

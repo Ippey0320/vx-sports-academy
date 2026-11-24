@@ -4,6 +4,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 python3 tools/seo.py .          # タイトル・説明文・構造化データ・FAQ・代表/About
+python3 tools/sales10.py        # 買う人の10の質問に答えるブロック（seo.py のあと）
 python3 tools/optimize.py .     # 画像のWebP化・表示速度・アクセシビリティ
 python3 - <<'EOF'
 # CSS/JS の読み込みに新しい番号をつけて、古い表示が残らないようにする

@@ -623,3 +623,46 @@ footer .f-legal { color: var(--sub-on-ink); text-decoration: underline; text-und
 .lb-track img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border: 1px solid var(--line-dark); }
 .lb-hint { margin: 0; font-size: 12px; letter-spacing: .06em; color: var(--sub-on-ink); text-align: center; }
 @media (min-width: 700px) { .lb-track li { flex-basis: 46%; } }
+
+/* 売るためのブロック（tools/sales10.py）：10の質問に答える */
+.s10-band { border-top: 1px solid var(--line-dark); }
+.s10-band .stack { gap: 56px; }
+.s10 { display: grid; gap: 20px; min-width: 0; }
+.s10 .sec-head { gap: 10px; }
+.s10-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; border-top: 1px solid var(--line-dark); }
+.s10-list li { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--line-dark); align-items: start; }
+.s10-list b { font-family: 'Archivo', sans-serif; font-stretch: 112%; font-weight: 600; font-size: 14px; letter-spacing: .08em; color: var(--neon); padding-top: 3px; }
+.s10-list span { font-size: 16px; line-height: 1.7; }
+.s10-list h3 { margin: 0 0 4px; font-size: 17px; line-height: 1.5; font-weight: 700; letter-spacing: .03em; }
+.s10-list p { margin: 0; font-size: 14px; line-height: 1.75; color: var(--sub-on-ink); }
+.s10-foot { margin: 0; padding: 18px 20px; border-left: 3px solid var(--neon); background: rgba(212, 255, 42, .06); font-size: 15px; line-height: 1.8; font-weight: 700; }
+.s10-facts { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.s10-facts li { padding: 7px 12px; border: 1px solid var(--line-dark); font-size: 13px; letter-spacing: .04em; line-height: 1.4; }
+.s10-facts li::before { content: ""; display: inline-block; width: 6px; height: 6px; margin-right: 8px; background: var(--neon); vertical-align: middle; transform: translateY(-1px); }
+.s10-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line-dark); border-bottom: 1px solid var(--line-dark); }
+.s10-stats div { padding: 22px 0 16px; text-align: center; }
+.s10-stats div + div { border-left: 1px solid var(--line-dark); }
+.s10-stats b { display: block; font-family: 'Archivo', sans-serif; font-stretch: 112%; font-weight: 600; font-size: 44px; line-height: 1; color: var(--neon); }
+.s10-stats span { display: block; margin-top: 8px; font-size: 13px; letter-spacing: .1em; color: var(--sub-on-ink); }
+.s10-trust p { margin: 0; font-size: 15px; line-height: 1.8; }
+.s10-trust .s10-src { font-size: 12px; color: var(--sub-on-ink); }
+.s10-more { justify-self: start; font-size: 14px; letter-spacing: .04em; text-decoration: underline; text-underline-offset: 4px; }
+.s10-table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 14px; line-height: 1.6; }
+.s10-table th, .s10-table td { padding: 14px 8px; border-bottom: 1px solid var(--line-dark); text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.s10-table thead th { font-size: 12px; letter-spacing: .06em; color: var(--sub-on-ink); font-weight: 500; }
+.s10-table thead th:last-child { color: var(--neon); }
+.s10-table tbody th { width: 22%; font-weight: 500; color: var(--sub-on-ink); font-size: 13px; }
+.s10-table td:last-child { font-weight: 700; }
+.s10-table tr > :nth-child(2) { width: 33%; color: var(--sub-on-ink); }
+.s10-now { padding: 22px 20px; border: 1px solid var(--neon); gap: 10px; }
+.s10-now-t { margin: 0; font-size: 19px; line-height: 1.6; font-weight: 700; }
+.s10-now p:not(.en):not(.s10-now-t) { margin: 0; font-size: 14px; line-height: 1.8; color: var(--sub-on-ink); }
+.s10-steps .btn-row { margin-top: 4px; }
+/* 明るい背景・ジムの中でも読めるように */
+.gym .s10-why { margin-block: 8px; }
+.on-paper .s10-list, .on-paper .s10-list li { border-color: var(--line-light); }
+.on-paper .s10-list p { color: var(--sub-on-paper); }
+@media (min-width: 900px) {
+  .s10-mech .s10-list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 28px; border-top: none; }
+  .s10-mech .s10-list li { border-top: 1px solid var(--line-dark); }
+}
