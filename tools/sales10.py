@@ -56,8 +56,8 @@ def vs(other, ours, rows):  # 質問1・10
     return ('<div class="s10 s10-vs">' + head("Why VX", t("ほかと、ここが違う。", "What makes us different.", "我们的不同之处。"))
             + f'<table class="s10-table"><thead>{th}</thead><tbody>{tr}</tbody></table></div>')
 
-def now(title, sub):  # 質問6
-    return f'<div class="s10 s10-now"><p class="en sub">Now</p><p class="s10-now-t">{title}</p><p>{sub}</p></div>'
+def now(title, sub, kicker="Now"):  # 質問6（kicker を変えれば質問7の一言にも使う）
+    return f'<div class="s10 s10-now"><p class="en sub">{kicker}</p><p class="s10-now-t">{title}</p><p>{sub}</p></div>'
 
 def band(*blocks):
     return '<section class="band on-ink s10-band"><div class="wrap stack">' + "".join(blocks) + "</div></section>"
@@ -120,6 +120,21 @@ gym_start = steps(START_T, [ADD_LINE,
     "Start", cta="LINEで先行予約する")
 
 # ---- SOCCER ----
+# 質問4・5・8・10（SOCCER）
+soccer_why = why(t("試合で通用しないのは、技術不足だけじゃない。", "If it isn’t working in matches, it isn’t only about skill.", "比赛中踢不开，不只是技术不足。"),
+    [t("当たり負けして、ボールを失う", "You get knocked off the ball", "身体对抗落下风，丢掉球权"),
+     t("一歩目が遅れて、相手に先に触られる", "Your first step is late, so the opponent gets there first", "第一步慢，被对手抢先触球"),
+     t("判断が遅れて、パスがつながらない", "Slow decisions break up the passing", "判断慢，传球连不起来")],
+    t("原因の多くは、体の土台。VX SOCCERは身体能力を本気で鍛えながら、全員でつなぐパスサッカーを教えます。", "Most of it comes down to the physical base. VX SOCCER builds real athleticism while teaching a passing game everyone takes part in.", "原因大多在身体基础。VX SOCCER 认真训练身体素质，同时教授全员参与的传控足球。"))
+soccer_mech = steps(t("なぜ、強くなるのか。", "Why the team gets better.", "为什么能变强？"), [
+    (t("体をつくる", "Build the body", "打造身体"), t("アジリティ・フィジカル・運動能力を、毎回のトレーニングで鍛えます。", "Agility, physicality and athleticism, trained every session.", "每次训练都锻炼敏捷、身体对抗和运动能力。")),
+    (t("全員でつなぐ", "Pass it together", "全员传控"), t("トップレベルの指導で、全員でボールをつなぐパスサッカーを。", "Top-level coaching in a passing game where everyone keeps the ball moving.", "在顶级指导下，踢全员传控的足球。")),
+    (t("判断が速くなる", "Decide faster", "判断更快"), t("体の土台があるから、余裕を持ってプレーできます。", "With a strong base, players have time to think on the ball.", "有了身体基础，就能从容比赛。"))],
+    "How it works", cls="s10-steps s10-mech")
+soccer_vs = vs(t("よくあるチーム", "Typical teams", "常见球队"), "VX SOCCER", [
+    (t("練習の中心", "Main focus", "训练重点"), t("試合形式・技術", "Match play and skills", "比赛形式・技术"), t("身体能力×パスサッカー", "Athleticism × passing football", "身体素质×传控足球")),
+    (t("フィジカル", "Physical side", "身体素质"), t("見落とされがち", "Often overlooked", "常被忽视"), t("いちばん大事にする", "Our top priority", "最重视的部分")),
+    (t("指導", "Coaching", "指导"), t("チームによる", "Varies by team", "因队而异"), t("代表は元Jリーガー", "Founder is a former J.League player", "创始人是前J联赛球员"))])
 soccer_now = now(t("新チームの、立ち上げメンバーを募集中。", "Now recruiting founding members for the new team.", "新球队创始成员招募中。"),
                  t("U-12・U-9。チームの最初の一歩を、一緒につくる選手を待っています。", "U-12 and U-9. Join us and help take the team’s first step.", "U-12・U-9。期待与你一起迈出球队的第一步。"))
 soccer_start = steps(START_T, [ADD_LINE,
@@ -139,6 +154,13 @@ apparel_mech = steps(t("なぜ、動けるのか。", "Why you can move in it.",
     (t("撥水", "Water-repellent", "防泼水"), t("水をはじく生地。", "Fabric that sheds water.", "能防泼水的面料。")),
     (t("リフレクティブ", "Reflective", "反光设计"), t("夜でも目立つ反射のディテール。", "Reflective details that stand out at night.", "夜间也醒目的反光细节。"))],
     "How it works", cls="s10-steps s10-mech")
+# 質問10・7（APPAREL）
+apparel_vs = vs(t("よくあるスポーツウェア", "Typical sportswear", "常见运动服"), "VX APPAREL", [
+    (t("デザイン", "Design", "设计"), t("いかにも運動用", "Looks like gym kit", "一看就是运动服"), t("普段着として着られる", "Wearable as everyday clothes", "可以当日常服穿")),
+    (t("機能", "Function", "机能"), t("運動のときだけ", "Only for workouts", "只在运动时"), t("4方向ストレッチ・速乾・撥水を毎日に", "Four-way stretch, quick-dry and water-repellent, every day", "四向弹力・速干・防泼水，天天都能用")),
+    (t("着る場面", "When you wear it", "穿着场合"), t("トレーニングだけ", "Training only", "仅限训练"), t("トレーニングも、街も", "Training and the street", "训练、街头都可以"))])
+apparel_trust = now(t("つくるのは、元Jリーガーが代表を務めるVX SPORTS ACADEMY。", "Made by VX SPORTS ACADEMY, founded by a former J.League player.", "由前J联赛球员创办的 VX SPORTS ACADEMY 出品。"),
+    t("選手の動きを毎日見ているアカデミーが、動ける服を、毎日の服にしました。", "An academy that watches athletes move every day made clothes that move, for every day.", "每天关注球员动作的学院，把能活动的衣服变成了日常服装。"), kicker="Trust")
 apparel_now = now(t("DROP 01は、予約注文のみ。", "DROP 01 is pre-order only.", "DROP 01 仅接受预订。"),
                   t("予約締切後に生産します。締切日はInstagramとLINEでお知らせします。", "Made after the pre-order deadline. We’ll announce the deadline on Instagram and LINE.", "预订截止后开始生产。截止日期将在Instagram和LINE公布。"))
 apparel_start = steps(START_T, [
@@ -180,10 +202,10 @@ PLAN = {
         ("start", r'(?=<section class="band on-ink faq")', band(trust(), gym_vs, gym_now, gym_start)),
     ],
     "soccer.html": [
-        ("start", r'(?=<section class="band on-ink faq")', band(trust(), *([camp] if CAMP_SHOW else []), soccer_now, soccer_start)),
+        ("start", r'(?=<section class="band on-ink faq")', band(soccer_why, soccer_mech, trust(), soccer_vs, *([camp] if CAMP_SHOW else []), soccer_now, soccer_start)),
     ],
     "apparel.html": [
-        ("why", r'(?=<div class="products">)', apparel_why + apparel_mech),
+        ("why", r'(?=<div class="products">)', apparel_why + apparel_mech + apparel_vs + apparel_trust),
         ("start", r'(?=<form class="order")', apparel_now + apparel_start),
     ],
     "index.html": [
