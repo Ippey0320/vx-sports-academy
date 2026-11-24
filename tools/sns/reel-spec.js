@@ -74,7 +74,7 @@ body{width:1080px;height:1920px;background:#0a0a0b;color:#fff;font-family:Archiv
 .price .hl b{color:${NEON}}
 .note{font-family:'Noto Sans JP';font-size:32px;color:#8d8d95;margin-top:30px;line-height:1.6}
 .logo{width:300px;display:block;margin-top:100px}
-.foot{position:absolute;left:96px;right:96px;bottom:120px;display:flex;justify-content:space-between;font-stretch:125%;font-size:24px;letter-spacing:.3em;color:#7d7d85;z-index:5}
+.foot{position:absolute;left:96px;right:96px;bottom:120px;display:flex;justify-content:space-between;font-stretch:110%;font-size:22px;letter-spacing:.18em;color:#7d7d85;z-index:5;white-space:nowrap;gap:40px}
 .top{position:absolute;left:96px;top:130px;z-index:5}.top img{height:40px}
 </style></head><body>
 ${scenes.map(sceneHtml).join('')}
