@@ -162,7 +162,7 @@ apparel_vs = vs(t("よくあるスポーツウェア", "Typical sportswear", "�
     (t("着る場面", "When you wear it", "穿着场合"), t("トレーニングだけ", "Training only", "仅限训练"), t("トレーニングも、街も", "Training and the street", "训练、街头都可以"))])
 apparel_trust = now(t("THE PRO PERSPECTIVE.", "THE PRO PERSPECTIVE.", "THE PRO PERSPECTIVE."),
     t("プロの視点でつくった、動ける服を、毎日の服に。", "Made from a pro’s perspective: clothes you can move in, for every day.", "以职业视角打造：能运动的衣服，变成每天的衣服。"), kicker="VX APPAREL")
-apparel_now = now(t("DROP 01は、予約注文のみ。", "DROP 01 is pre-order only.", "DROP 01 仅接受预订。"),
+apparel_now = now(t("今は、予約注文のみ。", "Pre-order only for now.", "目前仅接受预订。"),
                   t("予約締切後に生産します。締切日はInstagramとLINEでお知らせします。", "Made after the pre-order deadline. We’ll announce the deadline on Instagram and LINE.", "预订截止后开始生产。截止日期将在Instagram和LINE公布。"))
 apparel_start = steps(START_T, [
     (t("色とサイズを選ぶ", "Choose colour and size", "选择颜色和尺码"), t("下のフォームで選びます。", "Pick them in the form below.", "在下方表格中选择。")),
