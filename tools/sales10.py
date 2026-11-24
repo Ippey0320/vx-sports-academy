@@ -19,7 +19,7 @@ def t(ja, en, zh):
     TR[ja] = {"en": en, "zh": zh}
     return ja
 
-LINE = "https://lin.ee/P7ZYT6p"
+LINE = "https://lin.ee/uKvQIEB"
 LINE_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 4C7 4 3 7.2 3 11.2c0 3.6 3.2 6.6 7.5 7.1-.2.9-.6 2.1-.7 2.4 0 .3.3.5.6.3 1.2-.8 4.3-2.8 5.9-4.3 2.3-1.3 3.7-3.3 3.7-5.5C21 7.2 17 4 12 4Z"/></svg>'
 
 def head(kicker, title):
