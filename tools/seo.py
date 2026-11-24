@@ -17,7 +17,7 @@ ORG = {
     'founder': {'@type': 'Person', '@id': BASE + '#founder', 'name': 'シノヅカイッペイ', 'alternateName': ['イッペイ・シノヅカ', 'Ippey Shinozuka', '篠塚一平'], 'jobTitle': '代表',
                 'description': '元プロサッカー選手（MF）。U-18ロシア代表。スパルタク・モスクワ、横浜F・マリノス、大宮アルディージャ、柏レイソル、アルビレックス新潟でプレー。Jリーグ通算95試合11ゴール9アシスト（J1・J2リーグ戦）。',
                 'image': BASE + 'assets/founder.jpg', 'sameAs': ['https://en.wikipedia.org/wiki/Ippey_Shinozuka']},
-    'sameAs': [IG],
+    'sameAs': [IG, 'https://www.instagram.com/vx.gym.official/', 'https://www.instagram.com/vx.apparel.official/', 'https://x.com/vxsportsacademy'],
     'contactPoint': [{'@type': 'ContactPoint', 'contactType': 'customer service', 'url': LINE, 'availableLanguage': ['ja']},
                      {'@type': 'ContactPoint', 'contactType': 'sponsorship', 'url': IG, 'availableLanguage': ['ja']}],
 }
