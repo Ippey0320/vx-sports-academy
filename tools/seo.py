@@ -98,11 +98,11 @@ PAGES = {
   }]),
  'apparel': dict(
   path='apparel.html', title='VX APPAREL｜普段着にもなるTシャツ・ショーツ・ソックス 予約受付中',
-  desc='VX SPORTS ACADEMYのアパレル（VX T-SHIRT・VX SHORTS・VX SOCKS）の予約注文を受付中。Tシャツ ¥11,000、ショーツ ¥8,800、ソックス ¥2,200、3点セット ¥19,800（税込）。軽量・速乾、4方向ストレッチ、撥水。6色・S〜XL。',
-  og='動ける服を、毎日の服に。VX APPAREL 3点セット ¥19,800（税込）。予約受付中。',
+  desc='VX SPORTS ACADEMYのアパレル（VX T-SHIRT・VX SHORTS・VX SOCKS）の予約注文を受付中。Tシャツ ¥7,700、ショーツ ¥7,700、ソックス ¥2,200、3点セット ¥15,400（税込）。軽量・速乾、4方向ストレッチ、撥水。6色・S〜XL。',
+  og='動ける服を、毎日の服に。VX APPAREL 3点セット ¥15,400（税込）。予約受付中。',
   name='VX APPAREL',
   faq=[
-   ('何を買えますか？', 'Tシャツ ¥11,000、ショーツ ¥8,800、ソックス ¥2,200、3点セット ¥19,800です（すべて税込）。3点セットは単品合計より¥2,200お得です。'),
+   ('何を買えますか？', 'Tシャツ ¥7,700、ショーツ ¥7,700、ソックス ¥2,200、3点セット ¥15,400です（すべて税込）。3点セットは単品合計より¥2,200お得です。'),
    ('カラーとサイズは？', 'Ink Black・Sage Green・Powder Blue・Petal Pink・Mist Lavender・Cloud Whiteのユニセックス6色、サイズはS・M・L・XLです。ソックスも同じ6色です。'),
    ('どんな素材・機能ですか？', '軽量・速乾で、4方向ストレッチと撥水性、動きやすいスリット、夜でも目立つリフレクティブがついています。トレーニングにも普段着にも使えます。'),
    ('いつ届きますか？', '予約注文のため、予約締切後の生産となります。お届け時期とお支払い方法はLINEでご案内します。'),
@@ -112,9 +112,9 @@ PAGES = {
     'image': BASE + 'assets/apparel/' + img + '.webp', 'url': BASE + page + '.html',
     'color': 'Ink Black, Sage Green, Powder Blue, Petal Pink, Mist Lavender, Cloud White', 'size': 'S, M, L, XL',
     'offers': JPY(p, n, {'availability': 'https://schema.org/PreOrder', 'url': BASE + page + '.html', 'seller': {'@id': BASE + '#org'}})}
-   for n, p, d, img, page in [('VX 3点セット（T-SHIRT・SHORTS・SOCKS）', 19800, 'Tシャツ・ショーツ・ソックスを同じ色でそろえるセット。ユニセックス6色・S〜XL。', 'set-front_sage-green', 'set'),
-                   ('VX T-SHIRT', 11000, '高通気・速乾メッシュ。4方向ストレッチ、裾のスリット、反射ライン。', 'set-front_ink-black', 'tee'),
-                   ('VX SHORTS', 8800, '4方向ストレッチ・撥水。両サイドポケット、反射ライン。', 'shorts-back_ink-black', 'shorts'),
+   for n, p, d, img, page in [('VX 3点セット（T-SHIRT・SHORTS・SOCKS）', 15400, 'Tシャツ・ショーツ・ソックスを同じ色でそろえるセット。ユニセックス6色・S〜XL。', 'set-front_sage-green', 'set'),
+                   ('VX T-SHIRT', 7700, '高通気・速乾メッシュ。4方向ストレッチ、裾のスリット、反射ライン。', 'set-front_ink-black', 'tee'),
+                   ('VX SHORTS', 7700, '4方向ストレッチ・撥水。両サイドポケット、反射ライン。', 'shorts-back_ink-black', 'shorts'),
                    ('VX SOCKS', 2200, '約22cm丈・ウェアと同じ6色。', 'socks_ink-black', 'socks')]]),
 }
 
@@ -203,7 +203,7 @@ TR = {
  'HOME（ブラック）・AWAY（ホワイト）・THIRD（グレー）のオフィシャルユニフォームがあります。シャツ・パンツ・ソックスのセットで、背中に名前と背番号を入れられます。': ('Yes: official HOME (black), AWAY (white) and THIRD (grey) kits. Each is a shirt, shorts and socks set, with name and number on the back.', '有。官方队服分为HOME（黑）、AWAY（白）、THIRD（灰），包括球衣、球裤和球袜，背后可印名字和号码。'),
  # apparel
  '何を買えますか？': ('What can I buy?', '可以买什么？'),
- 'Tシャツ ¥11,000、ショーツ ¥8,800、ソックス ¥2,200、3点セット ¥19,800です（すべて税込）。3点セットは単品合計より¥2,200お得です。': ('T-shirt ¥11,000, shorts ¥8,800, socks ¥2,200, or the 3-piece set for ¥19,800 (all incl. tax), ¥2,200 less than buying separately.', 'T恤 ¥11,000、短裤 ¥8,800、袜子 ¥2,200、三件套 ¥19,800（均含税），比单买合计便宜¥2,200。'),
+ 'Tシャツ ¥7,700、ショーツ ¥7,700、ソックス ¥2,200、3点セット ¥15,400です（すべて税込）。3点セットは単品合計より¥2,200お得です。': ('T-shirt ¥7,700, shorts ¥7,700, socks ¥2,200, or the 3-piece set for ¥15,400 (all incl. tax), ¥2,200 less than buying separately.', 'T恤 ¥7,700、短裤 ¥7,700、袜子 ¥2,200、三件套 ¥15,400（均含税），比单买合计便宜¥2,200。'),
  'カラーとサイズは？': ('Which colours and sizes?', '有哪些颜色和尺码？'),
  'Ink Black・Sage Green・Powder Blue・Petal Pink・Mist Lavender・Cloud Whiteのユニセックス6色、サイズはS・M・L・XLです。ソックスも同じ6色です。': ('Six unisex colours (Ink Black, Sage Green, Powder Blue, Petal Pink, Mist Lavender, Cloud White) in S, M, L and XL. Socks come in the same six colours.', '共6色（Ink Black、Sage Green、Powder Blue、Petal Pink、Mist Lavender、Cloud White），男女同款，尺码S、M、L、XL。袜子也有同样6色。'),
  'どんな素材・機能ですか？': ('What are the materials and features?', '面料和功能如何？'),

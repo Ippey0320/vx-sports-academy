@@ -84,7 +84,7 @@ T = {
 
 ITEMS = {
     "tee": dict(
-        code="VX T-SHIRT", price=11000, order_item="Tシャツ", thumb="set-front_ink-black",
+        code="VX T-SHIRT", price=7700, order_item="Tシャツ", thumb="set-front_ink-black",
         name=dict(ja="Tシャツ", en="T-Shirt", zh="T恤"),
         catch=dict(ja="汗をかいても、<br>そのまま出かけられる。", en="Sweat in it.<br>Head out in it.", zh="出汗后，<br>也能直接出门。"),
         lead=dict(
@@ -98,7 +98,7 @@ ITEMS = {
         views=[("front", "set-front_{c}"), ("back", "tee-back_{c}"), ("fabric", "detail-fabric"), ("reflective", "detail-reflective"), ("slit", "detail-slit")],
     ),
     "shorts": dict(
-        code="VX SHORTS", price=8800, order_item="ショーツ", thumb="shorts-back_ink-black",
+        code="VX SHORTS", price=7700, order_item="ショーツ", thumb="shorts-back_ink-black",
         name=dict(ja="ショーツ", en="Shorts", zh="短裤"),
         catch=dict(ja="走っても、しゃがんでも、<br>気にならない。", en="Run, squat, sprint.<br>It moves with you.", zh="奔跑、下蹲，<br>都不受拘束。"),
         lead=dict(
@@ -126,7 +126,7 @@ ITEMS = {
         views=[("socks", "socks_{c}")],
     ),
     "set": dict(
-        code="VX FULL KIT", price=19800, order_item="3点セット", thumb="set-front_sage-green",
+        code="VX FULL KIT", price=15400, order_item="3点セット", thumb="set-front_sage-green",
         name=dict(ja="3点セット", en="3-Piece Set", zh="三件套"),
         catch=dict(ja="上から下まで、<br>1色で決まる。", en="One colour,<br>head to toe.", zh="一种颜色，<br>从头到脚。"),
         lead=dict(
@@ -134,27 +134,27 @@ ITEMS = {
             en="T-shirt, shorts and socks in one colour, ¥2,200 less than buying them separately.",
             zh="T恤、短裤、袜子同色套装，比单买便宜¥2,200。"),
         feats=dict(
-            ja=[("Tシャツ ¥11,000", "高通気・速乾メッシュ、裾のスリット。"), ("ショーツ ¥8,800", "4方向ストレッチ・撥水、両サイドポケット。"), ("ソックス ¥2,200", "約22cm丈、ウェアと同じ色。"), ("単品合計より¥2,200お得", "単品合計 ¥22,000 → セット ¥19,800。")],
-            en=[("T-shirt ¥11,000", "Breathable quick-dry mesh, side slits."), ("Shorts ¥8,800", "Four-way stretch, water-repellent, side pockets."), ("Socks ¥2,200", "Approx. 22 cm, same colour as the wear."), ("Save ¥2,200", "¥22,000 separately → ¥19,800 as a set.")],
-            zh=[("T恤 ¥11,000", "高透气速干网眼，下摆开衩。"), ("短裤 ¥8,800", "四向弹力・防泼水，两侧口袋。"), ("袜子 ¥2,200", "约22cm长，与服装同色。"), ("比单买便宜¥2,200", "单买合计 ¥22,000 → 套装 ¥19,800。")]),
+            ja=[("Tシャツ ¥7,700", "高通気・速乾メッシュ、裾のスリット。"), ("ショーツ ¥7,700", "4方向ストレッチ・撥水、両サイドポケット。"), ("ソックス ¥2,200", "約22cm丈、ウェアと同じ色。"), ("単品合計より¥2,200お得", "単品合計 ¥17,600 → セット ¥15,400。")],
+            en=[("T-shirt ¥7,700", "Breathable quick-dry mesh, side slits."), ("Shorts ¥7,700", "Four-way stretch, water-repellent, side pockets."), ("Socks ¥2,200", "Approx. 22 cm, same colour as the wear."), ("Save ¥2,200", "¥17,600 separately → ¥15,400 as a set.")],
+            zh=[("T恤 ¥7,700", "高透气速干网眼，下摆开衩。"), ("短裤 ¥7,700", "四向弹力・防泼水，两侧口袋。"), ("袜子 ¥2,200", "约22cm长，与服装同色。"), ("比单买便宜¥2,200", "单买合计 ¥17,600 → 套装 ¥15,400。")]),
         views=[("front", "set-front_{c}"), ("tee_back", "tee-back_{c}"), ("shorts_back", "shorts-back_{c}"), ("socks", "socks_{c}"), ("fabric", "detail-fabric")],
     ),
 }
 ORDER = ["tee", "shorts", "socks", "set"]
 
 META = {
-    "tee": dict(ja=("VX T-SHIRT｜速乾Tシャツ ¥11,000（税込）6色・予約受付中｜VX APPAREL", "VX APPARELのTシャツ。高通気・速乾メッシュ、4方向ストレッチ、裾のスリット、反射ライン。¥11,000（税込）。ユニセックス6色・S〜XL。予約受付中。"),
-                en=("VX T-SHIRT: quick-dry tee ¥11,000, 6 colours, pre-order | VX APPAREL", "VX APPAREL T-shirt: breathable quick-dry mesh, four-way stretch, side slits, reflective lines. ¥11,000 incl. tax. Six unisex colours, S–XL. Pre-orders open."),
-                zh=("VX T-SHIRT｜速干T恤 ¥11,000（含税）6色・接受预订｜VX APPAREL", "VX APPAREL T恤：高透气速干网眼、四向弹力、下摆开衩、反光条。¥11,000（含税）。男女同款6色，S〜XL。接受预订中。")),
-    "shorts": dict(ja=("VX SHORTS｜ストレッチ撥水ショーツ ¥8,800（税込）6色・予約受付中｜VX APPAREL", "VX APPARELのショーツ。4方向ストレッチ・撥水、両サイドポケット、反射ライン。¥8,800（税込）。ユニセックス6色・S〜XL。予約受付中。"),
-                   en=("VX SHORTS: stretch, water-repellent shorts ¥8,800, 6 colours | VX APPAREL", "VX APPAREL shorts: four-way stretch, water-repellent, side pockets, reflective line. ¥8,800 incl. tax. Six unisex colours, S–XL. Pre-orders open."),
-                   zh=("VX SHORTS｜弹力防泼水短裤 ¥8,800（含税）6色｜VX APPAREL", "VX APPAREL 短裤：四向弹力、防泼水、两侧口袋、反光条。¥8,800（含税）。男女同款6色，S〜XL。接受预订中。")),
+    "tee": dict(ja=("VX T-SHIRT｜速乾Tシャツ ¥7,700（税込）6色・予約受付中｜VX APPAREL", "VX APPARELのTシャツ。高通気・速乾メッシュ、4方向ストレッチ、裾のスリット、反射ライン。¥7,700（税込）。ユニセックス6色・S〜XL。予約受付中。"),
+                en=("VX T-SHIRT: quick-dry tee ¥7,700, 6 colours, pre-order | VX APPAREL", "VX APPAREL T-shirt: breathable quick-dry mesh, four-way stretch, side slits, reflective lines. ¥7,700 incl. tax. Six unisex colours, S–XL. Pre-orders open."),
+                zh=("VX T-SHIRT｜速干T恤 ¥7,700（含税）6色・接受预订｜VX APPAREL", "VX APPAREL T恤：高透气速干网眼、四向弹力、下摆开衩、反光条。¥7,700（含税）。男女同款6色，S〜XL。接受预订中。")),
+    "shorts": dict(ja=("VX SHORTS｜ストレッチ撥水ショーツ ¥7,700（税込）6色・予約受付中｜VX APPAREL", "VX APPARELのショーツ。4方向ストレッチ・撥水、両サイドポケット、反射ライン。¥7,700（税込）。ユニセックス6色・S〜XL。予約受付中。"),
+                   en=("VX SHORTS: stretch, water-repellent shorts ¥7,700, 6 colours | VX APPAREL", "VX APPAREL shorts: four-way stretch, water-repellent, side pockets, reflective line. ¥7,700 incl. tax. Six unisex colours, S–XL. Pre-orders open."),
+                   zh=("VX SHORTS｜弹力防泼水短裤 ¥7,700（含税）6色｜VX APPAREL", "VX APPAREL 短裤：四向弹力、防泼水、两侧口袋、反光条。¥7,700（含税）。男女同款6色，S〜XL。接受预订中。")),
     "socks": dict(ja=("VX SOCKS｜クルーソックス ¥2,200（税込）6色・予約受付中｜VX APPAREL", "VX APPARELのソックス。約22cm丈、ウェアと同じ6色。¥2,200（税込）。予約受付中。"),
                   en=("VX SOCKS: crew socks ¥2,200, 6 colours, pre-order | VX APPAREL", "VX APPAREL crew socks, approx. 22 cm, in the same six colours as the wear. ¥2,200 incl. tax. Pre-orders open."),
                   zh=("VX SOCKS｜中筒袜 ¥2,200（含税）6色・接受预订｜VX APPAREL", "VX APPAREL 中筒袜，约22cm，与服装同样6色。¥2,200（含税）。接受预订中。")),
-    "set": dict(ja=("VX 3点セット｜Tシャツ・ショーツ・ソックス ¥19,800（税込）｜VX APPAREL", "Tシャツ・ショーツ・ソックスを同じ色でそろえる3点セット。¥19,800（税込）、単品合計より¥2,200お得。ユニセックス6色・S〜XL。予約受付中。"),
-                en=("VX 3-Piece Set: T-shirt, shorts & socks ¥19,800 | VX APPAREL", "T-shirt, shorts and socks in one colour. ¥19,800 incl. tax, ¥2,200 less than buying separately. Six unisex colours, S–XL. Pre-orders open."),
-                zh=("VX 三件套｜T恤・短裤・袜子 ¥19,800（含税）｜VX APPAREL", "T恤、短裤、袜子同色三件套。¥19,800（含税），比单买便宜¥2,200。男女同款6色，S〜XL。接受预订中。")),
+    "set": dict(ja=("VX 3点セット｜Tシャツ・ショーツ・ソックス ¥15,400（税込）｜VX APPAREL", "Tシャツ・ショーツ・ソックスを同じ色でそろえる3点セット。¥15,400（税込）、単品合計より¥2,200お得。ユニセックス6色・S〜XL。予約受付中。"),
+                en=("VX 3-Piece Set: T-shirt, shorts & socks ¥15,400 | VX APPAREL", "T-shirt, shorts and socks in one colour. ¥15,400 incl. tax, ¥2,200 less than buying separately. Six unisex colours, S–XL. Pre-orders open."),
+                zh=("VX 三件套｜T恤・短裤・袜子 ¥15,400（含税）｜VX APPAREL", "T恤、短裤、袜子同色三件套。¥15,400（含税），比单买便宜¥2,200。男女同款6色，S〜XL。接受预订中。")),
 }
 
 LINE_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 4C7 4 3 7.2 3 11.2c0 3.6 3.2 6.6 7.5 7.1-.2.9-.6 2.1-.7 2.4 0 .3.3.5.6.3 1.2-.8 4.3-2.8 5.9-4.3 2.3-1.3 3.7-3.3 3.7-5.5C21 7.2 17 4 12 4Z"/></svg>'
