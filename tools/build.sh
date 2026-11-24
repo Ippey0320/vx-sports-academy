@@ -16,4 +16,5 @@ for f in glob.glob('*.html'):
     open(f, 'w', encoding='utf-8').write(t)
 EOF
 node tools/build-langs.js       # /en/ と /zh/ のページ
+python3 tools/product_pages.py  # 商品の個別ページ（日英中）
 echo "build ok"

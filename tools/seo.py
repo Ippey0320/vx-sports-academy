@@ -103,18 +103,19 @@ PAGES = {
   name='VX APPAREL',
   faq=[
    ('何を買えますか？', 'Tシャツ ¥11,000、ショーツ ¥8,800、ソックス ¥2,200、3点セット ¥19,800です（すべて税込）。3点セットは単品合計より¥2,200お得です。'),
-   ('カラーとサイズは？', 'Ink Black・Sage Green・Stone・Lilac・Blush Pink・Ivoryの6色、サイズはS・M・L・XLです。'),
+   ('カラーとサイズは？', 'Ink Black・Sage Green・Powder Blue・Petal Pink・Mist Lavender・Cloud Whiteのユニセックス6色、サイズはS・M・L・XLです。ソックスも同じ6色です。'),
    ('どんな素材・機能ですか？', '軽量・速乾で、4方向ストレッチと撥水性、動きやすいスリット、夜でも目立つリフレクティブがついています。トレーニングにも普段着にも使えます。'),
    ('いつ届きますか？', '予約注文のため、予約締切後の生産となります。お届け時期とお支払い方法はLINEでご案内します。'),
   ],
   extra=lambda: [
    {'@type': 'Product', 'name': n, 'brand': {'@type': 'Brand', 'name': 'VX SPORTS ACADEMY'}, 'description': d,
-    'image': BASE + 'assets/apparel-colors.jpg',
-    'offers': JPY(p, n, {'availability': 'https://schema.org/PreOrder', 'seller': {'@id': BASE + '#org'}})}
-   for n, p, d in [('VX 3点セット（T-SHIRT・SHORTS・SOCKS）', 19800, 'Tシャツ・ショーツ・ソックスのセット。6色・S〜XL。'),
-                   ('VX T-SHIRT', 11000, '高通気・速乾メッシュ。'),
-                   ('VX SHORTS', 8800, '4方向ストレッチ・撥水。'),
-                   ('VX SOCKS', 2200, '約22cm丈・ブラック。')]]),
+    'image': BASE + 'assets/apparel/' + img + '.webp', 'url': BASE + page + '.html',
+    'color': 'Ink Black, Sage Green, Powder Blue, Petal Pink, Mist Lavender, Cloud White', 'size': 'S, M, L, XL',
+    'offers': JPY(p, n, {'availability': 'https://schema.org/PreOrder', 'url': BASE + page + '.html', 'seller': {'@id': BASE + '#org'}})}
+   for n, p, d, img, page in [('VX 3点セット（T-SHIRT・SHORTS・SOCKS）', 19800, 'Tシャツ・ショーツ・ソックスを同じ色でそろえるセット。ユニセックス6色・S〜XL。', 'set-front_sage-green', 'set'),
+                   ('VX T-SHIRT', 11000, '高通気・速乾メッシュ。4方向ストレッチ、裾のスリット、反射ライン。', 'set-front_ink-black', 'tee'),
+                   ('VX SHORTS', 8800, '4方向ストレッチ・撥水。両サイドポケット、反射ライン。', 'shorts-back_ink-black', 'shorts'),
+                   ('VX SOCKS', 2200, '約22cm丈・ウェアと同じ6色。', 'socks_ink-black', 'socks')]]),
 }
 
 # ---- 英語・中国語（言語切替用） ----
@@ -204,7 +205,7 @@ TR = {
  '何を買えますか？': ('What can I buy?', '可以买什么？'),
  'Tシャツ ¥11,000、ショーツ ¥8,800、ソックス ¥2,200、3点セット ¥19,800です（すべて税込）。3点セットは単品合計より¥2,200お得です。': ('T-shirt ¥11,000, shorts ¥8,800, socks ¥2,200, or the 3-piece set for ¥19,800 (all incl. tax), ¥2,200 less than buying separately.', 'T恤 ¥11,000、短裤 ¥8,800、袜子 ¥2,200、三件套 ¥19,800（均含税），比单买合计便宜¥2,200。'),
  'カラーとサイズは？': ('Which colours and sizes?', '有哪些颜色和尺码？'),
- 'Ink Black・Sage Green・Stone・Lilac・Blush Pink・Ivoryの6色、サイズはS・M・L・XLです。': ('Six colours (Ink Black, Sage Green, Stone, Lilac, Blush Pink, Ivory) in S, M, L and XL.', '共6色（Ink Black、Sage Green、Stone、Lilac、Blush Pink、Ivory），尺码S、M、L、XL。'),
+ 'Ink Black・Sage Green・Powder Blue・Petal Pink・Mist Lavender・Cloud Whiteのユニセックス6色、サイズはS・M・L・XLです。ソックスも同じ6色です。': ('Six unisex colours (Ink Black, Sage Green, Powder Blue, Petal Pink, Mist Lavender, Cloud White) in S, M, L and XL. Socks come in the same six colours.', '共6色（Ink Black、Sage Green、Powder Blue、Petal Pink、Mist Lavender、Cloud White），男女同款，尺码S、M、L、XL。袜子也有同样6色。'),
  'どんな素材・機能ですか？': ('What are the materials and features?', '面料和功能如何？'),
  '軽量・速乾で、4方向ストレッチと撥水性、動きやすいスリット、夜でも目立つリフレクティブがついています。トレーニングにも普段着にも使えます。': ('Lightweight and quick-drying, with four-way stretch, water repellency, side slits for movement and reflective details for night. Made for training and everyday wear.', '轻量速干，四向弹力、防泼水，带便于活动的开衩和夜间醒目的反光设计，训练和日常都适用。'),
  'いつ届きますか？': ('When will it arrive?', '什么时候送达？'),
