@@ -20,6 +20,7 @@ const FPS = 30;
 const FR = OUT.replace(/\.mp4$/, '') + '-frames';
 // 台本に "theme":"apparel" で、VX APPAREL 用（写真はカラーのまま・差し色は白・下の文字は @vx.apparel.official）
 const APPAREL = SPEC.theme === 'apparel';
+const GYM = SPEC.theme === 'gym'; // VX GYM 用（写真はカラー・差し色ネオン・下の文字は @vx.gym.official）
 const NEON = APPAREL ? '#f0ede8' : '#d4ff2a';
 
 const asset = (f) => 'data:image/' + (f.endsWith('.svg') ? 'svg+xml' : f.endsWith('.webp') ? 'webp' : 'jpeg') + ';base64,' + fs.readFileSync(path.join(ROOT, 'assets', f)).toString('base64');
@@ -49,14 +50,15 @@ const sceneHtml = (s, i) => {
     ? `<img class="whole" id="p${i}" src="${asset(s.photo)}">`
     : `<div class="ph" id="p${i}" style="background-image:url(${asset(s.photo)});background-position:${s.pos || 'center'}"></div><div class="sh"></div>`;
   const place = s.photo ? 'bottom:260px' : 'top:50%;transform:translateY(-50%)';
-  return `<div class="s" id="s${i}">${photo}<div class="c" style="${place}"><div id="t${i}">${k}${s.title ? `<p class="jp">${s.title}</p>` : ''}${s.sub ? `<p class="sub">${s.sub}</p>` : ''}${list}${price}${logo}</div></div></div>`;
+  const tag = s.tag ? `<div style="position:absolute;right:64px;top:150px;z-index:6;font-family:'Noto Sans JP';font-size:26px;color:#e6e6ea;background:rgba(0,0,0,.45);padding:8px 16px;border-radius:8px">${s.tag}</div>` : '';
+  return `<div class="s" id="s${i}">${photo}${tag}<div class="c" style="${place}"><div id="t${i}">${k}${s.title ? `<p class="jp">${s.title}</p>` : ''}${s.sub ? `<p class="sub">${s.sub}</p>` : ''}${list}${price}${logo}</div></div></div>`;
 };
 
 const HTML = `<html><head><style>${fontCss()}
 *{margin:0;box-sizing:border-box}
 body{width:1080px;height:1920px;background:#0a0a0b;color:#fff;font-family:Archivo,'Noto Sans JP',sans-serif;font-feature-settings:"palt";overflow:hidden}
 .s{position:absolute;inset:0;opacity:0}
-.ph{position:absolute;inset:-4%;background-size:cover;filter:${APPAREL ? 'brightness(.92)' : 'grayscale(1) contrast(1.1) brightness(.8)'}}
+.ph{position:absolute;inset:-4%;background-size:cover;filter:${APPAREL ? 'brightness(.92)' : GYM ? 'brightness(.85)' : 'grayscale(1) contrast(1.1) brightness(.8)'}}
 .sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,11,.4),rgba(10,10,11,0) 28%,rgba(10,10,11,.2) 50%,rgba(10,10,11,.95) 80%)}
 .c{position:absolute;left:96px;right:96px}
 .whole{position:absolute;left:0;top:260px;width:1080px;height:auto;transform-origin:center top}
@@ -79,7 +81,7 @@ body{width:1080px;height:1920px;background:#0a0a0b;color:#fff;font-family:Archiv
 </style></head><body>
 ${scenes.map(sceneHtml).join('')}
 <div class="top"><img src="${asset('logo.svg')}"></div>
-<div class="foot">${APPAREL ? '<span>THE PRO PERSPECTIVE.</span><span>@vx.apparel.official</span>' : '<span>VX SPORTS ACADEMY</span><span>@vx_sports_academy</span>'}</div>
+<div class="foot">${APPAREL ? '<span>THE PRO PERSPECTIVE.</span><span>@vx.apparel.official</span>' : GYM ? '<span>VX GYM｜NISHI-AZABU</span><span>@vx.gym.official</span>' : '<span>VX SPORTS ACADEMY</span><span>@vx_sports_academy</span>'}</div>
 </body></html>`;
 
 function render(t, starts, durs) {

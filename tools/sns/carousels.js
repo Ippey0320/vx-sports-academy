@@ -13,6 +13,7 @@ const ONLY = process.argv.slice(3);
 const asset = (f) => 'data:image/' + (f.endsWith('.svg') ? 'svg+xml' : f.endsWith('.webp') ? 'webp' : 'jpeg') + ';base64,' + fs.readFileSync(path.join(ROOT, 'assets', f)).toString('base64');
 const LOGO = asset('logo.svg');
 const NEON = '#d4ff2a';
+let THEME = ''; // 台本に "theme":"gym" で VX GYM 用（写真はカラー・下の文字は @vx.gym.official）
 let NOPAGE = false; // 台本に "pageNumbers": false でページ番号（01 / 07）を消す
 
 function fontCss() {
@@ -71,11 +72,11 @@ p.lead{font-family:'Noto Sans JP';font-weight:500;font-size:34px;line-height:1.7
 .price.hl b{color:${NEON}}
 `;
 
-const page = (n, total, inner, { photo, pos, color, whole } = {}) => `
-${photo && whole ? `<img class="whole" src="${photo}">` : ''}${photo && !whole ? `<div class="photo" style="background-image:url(${photo});background-position:${pos || 'center'}${color ? ';filter:none' : ''}"></div><div class="shade"></div>` : ''}
+const page = (n, total, inner, { photo, pos, color, whole, note } = {}) => `
+${photo && whole ? `<img class="whole" src="${photo}">` : ''}${photo && !whole ? `<div class="photo" style="background-image:url(${photo});background-position:${pos || 'center'}${color || THEME === 'gym' ? ';filter:none' : ''}"></div><div class="shade"></div>` : ''}${note ? `<div style="position:absolute;right:72px;top:118px;z-index:6;font-family:'Noto Sans JP';font-size:22px;color:#e6e6ea;background:rgba(0,0,0,.45);padding:6px 14px;border-radius:6px">${note}</div>` : ''}
 <div class="top"><img src="${LOGO}">${NOPAGE ? '' : `<span>${String(n).padStart(2, '0')} / ${String(total).padStart(2, '0')}</span>`}</div>
 ${inner}
-<div class="foot"><span>VX SPORTS ACADEMY</span><span>@vx_sports_academy</span></div>`;
+<div class="foot">${THEME === 'gym' ? '<span>VX GYM｜NISHI-AZABU</span><span>@vx.gym.official</span>' : '<span>VX SPORTS ACADEMY</span><span>@vx_sports_academy</span>'}</div>`;
 
 const CTA_LINE = '体験・入会は、プロフィールのLINEで<br>「体験」と送ってください。';
 
@@ -112,7 +113,7 @@ function fromSpec(spec) {
   const esc = (x) => String(x ?? '');
   return spec.slides.map((sl) => (n, t) => {
     const k = sl.kicker ? `<p class="kicker">${esc(sl.kicker)}</p>` : '';
-    if (sl.type === 'cover') return page(n, t, `<div class="body">${k}<h1>${esc(sl.title)}</h1><div class="bar"></div>${sl.lead ? `<p class="lead">${esc(sl.lead)}</p>` : ''}</div>`, sl.photo ? { photo: asset(sl.photo), pos: sl.pos, color: sl.color } : {});
+    if (sl.type === 'cover' || sl.type === 'photo') return page(n, t, `<div class="body">${k}<h1>${esc(sl.title)}</h1><div class="bar"></div>${sl.lead ? `<p class="lead">${esc(sl.lead)}</p>` : ''}</div>`, sl.photo ? { photo: asset(sl.photo), pos: sl.pos, color: sl.color, note: sl.note } : {});
     if (sl.type === 'list') return page(n, t, `<div class="mid">${k}<h2>${esc(sl.title)}</h2><div class="list">${(sl.items || []).map(([b, s]) => `<div><b>${esc(b)}</b><span>${esc(s)}</span></div>`).join('')}</div>${sl.small ? `<p class="small">${esc(sl.small)}</p>` : ''}</div>`);
     if (sl.type === 'cta') return page(n, t, `<div class="mid">${k}<h2>${esc(sl.title)}</h2><div class="cta"><p>${esc(sl.cta || CTA_LINE)}</p>${sl.small ? `<small>${esc(sl.small)}</small>` : ''}</div></div>`);
     return page(n, t, `<div class="mid">${k}<h2>${esc(sl.title)}</h2>${sl.lead ? `<p class="lead">${esc(sl.lead)}</p>` : ''}${sl.small ? `<p class="small">${esc(sl.small)}</p>` : ''}</div>`);
@@ -124,6 +125,7 @@ if (specIdx > 0) {
   for (const k of Object.keys(SETS)) delete SETS[k];
   SETS[spec.name] = fromSpec(spec);
   NOPAGE = spec.pageNumbers === false;
+  THEME = spec.theme || '';
   ONLY.length = 0;
 }
 
