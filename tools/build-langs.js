@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
-const BASE = 'https://ippey0320.github.io/vx-sports-academy/';
+const BASE = 'https://vx-sports.com/';
 const PAGES = ['index', 'personal', 'gym', 'soccer', 'apparel'];
 
 const META = {

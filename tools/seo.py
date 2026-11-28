@@ -2,7 +2,7 @@
 import json, re, sys, os
 
 ROOT = sys.argv[1]
-BASE = 'https://ippey0320.github.io/vx-sports-academy/'
+BASE = 'https://vx-sports.com/'
 LINE = 'https://lin.ee/uKvQIEB'
 IG = 'https://www.instagram.com/vx_sports_academy/'
 UPDATED_ISO = '2026-11-18'

@@ -21,7 +21,7 @@ VX SPORTS ACADEMY（代表：シノヅカイッペイ）のサイトを、検索
 
 | 対象 | 場所 |
 |---|---|
-| サイト（公開：GitHub Pages） | `Ippey0320/vx-sports-academy` → https://ippey0320.github.io/vx-sports-academy/ |
+| サイト（公開：GitHub Pages） | `Ippey0320/vx-sports-academy` → https://vx-sports.com/ |
 | LINE予約ボットとやることリスト | `Ippey0320/vx-line`（非公開）の `TODO.md` |
 
 ## 手順

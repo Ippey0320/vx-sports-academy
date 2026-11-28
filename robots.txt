@@ -33,4 +33,4 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-Sitemap: https://ippey0320.github.io/vx-sports-academy/sitemap.xml
+Sitemap: https://vx-sports.com/sitemap.xml
